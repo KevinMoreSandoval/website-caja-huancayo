@@ -1,16 +1,296 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <title>Document</title>
-</head>
-<body>
-    <div>Primer cambio</div>
-    
-    
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Footer Responsive</title>
+  </head>
+  <body>
+    <section class="custom-section py-5">
+      <div class="container">
+        <div class="row">
+          <!-- Opción 1 -->
+          <div class="col-12 col-md-4 text-center mb-4 mb-md-0">
+            <a
+              href="https://www.cajahuancayo.com.pe/PCM_MenSecPri/PCM_frmCanEfectivos.aspx"
+              class="icon-link"
+            >
+              <div class="icon-circle">
+                <i class="bi bi-geo-alt"></i>
+              </div>
+              <h6>Canales de atención</h6>
+            </a>
+          </div>
 
-    <script src="node_modules/jquery/dist/jquery.min.js"></script>
-</body>
+          <!-- Opción 2 -->
+          <div class="col-12 col-md-4 text-center mb-4 mb-md-0">
+            <a
+              href="https://www.cajahuancayo.com.pe/PCM_AtenCliente/PCM_frmVeCarfianza.aspx?cNomApl=Valida%20Carta%20Fianza"
+              class="icon-link"
+            >
+              <div class="icon-circle">
+                <i class="bi bi-envelope-check"></i>
+              </div>
+              <h6>Valida carta fianza</h6>
+            </a>
+          </div>
+
+          <!-- Opción 3 -->
+          <div class="col-12 col-md-4 text-center">
+            <a
+              href="https://www.cajahuancayo.com.pe/PCM_MenSecPri/PCM_frmCanEfectivos.aspx"
+              class="icon-link"
+            >
+              <div class="icon-circle">
+                <i class="bi bi-briefcase"></i>
+              </div>
+              <h6>Trabaja en Caja Huancayo</h6>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-dark text-light pt-5">
+      <div class="container">
+        <!-- Acordeón SOLO en móviles -->
+        <div
+          class="accordion accordion-footer mb-3 mt-3 order-1 order-md-0"
+          id="footerAccordion"
+        >
+          <!-- Links -->
+          <div class="accordion-item bg-dark text-light border-0">
+            <h6 class="accordion-header">
+              <button
+                class="accordion-button bg-dark text-light collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#linksCollapse"
+              >
+                Links de interés
+              </button>
+            </h6>
+            <div id="linksCollapse" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                <ul class="list-unstyled">
+                  <li>
+                    <a href="#" class="text-light text-decoration-none"
+                      >Nueva Generación</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="text-light text-decoration-none"
+                      >Portal del Usuario</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="text-light text-decoration-none"
+                      >Compra tus entradas</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="text-light text-decoration-none"
+                      >Tu seguridad en línea</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contacto con íconos -->
+          <div class="accordion-item bg-dark text-light border-0">
+            <h6 class="accordion-header">
+              <button
+                class="accordion-button bg-dark text-light collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#contactCollapse"
+              >
+                Contáctate con nosotros
+              </button>
+            </h6>
+            <div id="contactCollapse" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                <!-- Call Center -->
+                <p class="mb-2">
+                  <i class="bi bi-telephone me-2"></i>(64) 481000
+                </p>
+                <p class="mb-2">
+                  <i class="bi bi-telephone-inbound me-2"></i>0800 10064
+                  <small>(línea gratuita desde fijo)</small>
+                </p>
+                <p class="mb-2">
+                  <i class="bi bi-clock me-2"></i>Lun - Dom · 8:00 am – 9:00 pm
+                </p>
+                <p class="small text-secondary mb-3">
+                  <i class="bi bi-shield-lock me-2"></i>Bloqueo de tarjetas
+                  disponible 24/7
+                </p>
+
+                <!-- Oficina Principal -->
+                <p class="mb-2">
+                  <i class="bi bi-building me-2"></i>Calle Real N° 341 - 343
+                </p>
+                <p class="mb-2">Huancayo, Junín – Perú</p>
+
+                <!-- Mesa de Partes -->
+                <p class="mb-2">
+                  <i class="bi bi-journal-text me-2"></i>Mesa de Partes
+                </p>
+                <ul class="list-unstyled ps-3 mb-0">
+                  <li>
+                    <i class="bi bi-clock me-2"></i>Lun - Vie: 9:00 am – 1:00 pm
+                  </li>
+                  <li>
+                    <i class="bi bi-clock me-2"></i>Lun - Vie: 3:30 pm – 6:00 pm
+                  </li>
+                  <li>
+                    <i class="bi bi-clock me-2"></i>Sábados: 9:00 am – 12:00 m
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Secciones en desktop -->
+        <div class="row">
+          <!-- Links de interés -->
+          <div class="col-12 col-md-3 mb-4 desktop-only order-md-0">
+            <h6 class="fw-bold">Links de interés</h6>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#" class="text-light text-decoration-none"
+                  >Nueva Generación</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none"
+                  >Portal del Usuario</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none"
+                  >Compra tus entradas</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none"
+                  >Tu seguridad en línea</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Contáctanos con íconos -->
+          <div class="col-12 col-md-3 mb-4 desktop-only order-md-1">
+            <h6 class="fw-bold">Contáctate con nosotros</h6>
+            <p class="mb-2"><i class="bi bi-telephone me-2"></i>(64) 481000</p>
+            <p class="mb-2">
+              <i class="bi bi-telephone-inbound me-2"></i>0800 10064
+              <small>(línea gratuita desde fijo)</small>
+            </p>
+            <p class="mb-2">
+              <i class="bi bi-clock me-2"></i>Lun - Dom · 8:00 am – 9:00 pm
+            </p>
+            <p class="small text-secondary mb-3">
+              <i class="bi bi-shield-lock me-2"></i>Bloqueo de tarjetas
+              disponible 24/7
+            </p>
+
+            <p class="mb-2">
+              <i class="bi bi-building me-2"></i>Calle Real N° 341 - 343
+            </p>
+            <p class="mb-2">Huancayo, Junín – Perú</p>
+
+            <p class="mb-2">
+              <i class="bi bi-journal-text me-2"></i>Mesa de Partes
+            </p>
+            <ul class="list-unstyled ps-3 mb-0">
+              <li>
+                <i class="bi bi-clock me-2"></i>Lun - Vie: 9:00 am – 1:00 pm
+              </li>
+              <li>
+                <i class="bi bi-clock me-2"></i>Lun - Vie: 3:30 pm – 6:00 pm
+              </li>
+              <li>
+                <i class="bi bi-clock me-2"></i>Sábados: 9:00 am – 12:00 m
+              </li>
+            </ul>
+          </div>
+
+          <!-- Síguenos -->
+          <div class="col-12 col-md-3 mb-4 order-2 order-md-2 footer-section">
+            <h6 class="fw-bold">Síguenos en</h6>
+            <div class="d-flex gap-3">
+              <a href="https://www.facebook.com/CajaHuancayo" target="_blank"
+                ><i class="bi bi-facebook text-light fs-5"></i
+              ></a>
+              <a href="https://www.twitter.com/cajahuancayo" target="_blank"
+                ><i class="bi bi-twitter text-light fs-5"></i
+              ></a>
+              <a href="https://www.instagram.com/caja_huancayo" target="_blank"
+                ><i class="bi bi-instagram text-light fs-5"></i
+              ></a>
+              <a
+                href="https://www.youtube.com/channel/UC8EWShjkIYQMeNmjrl14gUQ"
+                target="_blank"
+                ><i class="bi bi-youtube text-light fs-5"></i
+              ></a>
+              <a
+                href="https://api.whatsapp.com/send/?phone=51950989245&text&type=phone_number&app_absent=0"
+                target="_blank"
+                ><i class="bi bi-whatsapp text-light fs-5"></i
+              ></a>
+              <a href="https://www.tiktok.com/@cajahuancayo" target="_blank"
+                ><i class="bi bi-tiktok text-light fs-5"></i
+              ></a>
+            </div>
+          </div>
+
+          <!-- Buzón -->
+          <div class="col-12 col-md-3 mb-4 order-3 order-md-3 footer-section">
+            <h6 class="fw-bold">Buzón de Sugerencias</h6>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#" class="text-light text-decoration-none"
+                  >Canal Ético</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none"
+                  >Libro de Reclamaciones</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none"
+                  >Sostenibilidad</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Línea inferior -->
+        <div class="text-center border-top border-secondary pt-3 pb-2 mt-3">
+          <small
+            >&copy; Caja Huancayo 2025. Todos los derechos reservados.</small
+          >
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>

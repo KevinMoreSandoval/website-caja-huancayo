@@ -1,0 +1,59 @@
+/* En escritorio ocultamos el acordeón */
+@media (min-width: 768px) {
+  .accordion-footer {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .desktop-only {
+    display: none;
+  }
+}
+
+.accordion-button::after {
+  filter: invert(1);
+  border: none;
+}
+
+.footer-section {
+  padding-left: 2.2rem; /* mismo que usa Bootstrap */
+  padding-right: 2.2rem;
+}
+.custom-section {
+  background-color: #e30613; /* rojo Caja Huancayo */
+  color: white;
+  padding: 40px 0;
+}
+.icon-box {
+  text-align: center;
+}
+.icon-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 15px;
+  font-size: 30px;
+  transition: all 0.3s ease;
+}
+/* 🔹 Estilo para enlaces */
+.icon-link {
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+}
+.icon-link:visited {
+  color: white; /* evita que se ponga morado */
+}
+.icon-link:hover .icon-circle {
+  background-color: white;
+  color: #e30613;
+  transform: scale(1.1);
+}
+.icon-link:hover h6 {
+  text-decoration: underline;
+}
