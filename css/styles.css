@@ -57,3 +57,34 @@
 .icon-link:hover h6 {
   text-decoration: underline;
 }
+/* ------------------------ */
+/* Contenedor con ancho de 80% */
+.custom-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+/* Centrado del menú */
+.navbar-nav {
+  text-align: center;
+}
+
+/* Quitar icono flecha de Bootstrap */
+.nav-link.dropdown-toggle::after {
+  display: none !important;
+}
+
+/* Abrir dropdown al pasar mouse en pantallas grandes */
+@media (min-width: 992px) {
+  .dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+  }
+}
+.custom-container-90 {
+  width: 80%;
+  max-width: 1400px; /* opcional, para que no se estire demasiado en pantallas grandes */
+}
+
