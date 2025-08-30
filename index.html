@@ -11,6 +11,48 @@
     <title>Footer Responsive</title>
   </head>
   <body>
+    <nav class="navbar navbar-expand-lg bg-danger">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="img/logoCH.png"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <img src="img/icono bloqueo.png" height="15">
+                            Bloqueos
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Bloquear tu tarjeta</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">
+                            <img src="img/cajavirtual.png">
+                            Caja Virtual
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <img src="img/Colaboradores.png">
+                            Colaboradores
+                        </a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search" />
+                    <button class="btn btn-outline-success" type="submit">
+                        <img src="img/lupa.png" height="15">
+                    </button>
+                </form>
+            </div>
+        </div>
+    </nav>
     <nav
       class="navbar navbar-expand-lg navbar-dark bg-dark d-flex justify-content-center"
     >
@@ -25,9 +67,13 @@
                 >Productos y Servicios</a
               >
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Créditos</a></li>
                 <li><a class="dropdown-item" href="#">Ahorros</a></li>
+                <li><a class="dropdown-item" href="#">Crédito</a></li>
+                <li><a class="dropdown-item" href="#">Tarjetas</a></li>
                 <li><a class="dropdown-item" href="#">Seguros</a></li>
+                <li><a class="dropdown-item" href="#">Servicios</a></li>
+                <li><a class="dropdown-item" href="#">Canales de Atencion</a></li>
+                <li><a class="dropdown-item" href="#">Campañas</a></li>
               </ul>
             </li>
 
@@ -38,12 +84,13 @@
               >
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="#">Nuestra Historia</a></li>
-                <li>
-                  <a class="dropdown-item" href="#">Propósito y Aspiración</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#">Valores Institucionales</a>
-                </li>
+                <li><a class="dropdown-item" href="#">Propósito y Aspiración</a></li>
+                <li><a class="dropdown-item" href="#">Valores Institucionales</a></li>
+                <li><a class="dropdown-item" href="#">Nuestro Equipo</a></li>
+                <li><a class="dropdown-item" href="#">Memoria Institucional</a></li>
+                <li><a class="dropdown-item" href="#">Venta de adjudicados</a></li>
+                <li><a class="dropdown-item" href="#">Rendicion de cuentas anual</a></li>
+                <li><a class="dropdown-item" href="#">Colaboradores</a></li>
               </ul>
             </li>
 
@@ -53,8 +100,16 @@
                 >Proveedores</a
               >
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Registro</a></li>
-                <li><a class="dropdown-item" href="#">Convocatorias</a></li>
+                <li><a class="dropdown-item" href="#">Registro de proveedores</a></li>
+                <li><a class="dropdown-item" href="#">Registrar Archivos XML</a></li>
+                <li><a class="dropdown-item" href="#">Gestion de comprobantes de pago</a></li>
+                <li><a class="dropdown-item" href="#">Proc. Contrataciones (PAC)</a></li>
+                <li><a class="dropdown-item" href="#">Proc. Contrataciones (1er nivel)</a></li>
+                <li><a class="dropdown-item" href="#">Consulta de Facturas</a></li>
+                <li><a class="dropdown-item" href="#">Terminos de referencia y RTM</a></li>
+                <li><a class="dropdown-item" href="#">Formato ATS</a></li>
+                <li><a class="dropdown-item" href="#">Subasta Inversa Electronica</a></li>
+                <li><a class="dropdown-item" href="#">Formatos de adquisiciones y contrataciones</a></li>
               </ul>
             </li>
 
@@ -64,9 +119,12 @@
                 >Transparencia</a
               >
               <ul class="dropdown-menu">
-                ñ
-                <li><a class="dropdown-item" href="#">Informes</a></li>
-                <li><a class="dropdown-item" href="#">Normativas</a></li>
+                <li><a class="dropdown-item" href="#">Transparencia de Productos</a></li>
+                <li><a class="dropdown-item" href="#">Financiera y Presupuesto</a></li>
+                <li><a class="dropdown-item" href="#">Transparencia Estadistica</a></li>
+                <li><a class="dropdown-item" href="#">Estadistica de Reclamo</a></li>
+                <li><a class="dropdown-item" href="#">Clasificacion de Riesgos</a></li>
+                <li><a class="dropdown-item" href="#">Estados Financieros</a></li>
               </ul>
             </li>
 
@@ -76,8 +134,14 @@
                 >Gobierno corporativo</a
               >
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Directorio</a></li>
-                <li><a class="dropdown-item" href="#">Gestión</a></li>
+                <li><a class="dropdown-item" href="#">Fines del BGC</a></li>
+                <li><a class="dropdown-item" href="#">Estructura organica</a></li>
+                <li><a class="dropdown-item" href="#">Normatividad</a></li>
+                <li><a class="dropdown-item" href="#">Alta direccion</a></li>
+                <li><a class="dropdown-item" href="#">Indicadores en el PEI-POI</a></li>
+                <li><a class="dropdown-item" href="#">Auto evaluacion de BGC</a></li>
+                <li><a class="dropdown-item" href="#">Informacion a Grupos de Interes</a></li>
+                <li><a class="dropdown-item" href="#">Hechos de importancia</a></li>
               </ul>
             </li>
 
@@ -87,10 +151,14 @@
                 >Atención al cliente</a
               >
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Contactos</a></li>
-                <li>
-                  <a class="dropdown-item" href="#">Preguntas frecuentes</a>
-                </li>
+                <li><a class="dropdown-item" href="#">Consultas y reclamos</a></li>
+                <li><a class="dropdown-item" href="#">Situacion de reclamo</a></li>
+                <li><a class="dropdown-item" href="#">Canal Etico</a></li>
+                <li><a class="dropdown-item" href="#">Encuentra aqui los datos de asesor</a></li>
+                <li><a class="dropdown-item" href="#">Normas de atencion</a></li>
+                <li><a class="dropdown-item" href="#">Preguntas frecuentes</a></li>
+                <li><a class="dropdown-item" href="#">Informacion de Servicion Notariales</a></li>
+                <li><a class="dropdown-item" href="#">Consentimientos de Datos</a></li>
               </ul>
             </li>
 
