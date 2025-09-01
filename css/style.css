@@ -145,3 +145,15 @@
   width: 35%;
   object-fit: cover;
 }
+
+.navbar-toggler {
+  border: none;
+}
+
+
+
+@media (max-width: 767px) {
+  #navOriginal {
+  display: none !important;
+}
+}

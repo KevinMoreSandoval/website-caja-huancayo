@@ -1,11 +1,27 @@
-.navbar-toggler {
-  border: none;
+/* Botón rojo personalizado */
+.btn-rojo {
+  border-color: hsl(0, 0%, 0%);
+  color: rgb(0, 0, 0);
+}
+.btn-rojo:hover {
+  background-color: #ff0000;
+  color: #fff;
+}
+.mi-rojo {
+  background-color: hsl(0, 90%, 45%);
+  color: white;
+  border-radius: 25px 2px 25px 2px !important;
+  width: 100px;
+  height: 100px;
+}
+/* Solo para hover especial de los ítems rojos */
+.mi-rojo:hover {
+  cursor: pointer;
+  border-radius: 50% 50% 50% 1px !important;
+  transition: all 0.3s ease-in-out;
 }
 
-
-
-@media (max-width: 767px) {
-  #navOriginal {
-  display: none !important;
-}
+/* Centrado genérico (si no quieres usar text-center de Bootstrap) */
+.centrado {
+  text-align: center;
 }
