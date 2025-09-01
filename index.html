@@ -1,51 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
-    />
-    <link rel="stylesheet" href="css/style.css">
-    <title>Document</title>
-  </head>
-  <body>
-    <section class="carrusel">  
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/style.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <section class="carrusel">
     <div id="carouselExample" class="carousel slide w-75">
       <div class="carousel-inner">
         <div class="carousel-item active">
           <img src="img/Portada.png" class="d-block w-100" alt="..." />
         </div>
         <div class="carousel-item">
-          <img src="img/segundaImagen.png" class="d-block w-100" alt="..." />
+          <img src="img/segunda imagen.jpg" class="d-block w-100" alt="..." />
         </div>
         <div class="carousel-item">
-          <img src="img/terceraImagen.jpg" class="d-block w-100" alt="..." />
+          <img src="img/tercera imagen.jpg" class="d-block w-100" alt="..." />
         </div>
       </div>
-      <button
-        class="carousel-control-prev"
-        type="button"
-        data-bs-target="#carouselExample"
-        data-bs-slide="prev"
-      >
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
       </button>
-      <button
-        class="carousel-control-next"
-        type="button"
-        data-bs-target="#carouselExample"
-        data-bs-slide="next"
-      >
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
       </button>
     </div>
 
-    </section>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  </section>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
-  </body>
+  <br>
+  <div class="row row-cols-1 row-cols-md-2 g-p">
+    <div class="col ">
+      <div class="card brorder-0 p-0 m-0" style="display: inline-block;">
+        <img src="img/carta 1.jpg" class="d-block " >
+      </div>
+    </div>
+    <div class="col">
+      <div class="card border-0 p-0 m-0" style="display: inline-block;">
+        <img src="img/carta2.jpg" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <div class="col">
+      <div class="card border-0 p-0 m-0" style="display: inline-block;">
+        <img src="img/carta3.jpg" class=" d-block w-100" alt="...">
+      </div>
+    </div>
+    <div class="col">
+      <div class="card border-0 p-0 m-0" style="display: inline-block;">
+        <img src="img/carta4.jpg" class="d-block w-100 " alt="...">
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+</body>
+
 </html>
