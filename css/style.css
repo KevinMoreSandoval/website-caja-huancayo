@@ -1,11 +1,14 @@
-.carrusel{
+.carousel{
+  margin-top: 50px;
     width: 100vw;
+    
     display: flex;
     justify-content: center;
     align-items: center;    
 }
-
- #carouselExample .carousel-item img {
-    height: 300px;      
+ .carousel-item img {
+          
     width: 100%;        
+    object-fit: cover;
+    
   }
