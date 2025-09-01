@@ -1,90 +1,11 @@
-/* En escritorio ocultamos el acordeón */
-@media (min-width: 768px) {
-  .accordion-footer {
-    display: none;
-  }
-}
-
-@media (max-width: 767px) {
-  .desktop-only {
-    display: none;
-  }
-}
-
-.accordion-button::after {
-  filter: invert(1);
+.navbar-toggler {
   border: none;
 }
 
-.footer-section {
-  padding-left: 2.2rem; /* mismo que usa Bootstrap */
-  padding-right: 2.2rem;
-}
-.custom-section {
-  background-color: #e30613; /* rojo Caja Huancayo */
-  color: white;
-  padding: 40px 0;
-}
-.icon-box {
-  text-align: center;
-}
-.icon-circle {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  border: 2px solid white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto 15px;
-  font-size: 30px;
-  transition: all 0.3s ease;
-}
-/* 🔹 Estilo para enlaces */
-.icon-link {
-  text-decoration: none;
-  color: white;
-  display: inline-block;
-}
-.icon-link:visited {
-  color: white; /* evita que se ponga morado */
-}
-.icon-link:hover .icon-circle {
-  background-color: white;
-  color: #e30613;
-  transform: scale(1.1);
-}
-.icon-link:hover h6 {
-  text-decoration: underline;
-}
-/* ------------------------ */
-/* Contenedor con ancho de 80% */
-.custom-container {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  
-}
 
-/* Centrado del menú */
-.navbar-nav {
-  text-align: center;
-}
 
-/* Quitar icono flecha de Bootstrap */
-.nav-link.dropdown-toggle::after {
+@media (max-width: 767px) {
+  #navOriginal {
   display: none !important;
 }
-
-/* Abrir dropdown al pasar mouse en pantallas grandes */
-@media (min-width: 992px) {
-  .dropdown:hover .dropdown-menu {
-    display: block;
-    margin-top: 0;
-  }
 }
-.custom-container-90 {
-  width: 80%;
-  max-width: 1400px; /* opcional, para que no se estire demasiado en pantallas grandes */
-}
-
