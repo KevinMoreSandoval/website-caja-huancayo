@@ -3,75 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Caja Huancayo S.A.</title>
     <link
+      href="css/bootstrap.min.css"
       rel="stylesheet"
-      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
     />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
       rel="stylesheet"
     />
     <link
-      rel="apple-touch-icon"
-      sizes="57x57"
-      href="./favicones/apple-icon-57x57.png"
+      rel="stylesheet"
+      href="styles/style.css"
     />
-    <link
-      rel="apple-touch-icon"
-      sizes="60x60"
-      href="./favicones/apple-icon-60x60.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="72x72"
-      href="./favicones/apple-icon-72x72.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="76x76"
-      href="./favicones/apple-icon-76x76.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="114x114"
-      href="./favicones/apple-icon-114x114.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="120x120"
-      href="./favicones/apple-icon-120x120.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="144x144"
-      href="./favicones/apple-icon-144x144.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="152x152"
-      href="./favicones/apple-icon-152x152.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="./favicones/apple-icon-180x180.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="192x192"
-      href="./favicones/android-icon-192x192.png"
-    />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="manifest" href="/manifest.json" />
-    <meta name="msapplication-TileColor" content="#ffffff" />
-    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
-    <meta name="theme-color" content="#ffffff" />
-    <link rel="stylesheet" href="css/styles.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <title>Caja Huancayo S.A.</title>
+    <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
     <header class="container mt-2 w-100 h-50">
@@ -83,14 +28,12 @@
           >
             <i class="bi bi-lock"></i> Bloqueos
           </a>
-
           <a
             href="https://www.cajahuancayo.com.pe/homebankinghyo/CJN_frmInicio.aspx"
             class="d-flex align-items-center gap-2 px-md-5 border-0 rounded text-decoration-none shadow-none btn-custom-hover"
           >
             <i class="bi bi-person"></i> Caja Virtual
           </a>
-
           <a
             href="https://adm.cajahuancayo.com.pe/bienvenida"
             class="d-flex align-items-center gap-1 px-2 border-0 rounded text-decoration-none shadow-none btn-custom-hover"
@@ -100,12 +43,9 @@
         </div>
       </div>
       <div class="w-100 d-flex justify-content-between align-items-center">
-        <!-- Logo -->
         <a class="navbar-brand w-25" href="index.html">
-          <img src="img/log.png" alt="" class="w-100" />
+          <img src="img/log.png" alt="Caja Huancayo" class="w-100" />
         </a>
-
-        <!-- Botón hamburguesa solo en móvil -->
         <button
           class="navbar-toggler d-lg-none"
           type="button"
@@ -115,10 +55,10 @@
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"><i class="bi bi-list"></i></span>
+          <span class="navbar-toggler-icon"
+            ><i class="bi bi-list fs-2"></i
+          ></span>
         </button>
-
-        <!-- Buscador visible solo en escritorio -->
         <form class="d-none d-lg-flex" role="search">
           <input class="form-control me-2" type="search" aria-label="Buscar" />
           <button class="btn btn-outline-danger" type="submit">
@@ -128,7 +68,6 @@
       </div>
     </header>
 
-    <!-- ✅ Tu nav original intacto -->
     <nav
       id="navOriginal"
       class="navbar navbar-expand-lg navbar-dark bg-prim d-flex justify-content-center"
@@ -137,8 +76,6 @@
       <div class="container custom-container-90">
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav d-flex justify-content-between w-100">
-            <!-- Menú con space-between -->
-            <!-- Productos y Servicios -->
             <li class="nav-item dropdown">
               <a class="nav-link text-white" href="#" data-bs-toggle="dropdown"
                 >Productos y Servicios</a
@@ -155,7 +92,6 @@
                 <li><a class="dropdown-item" href="#">Campañas</a></li>
               </ul>
             </li>
-            <!-- Nuestra caja -->
             <li class="nav-item dropdown">
               <a class="nav-link text-white" href="#" data-bs-toggle="dropdown"
                 >Nuestra Caja</a
@@ -183,7 +119,6 @@
                 <li><a class="dropdown-item" href="#">Colaboradores</a></li>
               </ul>
             </li>
-            <!-- Proveedores -->
             <li class="nav-item dropdown">
               <a class="nav-link text-white" href="#" data-bs-toggle="dropdown"
                 >Proveedores</a
@@ -231,7 +166,6 @@
                 </li>
               </ul>
             </li>
-            <!-- Transparencia -->
             <li class="nav-item dropdown">
               <a class="nav-link text-white" href="#" data-bs-toggle="dropdown"
                 >Transparencia</a
@@ -261,7 +195,6 @@
                 </li>
               </ul>
             </li>
-            <!-- Gobierno corporativo -->
             <li class="nav-item dropdown">
               <a class="nav-link text-white" href="#" data-bs-toggle="dropdown"
                 >Gobierno corporativo</a
@@ -291,7 +224,6 @@
                 </li>
               </ul>
             </li>
-            <!-- Atención al cliente -->
             <li class="nav-item dropdown">
               <a class="nav-link text-white" href="#" data-bs-toggle="dropdown"
                 >Atención al cliente</a
@@ -331,7 +263,6 @@
                 </li>
               </ul>
             </li>
-            <!-- Estado de Emergencia -->
             <li class="nav-item dropdown">
               <a class="nav-link text-white" href="#" data-bs-toggle="dropdown"
                 >Estado de Emergencia</a
@@ -346,28 +277,23 @@
       </div>
     </nav>
 
-    <!-- ✅ Menú alternativo SOLO móvil -->
     <div
       class="collapse d-lg-none bg-prim"
       id="menuMovil"
       style="background-color: rgb(255, 0, 0)"
     >
       <div class="p-3">
-        <!-- Buscador en móvil -->
         <form class="d-flex mb-3" role="search">
           <input class="form-control me-2" type="search" aria-label="Buscar" />
           <button class="btn btn-outline-light" type="submit">
             <i class="bi bi-search"></i>
           </button>
         </form>
-
-        <!-- Menú en columna para móvil -->
         <ul class="navbar-nav flex-column">
-          <!-- Copiamos tus mismos <li> pero en formato columna -->
           <li class="nav-item dropdown">
-            <a class="nav-link text-white" href="#" data-bs-toggle="dropdown">
-              Productos y Servicios
-            </a>
+            <a class="nav-link text-white" href="#" data-bs-toggle="dropdown"
+              >Productos y Servicios</a
+            >
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="#">Ahorros</a></li>
               <li><a class="dropdown-item" href="#">Crédito</a></li>
@@ -378,7 +304,6 @@
               <li><a class="dropdown-item" href="#">Campañas</a></li>
             </ul>
           </li>
-          <!-- Nuestra caja -->
           <li class="nav-item dropdown">
             <a class="nav-link text-white" href="#" data-bs-toggle="dropdown"
               >Nuestra Caja</a
@@ -404,7 +329,6 @@
               <li><a class="dropdown-item" href="#">Colaboradores</a></li>
             </ul>
           </li>
-          <!-- Proveedores -->
           <li class="nav-item dropdown">
             <a class="nav-link text-white" href="#" data-bs-toggle="dropdown"
               >Proveedores</a
@@ -450,8 +374,6 @@
               </li>
             </ul>
           </li>
-
-          <!-- Transparencia -->
           <li class="nav-item dropdown">
             <a class="nav-link text-white" href="#" data-bs-toggle="dropdown"
               >Transparencia</a
@@ -472,21 +394,16 @@
               <li>
                 <a class="dropdown-item" href="#">Clasificacion de Riesgos</a>
               </li>
-              <li>
-                <a class="dropdown-item" href="#">Estados Financieros</a>
-              </li>
+              <li><a class="dropdown-item" href="#">Estados Financieros</a></li>
             </ul>
           </li>
-          <!-- Gobierno corporativo -->
           <li class="nav-item dropdown">
             <a class="nav-link text-white" href="#" data-bs-toggle="dropdown"
               >Gobierno corporativo</a
             >
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="#">Fines del BGC</a></li>
-              <li>
-                <a class="dropdown-item" href="#">Estructura organica</a>
-              </li>
+              <li><a class="dropdown-item" href="#">Estructura organica</a></li>
               <li><a class="dropdown-item" href="#">Normatividad</a></li>
               <li><a class="dropdown-item" href="#">Alta direccion</a></li>
               <li>
@@ -505,7 +422,6 @@
               </li>
             </ul>
           </li>
-          <!-- Atención al cliente -->
           <li class="nav-item dropdown">
             <a class="nav-link text-white" href="#" data-bs-toggle="dropdown"
               >Atención al cliente</a
@@ -529,9 +445,7 @@
                   >Encuentra aqui los datos de asesor</a
                 >
               </li>
-              <li>
-                <a class="dropdown-item" href="#">Normas de atencion</a>
-              </li>
+              <li><a class="dropdown-item" href="#">Normas de atencion</a></li>
               <li>
                 <a class="dropdown-item" href="#">Preguntas frecuentes</a>
               </li>
@@ -545,7 +459,6 @@
               </li>
             </ul>
           </li>
-          <!-- Estado de Emergencia -->
           <li class="nav-item dropdown">
             <a class="nav-link text-white" href="#" data-bs-toggle="dropdown"
               >Estado de Emergencia</a
@@ -567,13 +480,25 @@
       >
         <div class="carousel-inner">
           <div class="carousel-item active" data-bs-interval="10000">
-            <img src="img/primeraImagen.jpg" class="d-block w-100" alt="..." />
+            <img
+              src="img/primeraImagen.jpg"
+              class="d-block w-100"
+              alt="Promoción Caja Huancayo"
+            />
           </div>
           <div class="carousel-item" data-bs-interval="2000">
-            <img src="img/segundaImagen.jpg" class="d-block w-100" alt="..." />
+            <img
+              src="img/segundaImagen.jpg"
+              class="d-block w-100"
+              alt="Servicios financieros"
+            />
           </div>
           <div class="carousel-item">
-            <img src="img/terceraImagen.jpg" class="d-block w-100" alt="..." />
+            <img
+              src="img/terceraImagen.jpg"
+              class="d-block w-100"
+              alt="Atención al cliente"
+            />
           </div>
         </div>
         <button
@@ -599,10 +524,7 @@
 
     <section class="w-75 mx-auto">
       <div class="container my-5 text-center">
-        <!-- Título -->
         <h3 class="fw-bold mb-4">Descubre más</h3>
-
-        <!-- Opciones -->
         <div class="row justify-content-center">
           <div class="col-6 col-md-3 mb-4">
             <a
@@ -614,7 +536,6 @@
             </a>
             <p class="mt-2">Cuentas de ahorro</p>
           </div>
-
           <div class="col-6 col-md-3 mb-4">
             <a href="https://www.creditohipotecariocajahuancayo.com.pe/">
               <div class="text-white p-4 rounded mi-rojo d-inline-block">
@@ -623,7 +544,6 @@
             </a>
             <p class="mt-2">Créditos hipotecarios</p>
           </div>
-
           <div class="col-6 col-md-3 mb-4">
             <a
               href="https://www.cajahuancayo.com.pe/PCM_AtenCliente/PCM_frmDatAnal.aspx?cCodigo=73"
@@ -634,7 +554,6 @@
             </a>
             <p class="mt-2">Encuentra a tu asesor</p>
           </div>
-
           <div class="col-6 col-md-3 mb-4">
             <a
               href="https://www.cajahuancayo.com.pe/PCM_MenSecPri/PCM_frmMasServicios.aspx"
@@ -658,7 +577,10 @@
           <div class="card h-100">
             <a
               href="https://www.cajahuancayo.com.pe/PCM_Noticias/PCM_frmDetNoticia.aspx?cCodNotici=N1002&cCodigo=85"
-              ><img src="img/carta1.jpg" class="card-img-top" alt="..."
+              ><img
+                src="img/carta1.jpg"
+                class="card-img-top"
+                alt="Exposición pictórica"
             /></a>
             <div class="card-body d-flex flex-column">
               <h5 class="card-title">
@@ -674,12 +596,14 @@
             </div>
           </div>
         </div>
-
         <div class="col">
           <div class="card h-100">
             <a
               href="https://www.cajahuancayo.com.pe/PCM_Noticias/PCM_frmDetNoticia.aspx?cCodNotici=N1001&cCodigo=85"
-              ><img src="img/carta2.png" class="card-img-top" alt="..."
+              ><img
+                src="img/carta2.png"
+                class="card-img-top"
+                alt="Premio CX Index 2025"
             /></a>
             <div class="card-body d-flex flex-column">
               <h5 class="card-title">
@@ -692,12 +616,14 @@
             </div>
           </div>
         </div>
-
         <div class="col">
           <div class="card h-100">
             <a
               href="https://www.cajahuancayo.com.pe/PCM_Noticias/PCM_frmDetNoticia.aspx?cCodNotici=N1000&cCodigo=85"
-              ><img src="img/carta3.jpg" class="card-img-top" alt="..."
+              ><img
+                src="img/carta3.jpg"
+                class="card-img-top"
+                alt="Taller de elaboración de mochilas"
             /></a>
             <div class="card-body d-flex flex-column">
               <h5 class="card-title">
@@ -722,23 +648,19 @@
         >
       </div>
     </section>
+
     <section class="custom-section py-5">
       <div class="container">
         <div class="row">
-          <!-- Opción 1 -->
           <div class="col-12 col-md-4 text-center mb-4 mb-md-0">
             <a
               href="https://www.cajahuancayo.com.pe/PCM_MenSecPri/PCM_frmCanEfectivos.aspx"
               class="icon-link"
             >
-              <div class="icon-circle">
-                <i class="bi bi-geo-alt"></i>
-              </div>
+              <div class="icon-circle"><i class="bi bi-geo-alt"></i></div>
               <h6>Canales de atención</h6>
             </a>
           </div>
-
-          <!-- Opción 2 -->
           <div class="col-12 col-md-4 text-center mb-4 mb-md-0">
             <a
               href="https://www.cajahuancayo.com.pe/PCM_AtenCliente/PCM_frmVeCarfianza.aspx?cNomApl=Valida%20Carta%20Fianza"
@@ -750,16 +672,12 @@
               <h6>Valida carta fianza</h6>
             </a>
           </div>
-
-          <!-- Opción 3 -->
           <div class="col-12 col-md-4 text-center">
             <a
               href="https://www.cajahuancayo.com.pe/PCM_MenSecPri/PCM_frmCanEfectivos.aspx"
               class="icon-link"
             >
-              <div class="icon-circle">
-                <i class="bi bi-briefcase"></i>
-              </div>
+              <div class="icon-circle"><i class="bi bi-briefcase"></i></div>
               <h6>Trabaja en Caja Huancayo</h6>
             </a>
           </div>
@@ -769,12 +687,10 @@
 
     <footer class="bg-dark text-light pt-5">
       <div class="container">
-        <!-- Acordeón SOLO en móviles -->
         <div
           class="accordion accordion-footer mb-3 mt-3 order-1 order-md-0"
           id="footerAccordion"
         >
-          <!-- Links -->
           <div class="accordion-item bg-dark text-light border-0">
             <h6 class="accordion-header">
               <button
@@ -821,8 +737,6 @@
               </div>
             </div>
           </div>
-
-          <!-- Contacto con íconos -->
           <div class="accordion-item bg-dark text-light border-0">
             <h6 class="accordion-header">
               <button
@@ -836,7 +750,6 @@
             </h6>
             <div id="contactCollapse" class="accordion-collapse collapse">
               <div class="accordion-body">
-                <!-- Call Center -->
                 <p class="mb-2">
                   <i class="bi bi-telephone me-2"></i>(64) 481000
                 </p>
@@ -851,14 +764,10 @@
                   <i class="bi bi-shield-lock me-2"></i>Bloqueo de tarjetas
                   disponible 24/7
                 </p>
-
-                <!-- Oficina Principal -->
                 <p class="mb-2">
                   <i class="bi bi-building me-2"></i>Calle Real N° 341 - 343
                 </p>
                 <p class="mb-2">Huancayo, Junín – Perú</p>
-
-                <!-- Mesa de Partes -->
                 <p class="mb-2">
                   <i class="bi bi-journal-text me-2"></i>Mesa de Partes
                 </p>
@@ -878,9 +787,7 @@
           </div>
         </div>
 
-        <!-- Secciones en desktop -->
         <div class="row">
-          <!-- Links de interés -->
           <div class="col-12 col-md-3 mb-4 desktop-only order-md-0">
             <h6 class="fw-bold">Links de interés</h6>
             <ul class="list-unstyled">
@@ -914,8 +821,6 @@
               </li>
             </ul>
           </div>
-
-          <!-- Contáctanos con íconos -->
           <div class="col-12 col-md-3 mb-4 desktop-only order-md-1">
             <h6 class="fw-bold">Contáctate con nosotros</h6>
             <p class="mb-2"><i class="bi bi-telephone me-2"></i>(64) 481000</p>
@@ -930,12 +835,10 @@
               <i class="bi bi-shield-lock me-2"></i>Bloqueo de tarjetas
               disponible 24/7
             </p>
-
             <p class="mb-2">
               <i class="bi bi-building me-2"></i>Calle Real N° 341 - 343
             </p>
             <p class="mb-2">Huancayo, Junín – Perú</p>
-
             <p class="mb-2">
               <i class="bi bi-journal-text me-2"></i>Mesa de Partes
             </p>
@@ -951,8 +854,6 @@
               </li>
             </ul>
           </div>
-
-          <!-- Síguenos -->
           <div class="col-12 col-md-3 mb-4 order-2 order-md-2 footer-section">
             <h6 class="fw-bold">Síguenos en</h6>
             <div class="d-flex gap-3">
@@ -980,8 +881,6 @@
               ></a>
             </div>
           </div>
-
-          <!-- Buzón -->
           <div class="col-12 col-md-3 mb-4 order-3 order-md-3 footer-section">
             <h6 class="fw-bold">Buzón de Sugerencias</h6>
             <ul class="list-unstyled">
@@ -1010,7 +909,6 @@
           </div>
         </div>
 
-        <!-- Línea inferior -->
         <div class="text-center border-top border-secondary pt-3 pb-2 mt-3">
           <small
             >&copy; Caja Huancayo 2025. Todos los derechos reservados.</small
@@ -1018,6 +916,7 @@
         </div>
       </div>
     </footer>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
