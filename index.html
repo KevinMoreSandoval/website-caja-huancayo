@@ -5,10 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Caja Huancayo S.A.</title>
     <link href="css/bootstrap.min.css" rel="stylesheet" />
-    <link
-      href="iconAndFonts/bootstrap-icons.css"
-      rel="stylesheet"
-    />
+    <link href="iconAndFonts/bootstrap-icons.css" rel="stylesheet" />
     <link
       rel="icon"
       type="image/png"
@@ -26,7 +23,6 @@
       sizes="180x180"
       href="./favicones/apple-icon-180x180.png"
     />
-    
   </head>
   <body>
     <!-- Header -->
@@ -91,7 +87,6 @@
       </div>
     </header>
 
-    
     <!-- Navbar desktop -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
       <div class="container">
@@ -319,632 +314,644 @@
       </div>
     </nav>
 
-    <!-- Menú móvil moderno con acordeón -->
-    <div class="collapse d-lg-none" id="menuMovil">
-      <div class="bg-danger p-3">
-        <!-- Buscador -->
-        <form class="d-flex mb-3" role="search">
-          <input
-            class="form-control me-2"
-            type="search"
-            placeholder="Buscar..."
-          />
-          <button class="btn btn-light"><i class="bi bi-search"></i></button>
-        </form>
+    <main>
+      <!-- Menú móvil moderno con acordeón -->
+      <div class="collapse d-lg-none" id="menuMovil">
+        <div class="bg-danger p-3">
+          <!-- Buscador -->
+          <form class="d-flex mb-3" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Buscar..."
+            />
+            <button class="btn btn-light"><i class="bi bi-search"></i></button>
+          </form>
 
-        <!-- Acordeón -->
-        <div class="accordion accordion-flush" id="menuAccordion">
-          <!-- Productos y Servicios -->
-          <div class="accordion-item bg-transparent border-0">
-            <h2 class="accordion-header">
-              <button
-                class="accordion-button bg-transparent text-white shadow-none"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#mProductos"
+          <!-- Acordeón -->
+          <div class="accordion accordion-flush" id="menuAccordion">
+            <!-- Productos y Servicios -->
+            <div class="accordion-item bg-transparent border-0">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button bg-transparent text-white shadow-none"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#mProductos"
+                >
+                  Productos y Servicios
+                </button>
+              </h2>
+              <div
+                id="mProductos"
+                class="accordion-collapse collapse"
+                data-bs-parent="#menuAccordion"
               >
-                Productos y Servicios
-              </button>
-            </h2>
-            <div
-              id="mProductos"
-              class="accordion-collapse collapse"
-              data-bs-parent="#menuAccordion"
-            >
-              <div class="accordion-body">
-                <ul class="list-unstyled ms-3">
-                  <li>
-                    <a href="#" class="text-white text-decoration-none"
-                      >Ahorros</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#" class="text-white text-decoration-none"
-                      >Crédito</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#" class="text-white text-decoration-none"
-                      >Tarjetas</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#" class="text-white text-decoration-none"
-                      >Seguros</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#" class="text-white text-decoration-none"
-                      >Servicios</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#" class="text-white text-decoration-none"
-                      >Canales de Atención</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#" class="text-white text-decoration-none"
-                      >Campañas</a
-                    >
-                  </li>
-                </ul>
+                <div class="accordion-body">
+                  <ul class="list-unstyled ms-3">
+                    <li>
+                      <a href="#" class="text-white text-decoration-none"
+                        >Ahorros</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="text-white text-decoration-none"
+                        >Crédito</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="text-white text-decoration-none"
+                        >Tarjetas</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="text-white text-decoration-none"
+                        >Seguros</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="text-white text-decoration-none"
+                        >Servicios</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="text-white text-decoration-none"
+                        >Canales de Atención</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="text-white text-decoration-none"
+                        >Campañas</a
+                      >
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
-          </div>
 
-          <!-- Nuestra Caja -->
-          <div class="accordion-item bg-transparent border-0">
-            <h2 class="accordion-header">
-              <button
-                class="accordion-button bg-transparent text-white shadow-none"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#mCaja"
+            <!-- Nuestra Caja -->
+            <div class="accordion-item bg-transparent border-0">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button bg-transparent text-white shadow-none"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#mCaja"
+                >
+                  Nuestra Caja
+                </button>
+              </h2>
+              <div
+                id="mCaja"
+                class="accordion-collapse collapse"
+                data-bs-parent="#menuAccordion"
               >
-                Nuestra Caja
-              </button>
-            </h2>
-            <div
-              id="mCaja"
-              class="accordion-collapse collapse"
-              data-bs-parent="#menuAccordion"
-            >
-              <div class="accordion-body">
-                <ul class="list-unstyled ms-3">
-                  <li>
-                    <a href="#" class="text-white text-decoration-none"
-                      >Nuestra Historia</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#" class="text-white text-decoration-none"
-                      >Propósito y Aspiración</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#" class="text-white text-decoration-none"
-                      >Valores Institucionales</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#" class="text-white text-decoration-none"
-                      >Nuestro Equipo</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#" class="text-white text-decoration-none"
-                      >Memoria Institucional</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#" class="text-white text-decoration-none"
-                      >Venta de adjudicados</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#" class="text-white text-decoration-none"
-                      >Rendición de cuentas anual</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#" class="text-white text-decoration-none"
-                      >Colaboradores</a
-                    >
-                  </li>
-                </ul>
+                <div class="accordion-body">
+                  <ul class="list-unstyled ms-3">
+                    <li>
+                      <a href="#" class="text-white text-decoration-none"
+                        >Nuestra Historia</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="text-white text-decoration-none"
+                        >Propósito y Aspiración</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="text-white text-decoration-none"
+                        >Valores Institucionales</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="text-white text-decoration-none"
+                        >Nuestro Equipo</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="text-white text-decoration-none"
+                        >Memoria Institucional</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="text-white text-decoration-none"
+                        >Venta de adjudicados</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="text-white text-decoration-none"
+                        >Rendición de cuentas anual</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="text-white text-decoration-none"
+                        >Colaboradores</a
+                      >
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
-          </div>
 
-          <!-- Proveedores -->
-          <div class="accordion-item bg-transparent border-0">
-            <h2 class="accordion-header">
-              <button
-                class="accordion-button bg-transparent text-white shadow-none"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#mProveedores"
+            <!-- Proveedores -->
+            <div class="accordion-item bg-transparent border-0">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button bg-transparent text-white shadow-none"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#mProveedores"
+                >
+                  Proveedores
+                </button>
+              </h2>
+              <div
+                id="mProveedores"
+                class="accordion-collapse collapse"
+                data-bs-parent="#menuAccordion"
               >
-                Proveedores
-              </button>
-            </h2>
-            <div
-              id="mProveedores"
-              class="accordion-collapse collapse"
-              data-bs-parent="#menuAccordion"
-            >
-              <div class="accordion-body">
-                <ul class="list-unstyled ms-3">
-                  <li>
-                    <a href="#" class="text-white text-decoration-none"
-                      >Registro de proveedores</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#" class="text-white text-decoration-none"
-                      >Registrar Archivos XML</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#" class="text-white text-decoration-none"
-                      >Gestión de comprobantes de pago</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#" class="text-white text-decoration-none"
-                      >Proc. Contrataciones (PAC)</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#" class="text-white text-decoration-none"
-                      >Proc. Contrataciones (1er nivel)</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#" class="text-white text-decoration-none"
-                      >Consulta de Facturas</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#" class="text-white text-decoration-none"
-                      >Términos de referencia y RTM</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#" class="text-white text-decoration-none"
-                      >Formato ATS</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#" class="text-white text-decoration-none"
-                      >Subasta Inversa Electrónica</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#" class="text-white text-decoration-none"
-                      >Formatos de adquisiciones y contrataciones</a
-                    >
-                  </li>
-                </ul>
+                <div class="accordion-body">
+                  <ul class="list-unstyled ms-3">
+                    <li>
+                      <a href="#" class="text-white text-decoration-none"
+                        >Registro de proveedores</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="text-white text-decoration-none"
+                        >Registrar Archivos XML</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="text-white text-decoration-none"
+                        >Gestión de comprobantes de pago</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="text-white text-decoration-none"
+                        >Proc. Contrataciones (PAC)</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="text-white text-decoration-none"
+                        >Proc. Contrataciones (1er nivel)</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="text-white text-decoration-none"
+                        >Consulta de Facturas</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="text-white text-decoration-none"
+                        >Términos de referencia y RTM</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="text-white text-decoration-none"
+                        >Formato ATS</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="text-white text-decoration-none"
+                        >Subasta Inversa Electrónica</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="text-white text-decoration-none"
+                        >Formatos de adquisiciones y contrataciones</a
+                      >
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
-          </div>
 
-          <!-- Transparencia -->
-          <div class="accordion-item bg-transparent border-0">
-            <h2 class="accordion-header">
-              <button
-                class="accordion-button bg-transparent text-white shadow-none"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#mTransparencia"
+            <!-- Transparencia -->
+            <div class="accordion-item bg-transparent border-0">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button bg-transparent text-white shadow-none"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#mTransparencia"
+                >
+                  Transparencia
+                </button>
+              </h2>
+              <div
+                id="mTransparencia"
+                class="accordion-collapse collapse"
+                data-bs-parent="#menuAccordion"
               >
-                Transparencia
-              </button>
-            </h2>
-            <div
-              id="mTransparencia"
-              class="accordion-collapse collapse"
-              data-bs-parent="#menuAccordion"
-            >
-              <div class="accordion-body">
-                <ul class="list-unstyled ms-3">
-                  <li>
-                    <a href="#" class="text-white text-decoration-none"
-                      >Transparencia de Productos</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#" class="text-white text-decoration-none"
-                      >Financiera y Presupuesto</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#" class="text-white text-decoration-none"
-                      >Transparencia Estadística</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#" class="text-white text-decoration-none"
-                      >Estadística de Reclamo</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#" class="text-white text-decoration-none"
-                      >Clasificación de Riesgos</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#" class="text-white text-decoration-none"
-                      >Estados Financieros</a
-                    >
-                  </li>
-                </ul>
+                <div class="accordion-body">
+                  <ul class="list-unstyled ms-3">
+                    <li>
+                      <a href="#" class="text-white text-decoration-none"
+                        >Transparencia de Productos</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="text-white text-decoration-none"
+                        >Financiera y Presupuesto</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="text-white text-decoration-none"
+                        >Transparencia Estadística</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="text-white text-decoration-none"
+                        >Estadística de Reclamo</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="text-white text-decoration-none"
+                        >Clasificación de Riesgos</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="text-white text-decoration-none"
+                        >Estados Financieros</a
+                      >
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
-          </div>
 
-          <!-- Gobierno corporativo -->
-          <div class="accordion-item bg-transparent border-0">
-            <h2 class="accordion-header">
-              <button
-                class="accordion-button bg-transparent text-white shadow-none"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#mGobierno"
+            <!-- Gobierno corporativo -->
+            <div class="accordion-item bg-transparent border-0">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button bg-transparent text-white shadow-none"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#mGobierno"
+                >
+                  Gobierno corporativo
+                </button>
+              </h2>
+              <div
+                id="mGobierno"
+                class="accordion-collapse collapse"
+                data-bs-parent="#menuAccordion"
               >
-                Gobierno corporativo
-              </button>
-            </h2>
-            <div
-              id="mGobierno"
-              class="accordion-collapse collapse"
-              data-bs-parent="#menuAccordion"
-            >
-              <div class="accordion-body">
-                <ul class="list-unstyled ms-3">
-                  <li>
-                    <a href="#" class="text-white text-decoration-none"
-                      >Fines del BGC</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#" class="text-white text-decoration-none"
-                      >Estructura orgánica</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#" class="text-white text-decoration-none"
-                      >Normatividad</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#" class="text-white text-decoration-none"
-                      >Alta dirección</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#" class="text-white text-decoration-none"
-                      >Indicadores en el PEI-POI</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#" class="text-white text-decoration-none"
-                      >Auto evaluación de BGC</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#" class="text-white text-decoration-none"
-                      >Información a Grupos de Interés</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#" class="text-white text-decoration-none"
-                      >Hechos de importancia</a
-                    >
-                  </li>
-                </ul>
+                <div class="accordion-body">
+                  <ul class="list-unstyled ms-3">
+                    <li>
+                      <a href="#" class="text-white text-decoration-none"
+                        >Fines del BGC</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="text-white text-decoration-none"
+                        >Estructura orgánica</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="text-white text-decoration-none"
+                        >Normatividad</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="text-white text-decoration-none"
+                        >Alta dirección</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="text-white text-decoration-none"
+                        >Indicadores en el PEI-POI</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="text-white text-decoration-none"
+                        >Auto evaluación de BGC</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="text-white text-decoration-none"
+                        >Información a Grupos de Interés</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="text-white text-decoration-none"
+                        >Hechos de importancia</a
+                      >
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
-          </div>
 
-          <!-- Atención al cliente -->
-          <div class="accordion-item bg-transparent border-0">
-            <h2 class="accordion-header">
-              <button
-                class="accordion-button bg-transparent text-white shadow-none"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#mAtencion"
+            <!-- Atención al cliente -->
+            <div class="accordion-item bg-transparent border-0">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button bg-transparent text-white shadow-none"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#mAtencion"
+                >
+                  Atención al cliente
+                </button>
+              </h2>
+              <div
+                id="mAtencion"
+                class="accordion-collapse collapse"
+                data-bs-parent="#menuAccordion"
               >
-                Atención al cliente
-              </button>
-            </h2>
-            <div
-              id="mAtencion"
-              class="accordion-collapse collapse"
-              data-bs-parent="#menuAccordion"
-            >
-              <div class="accordion-body">
-                <ul class="list-unstyled ms-3">
-                  <li>
-                    <a href="#" class="text-white text-decoration-none"
-                      >Consultas y reclamos</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#" class="text-white text-decoration-none"
-                      >Situación de reclamo</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="https://www.cajahuancayo.com.pe/PCM_AtenCliente/PCM_frmCanEtiCaj.aspx?cCodigo=111"
-                      class="text-white text-decoration-none"
-                      >Canal Ético</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#" class="text-white text-decoration-none"
-                      >Encuentra aquí los datos de asesor</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#" class="text-white text-decoration-none"
-                      >Normas de atención</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#" class="text-white text-decoration-none"
-                      >Preguntas frecuentes</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#" class="text-white text-decoration-none"
-                      >Información de Servicios Notariales</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#" class="text-white text-decoration-none"
-                      >Consentimientos de Datos</a
-                    >
-                  </li>
-                </ul>
+                <div class="accordion-body">
+                  <ul class="list-unstyled ms-3">
+                    <li>
+                      <a href="#" class="text-white text-decoration-none"
+                        >Consultas y reclamos</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="text-white text-decoration-none"
+                        >Situación de reclamo</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.cajahuancayo.com.pe/PCM_AtenCliente/PCM_frmCanEtiCaj.aspx?cCodigo=111"
+                        class="text-white text-decoration-none"
+                        >Canal Ético</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="text-white text-decoration-none"
+                        >Encuentra aquí los datos de asesor</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="text-white text-decoration-none"
+                        >Normas de atención</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="text-white text-decoration-none"
+                        >Preguntas frecuentes</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="text-white text-decoration-none"
+                        >Información de Servicios Notariales</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="text-white text-decoration-none"
+                        >Consentimientos de Datos</a
+                      >
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
-          </div>
 
-          <!-- Estado de Emergencia -->
-          <div class="accordion-item bg-transparent border-0">
-            <h2 class="accordion-header">
-              <button
-                class="accordion-button bg-transparent text-white shadow-none"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#mEmergencia"
+            <!-- Estado de Emergencia -->
+            <div class="accordion-item bg-transparent border-0">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button bg-transparent text-white shadow-none"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#mEmergencia"
+                >
+                  Estado de Emergencia
+                </button>
+              </h2>
+              <div
+                id="mEmergencia"
+                class="accordion-collapse collapse"
+                data-bs-parent="#menuAccordion"
               >
-                Estado de Emergencia
-              </button>
-            </h2>
-            <div
-              id="mEmergencia"
-              class="accordion-collapse collapse"
-              data-bs-parent="#menuAccordion"
-            >
-              <div class="accordion-body">
-                <ul class="list-unstyled ms-3">
-                  <li>
-                    <a href="#" class="text-white text-decoration-none"
-                      >Protocolos</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#" class="text-white text-decoration-none"
-                      >Ayuda inmediata</a
-                    >
-                  </li>
-                </ul>
+                <div class="accordion-body">
+                  <ul class="list-unstyled ms-3">
+                    <li>
+                      <a href="#" class="text-white text-decoration-none"
+                        >Protocolos</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="text-white text-decoration-none"
+                        >Ayuda inmediata</a
+                      >
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-
-    <!-- Carousel -->
-    <div id="carousel" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img
-            src="img/primeraImagen.jpg"
-            class="d-block w-100"
-            alt="Promoción"
-          />
-        </div>
-        <div class="carousel-item">
-          <img
-            src="img/segundaImagen.jpg"
-            class="d-block w-100"
-            alt="Servicios"
-          />
-        </div>
-        <div class="carousel-item">
-          <img
-            src="img/terceraImagen.jpg"
-            class="d-block w-100"
-            alt="Atención"
-          />
-        </div>
-      </div>
-      <button
-        class="carousel-control-prev"
-        type="button"
-        data-bs-target="#carousel"
-        data-bs-slide="prev"
-      >
-        <span class="carousel-control-prev-icon"></span>
-      </button>
-      <button
-        class="carousel-control-next"
-        type="button"
-        data-bs-target="#carousel"
-        data-bs-slide="next"
-      >
-        <span class="carousel-control-next-icon"></span>
-      </button>
-    </div>
-
-    <!-- Descubre más -->
-    <section class="container my-5 text-center">
-      <h3 class="fw-bold mb-4">Descubre más</h3>
-      <div class="row justify-content-center g-4">
-        <div class="col-6 col-md-3">
-          <a
-            href="https://www.cajahuancayo.com.pe/PCM_ProdServicios/PCM_frmLisProAho.aspx?id=PA&cCodigo=115"
-          >
-            <div
-              class="bg-danger text-white rounded-circle mx-auto d-flex justify-content-center align-items-center mb-2 shadow"
-              style="width: 100px; height: 100px; transition: transform 0.3s"
-            >
-              <i class="bi bi-piggy-bank fs-2"></i>
-            </div>
-          </a>
-          <p class="mt-2">Cuentas de ahorro</p>
-        </div>
-        <div class="col-6 col-md-3">
-          <a href="https://www.creditohipotecariocajahuancayo.com.pe/">
-            <div
-              class="bg-danger text-white rounded-circle mx-auto d-flex justify-content-center align-items-center mb-2 shadow"
-              style="width: 100px; height: 100px; transition: transform 0.3s"
-            >
-              <i class="bi bi-house fs-2"></i>
-            </div>
-          </a>
-          <p class="mt-2">Créditos hipotecarios</p>
-        </div>
-        <div class="col-6 col-md-3">
-          <a
-            href="https://www.cajahuancayo.com.pe/PCM_AtenCliente/PCM_frmDatAnal.aspx?cCodigo=73"
-          >
-            <div
-              class="bg-danger text-white rounded-circle mx-auto d-flex justify-content-center align-items-center mb-2 shadow"
-              style="width: 100px; height: 100px; transition: transform 0.3s"
-            >
-              <i class="bi bi-search fs-2"></i>
-            </div>
-          </a>
-          <p class="mt-2">Encuentra a tu asesor</p>
-        </div>
-        <div class="col-6 col-md-3">
-          <a
-            href="https://www.cajahuancayo.com.pe/PCM_MenSecPri/PCM_frmMasServicios.aspx"
-          >
-            <div
-              class="bg-danger text-white rounded-circle mx-auto d-flex justify-content-center align-items-center mb-2 shadow"
-              style="width: 100px; height: 100px; transition: transform 0.3s"
-            >
-              <i class="bi bi-cash-coin fs-2"></i>
-            </div>
-          </a>
-          <p class="mt-2">Otros servicios</p>
-        </div>
-      </div>
-
-      <h5 class="fw-bold mt-5">E-NEWS CAJA HUANCAYO</h5>
-      <h6 class="text-muted mb-4">Te informamos</h6>
-
-      <div class="row g-4">
-        <div class="col-md-4">
-          <div class="card h-100 shadow">
-            <a href="https://www.cajahuancayo.com.pe/PCM_Noticias/PCM_frmDetNoticia.aspx?cCodNotici=N1002&cCodigo=85"><img src="img/carta1.jpg" class="card-img-top" alt="Exposición" /></a>
-            <div class="card-body">
-              <h6 class="card-title">
-                Caja Huancayo impulsa el arte y la cultura...
-              </h6>
-              <p class="card-text small">En línea con su compromiso...</p>
-            </div>
+      <!-- Carousel -->
+      <div id="carousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="img/primeraImagen.jpg"
+              class="d-block w-100"
+              alt="37 años contigo"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="img/segundaImagen.jpg"
+              class="d-block w-100"
+              alt="Espiritu Emprendedor"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="img/terceraImagen.jpg"
+              class="d-block w-100"
+              alt="1er puesto en ranking CX INDEX"
+            />
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="card h-100 shadow">
-            <a href="https://www.cajahuancayo.com.pe/PCM_Noticias/PCM_frmDetNoticia.aspx?cCodNotici=N1001&cCodigo=85"><img src="img/carta2.png" class="card-img-top" alt="Premio" /></a>
-            <div class="card-body">
-              <h6 class="card-title">Con premio CX Index 2025...</h6>
-              <p class="card-text small">Según estudio de Datum...</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card h-100 shadow">
-            <a href="https://www.cajahuancayo.com.pe/PCM_Noticias/PCM_frmDetNoticia.aspx?cCodNotici=N1000&cCodigo=85"><img src="img/carta3.jpg" class="card-img-top" alt="Taller" /></a>
-            <div class="card-body">
-              <h6 class="card-title">Caja Huancayo inaugura taller...</h6>
-              <p class="card-text small">Impulsa la adaptación...</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="mt-4">
-        <a
-          href="https://www.cajahuancayo.com.pe/PCM_Noticias/PCM_frmNoticias.aspx?cCodigo=85"
-          class="btn btn-danger"
-          >Ver más</a
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carousel"
+          data-bs-slide="prev"
         >
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carousel"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon"></span>
+        </button>
       </div>
-    </section>
 
-    <!-- Sección de iconos -->
-    <section class="bg-danger text-white py-5">
-      <div class="container text-center">
+      <!-- Descubre más -->
+      <section class="container my-5 text-center">
+        <h3 class="fw-bold mb-4">Descubre más</h3>
+        <div class="row justify-content-center g-4">
+          <div class="col-6 col-md-3">
+            <a
+              href="https://www.cajahuancayo.com.pe/PCM_ProdServicios/PCM_frmLisProAho.aspx?id=PA&cCodigo=115"
+            >
+              <div
+                class="bg-danger text-white rounded-circle mx-auto d-flex justify-content-center align-items-center mb-2 shadow"
+                style="width: 100px; height: 100px; transition: transform 0.3s"
+              >
+                <i class="bi bi-piggy-bank fs-2"></i>
+              </div>
+            </a>
+            <p class="mt-2">Cuentas de ahorro</p>
+          </div>
+          <div class="col-6 col-md-3">
+            <a href="https://www.creditohipotecariocajahuancayo.com.pe/">
+              <div
+                class="bg-danger text-white rounded-circle mx-auto d-flex justify-content-center align-items-center mb-2 shadow"
+                style="width: 100px; height: 100px; transition: transform 0.3s"
+              >
+                <i class="bi bi-house fs-2"></i>
+              </div>
+            </a>
+            <p class="mt-2">Créditos hipotecarios</p>
+          </div>
+          <div class="col-6 col-md-3">
+            <a
+              href="https://www.cajahuancayo.com.pe/PCM_AtenCliente/PCM_frmDatAnal.aspx?cCodigo=73"
+            >
+              <div
+                class="bg-danger text-white rounded-circle mx-auto d-flex justify-content-center align-items-center mb-2 shadow"
+                style="width: 100px; height: 100px; transition: transform 0.3s"
+              >
+                <i class="bi bi-search fs-2"></i>
+              </div>
+            </a>
+            <p class="mt-2">Encuentra a tu asesor</p>
+          </div>
+          <div class="col-6 col-md-3">
+            <a
+              href="https://www.cajahuancayo.com.pe/PCM_MenSecPri/PCM_frmMasServicios.aspx"
+            >
+              <div
+                class="bg-danger text-white rounded-circle mx-auto d-flex justify-content-center align-items-center mb-2 shadow"
+                style="width: 100px; height: 100px; transition: transform 0.3s"
+              >
+                <i class="bi bi-cash-coin fs-2"></i>
+              </div>
+            </a>
+            <p class="mt-2">Otros servicios</p>
+          </div>
+        </div>
+
+        <h5 class="fw-bold mt-5">E-NEWS CAJA HUANCAYO</h5>
+        <h6 class="text-muted mb-4">Te informamos</h6>
+
         <div class="row g-4">
           <div class="col-md-4">
-            <a
-              href="https://www.cajahuancayo.com.pe/PCM_MenSecPri/PCM_frmCanEfectivos.aspx"
-              class="text-white text-decoration-none"
-            >
-              <div
-                class="border border-white rounded-circle mx-auto d-flex justify-content-center align-items-center mb-2"
-                style="width: 80px; height: 80px; transition: all 0.3s"
-              >
-                <i class="bi bi-geo-alt fs-3"></i>
+            <div class="card h-100 shadow">
+              <a
+                href="https://www.cajahuancayo.com.pe/PCM_Noticias/PCM_frmDetNoticia.aspx?cCodNotici=N1002&cCodigo=85"
+                ><img
+                  src="img/carta1.jpg"
+                  class="card-img-top"
+                  alt="Exposición"
+              /></a>
+              <div class="card-body">
+                <h6 class="card-title">
+                  Caja Huancayo impulsa el arte y la cultura...
+                </h6>
+                <p class="card-text small">En línea con su compromiso...</p>
               </div>
-              <h6>Canales de atención</h6>
-            </a>
+            </div>
           </div>
           <div class="col-md-4">
-            <a
-              href="https://www.cajahuancayo.com.pe/PCM_AtenCliente/PCM_frmVeCarfianza.aspx?cNomApl=Valida%20Carta%20Fianza"
-              class="text-white text-decoration-none"
-            >
-              <div
-                class="border border-white rounded-circle mx-auto d-flex justify-content-center align-items-center mb-2"
-                style="width: 80px; height: 80px; transition: all 0.3s"
-              >
-                <i class="bi bi-envelope-check fs-3"></i>
+            <div class="card h-100 shadow">
+              <a
+                href="https://www.cajahuancayo.com.pe/PCM_Noticias/PCM_frmDetNoticia.aspx?cCodNotici=N1001&cCodigo=85"
+                ><img src="img/carta2.png" class="card-img-top" alt="Premio"
+              /></a>
+              <div class="card-body">
+                <h6 class="card-title">Con premio CX Index 2025...</h6>
+                <p class="card-text small">Según estudio de Datum...</p>
               </div>
-              <h6>Valida carta fianza</h6>
-            </a>
+            </div>
           </div>
           <div class="col-md-4">
-            <a
-              href="https://www.cajahuancayo.com.pe/PCM_MenSecPri/PCM_frmCanEfectivos.aspx"
-              class="text-white text-decoration-none"
-            >
-              <div
-                class="border border-white rounded-circle mx-auto d-flex justify-content-center align-items-center mb-2"
-                style="width: 80px; height: 80px; transition: all 0.3s"
-              >
-                <i class="bi bi-briefcase fs-3"></i>
+            <div class="card h-100 shadow">
+              <a
+                href="https://www.cajahuancayo.com.pe/PCM_Noticias/PCM_frmDetNoticia.aspx?cCodNotici=N1000&cCodigo=85"
+                ><img src="img/carta3.jpg" class="card-img-top" alt="Taller"
+              /></a>
+              <div class="card-body">
+                <h6 class="card-title">Caja Huancayo inaugura taller...</h6>
+                <p class="card-text small">Impulsa la adaptación...</p>
               </div>
-              <h6>Trabaja en Caja Huancayo</h6>
-            </a>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
 
+        <div class="mt-4">
+          <a
+            href="https://www.cajahuancayo.com.pe/PCM_Noticias/PCM_frmNoticias.aspx?cCodigo=85"
+            class="btn btn-danger"
+            >Ver más</a
+          >
+        </div>
+      </section>
+
+      <!-- Sección de iconos -->
+      <section class="bg-danger text-white py-5">
+        <div class="container text-center">
+          <div class="row g-4">
+            <div class="col-md-4">
+              <a
+                href="https://www.cajahuancayo.com.pe/PCM_MenSecPri/PCM_frmCanEfectivos.aspx"
+                class="text-white text-decoration-none"
+              >
+                <div
+                  class="border border-white rounded-circle mx-auto d-flex justify-content-center align-items-center mb-2"
+                  style="width: 80px; height: 80px; transition: all 0.3s"
+                >
+                  <i class="bi bi-geo-alt fs-3"></i>
+                </div>
+                <h6>Canales de atención</h6>
+              </a>
+            </div>
+            <div class="col-md-4">
+              <a
+                href="https://www.cajahuancayo.com.pe/PCM_AtenCliente/PCM_frmVeCarfianza.aspx?cNomApl=Valida%20Carta%20Fianza"
+                class="text-white text-decoration-none"
+              >
+                <div
+                  class="border border-white rounded-circle mx-auto d-flex justify-content-center align-items-center mb-2"
+                  style="width: 80px; height: 80px; transition: all 0.3s"
+                >
+                  <i class="bi bi-envelope-check fs-3"></i>
+                </div>
+                <h6>Valida carta fianza</h6>
+              </a>
+            </div>
+            <div class="col-md-4">
+              <a
+                href="https://www.cajahuancayo.com.pe/PCM_MenSecPri/PCM_frmCanEfectivos.aspx"
+                class="text-white text-decoration-none"
+              >
+                <div
+                  class="border border-white rounded-circle mx-auto d-flex justify-content-center align-items-center mb-2"
+                  style="width: 80px; height: 80px; transition: all 0.3s"
+                >
+                  <i class="bi bi-briefcase fs-3"></i>
+                </div>
+                <h6>Trabaja en Caja Huancayo</h6>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
     <!-- Footer -->
     <footer class="bg-dark text-light py-5">
       <div class="container">
