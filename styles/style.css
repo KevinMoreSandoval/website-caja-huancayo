@@ -15,22 +15,16 @@
   background-color: red;
 }
 .nav-link{
-  color: black;
-
-
-
-
-
+  color: black !important;
 }
-
 .nav-link:hover{
-  font-weight: 600;
+  font-weight: 600 !important;
 }
 .nav-item{
   margin-bottom: 20px;
 }
 .nav-item:hover{
-  border-bottom: 2px solid red;
+  border-bottom: 2px solid red !important;
   
 }
 .otro{
