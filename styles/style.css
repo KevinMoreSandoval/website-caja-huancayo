@@ -14,3 +14,25 @@
   color: white;
   background-color: red;
 }
+.nav-link{
+  color: black;
+
+
+
+
+
+}
+
+.nav-link:hover{
+  font-weight: 600;
+}
+.nav-item{
+  margin-bottom: 20px;
+}
+.nav-item:hover{
+  border-bottom: 2px solid red;
+  
+}
+.otro{
+  margin-bottom: 50px !important;
+}

@@ -30,28 +30,28 @@
     <!-- Header -->
     <header class="container mt-3">
       <!-- Botones superiores -->
-      <div class="d-flex justify-content-center mb-3">
+      <div class="d-flex justify-content-center mb-3 otro">
         <div class="d-flex flex-wrap gap-1">
-          <a
+          <!-- <a
             href="https://www.cajahuancayo.com.pe/homebankinghyo/CJN_frmBloTarjet.aspx"
-            class="btn btn-outline-danger fw-bold d-flex align-items-center px-2 py-1 fs-6 px-md-3 py-md-2 fs-md-5"
+            class="btn btn-outline-danger  d-flex align-items-center px-2 py-1 fs-6 px-md-3 py-md-2 fs-md-5"
           >
             <i class="bi bi-lock me-1 fs-6 fs-md-5"></i> Bloqueos
           </a>
 
           <a
             href="https://www.cajahuancayo.com.pe/homebankinghyo/CJN_frmInicio.aspx"
-            class="btn btn-outline-danger fw-bold d-flex align-items-center px-2 py-1 fs-6 px-md-3 py-md-2 fs-md-5"
+            class="btn btn-outline-danger  d-flex align-items-center px-2 py-1 fs-6 px-md-3 py-md-2 fs-md-5"
           >
             <i class="bi bi-person me-1 fs-6 fs-md-5"></i> Caja Virtual
           </a>
 
           <a
             href="https://adm.cajahuancayo.com.pe/bienvenida"
-            class="btn btn-outline-danger fw-bold d-flex align-items-center px-2 py-1 fs-6 px-md-3 py-md-2 fs-md-5"
+            class="btn btn-outline-danger  d-flex align-items-center px-2 py-1 fs-6 px-md-3 py-md-2 fs-md-5"
           >
             <i class="bi bi-people me-1 fs-6 fs-md-5"></i> Colaboradores
-          </a>
+          </a> -->
         </div>
       </div>
 
@@ -62,7 +62,32 @@
         </a>
 
         <!-- Búsqueda solo en desktop -->
-        <form class="d-none d-lg-flex" role="search">
+        <!-- Botones superiores -->
+        <div class="d-none d-xl-flex justify-content-center mb-3">
+          <div class="d-flex flex-wrap gap-1">
+            <a
+              href="https://www.cajahuancayo.com.pe/homebankinghyo/CJN_frmBloTarjet.aspx"
+              class="btn btn-outline-danger d-flex align-items-center px-2 py-1 fs-6 px-md-3 py-md-2 fs-md-5"
+            >
+              <i class="bi bi-lock me-1 fs-6 fs-md-5"></i> Bloqueos
+            </a>
+
+            <a
+              href="https://www.cajahuancayo.com.pe/homebankinghyo/CJN_frmInicio.aspx"
+              class="btn btn-outline-danger d-flex align-items-center px-2 py-1 fs-6 px-md-3 py-md-2 fs-md-5"
+            >
+              <i class="bi bi-person me-1 fs-6 fs-md-5"></i> Caja Virtual
+            </a>
+
+            <a
+              href="https://adm.cajahuancayo.com.pe/bienvenida"
+              class="btn btn-outline-danger d-flex align-items-center px-2 py-1 fs-6 px-md-3 py-md-2 fs-md-5"
+            >
+              <i class="bi bi-people me-1 fs-6 fs-md-5"></i> Colaboradores
+            </a>
+          </div>
+        </div>
+        <form class="d-none d-xl-flex" role="search">
           <input
             class="form-control me-2"
             type="search"
@@ -76,7 +101,7 @@
 
         <!-- Botón móvil -->
         <button
-          class="btn d-lg-none border-0"
+          class="btn d-xl-none border-0"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#menuMovil"
@@ -89,15 +114,12 @@
     </header>
 
     <!-- Navbar desktop -->
-    <nav class="navbar navbar-expand-lg bg-danger">
-      <div class="container">
-        <div class="collapse navbar-collapse" id="navbarNav">
+    <nav class="navbar navbar-expand-md d-none d-none d-xl-flex">
+      <div class="container ">
+        <div class="collapse navbar-collapse " id="navbarNav">
           <ul class="navbar-nav w-100 justify-content-between text-center">
             <li class="nav-item dropdown">
-              <a
-                class="nav-link fw-bold text-white dropdown-toggle"
-                href="#"
-                data-bs-toggle="dropdown"
+              <a class="nav-link" href="#" data-bs-toggle="dropdown"
                 >Productos y Servicios</a
               >
               <ul class="dropdown-menu">
@@ -113,10 +135,7 @@
               </ul>
             </li>
             <li class="nav-item dropdown">
-              <a
-                class="nav-link fw-bold text-white dropdown-toggle"
-                href="#"
-                data-bs-toggle="dropdown"
+              <a class="nav-link" href="#" data-bs-toggle="dropdown"
                 >Nuestra Caja</a
               >
               <ul class="dropdown-menu">
@@ -143,10 +162,7 @@
               </ul>
             </li>
             <li class="nav-item dropdown">
-              <a
-                class="nav-link fw-bold text-white dropdown-toggle"
-                href="#"
-                data-bs-toggle="dropdown"
+              <a class="nav-link" href="#" data-bs-toggle="dropdown"
                 >Proveedores</a
               >
               <ul class="dropdown-menu">
@@ -193,10 +209,7 @@
               </ul>
             </li>
             <li class="nav-item dropdown">
-              <a
-                class="nav-link fw-bold text-white dropdown-toggle"
-                href="#"
-                data-bs-toggle="dropdown"
+              <a class="nav-link" href="#" data-bs-toggle="dropdown"
                 >Transparencia</a
               >
               <ul class="dropdown-menu">
@@ -225,10 +238,7 @@
               </ul>
             </li>
             <li class="nav-item dropdown">
-              <a
-                class="nav-link fw-bold text-white dropdown-toggle"
-                href="#"
-                data-bs-toggle="dropdown"
+              <a class="nav-link" href="#" data-bs-toggle="dropdown"
                 >Gobierno corporativo</a
               >
               <ul class="dropdown-menu">
@@ -257,10 +267,7 @@
               </ul>
             </li>
             <li class="nav-item dropdown">
-              <a
-                class="nav-link fw-bold text-white dropdown-toggle"
-                href="#"
-                data-bs-toggle="dropdown"
+              <a class="nav-link" href="#" data-bs-toggle="dropdown"
                 >Atención al cliente</a
               >
               <ul class="dropdown-menu">
@@ -299,10 +306,7 @@
               </ul>
             </li>
             <li class="nav-item dropdown">
-              <a
-                class="nav-link fw-bold text-white dropdown-toggle"
-                href="#"
-                data-bs-toggle="dropdown"
+              <a class="nav-link" href="#" data-bs-toggle="dropdown"
                 >Estado de Emergencia</a
               >
               <ul class="dropdown-menu">
@@ -316,7 +320,7 @@
     </nav>
 
     <!-- Menú móvil moderno con acordeón -->
-    <div class="collapse d-lg-none" id="menuMovil">
+    <div class="collapse d-xl-none" id="menuMovil">
       <div class="bg-danger p-3">
         <!-- Buscador -->
         <form class="d-flex mb-3" role="search">
@@ -856,10 +860,10 @@
         <h5 class="fw-bold mt-5">E-NEWS CAJA HUANCAYO</h5>
         <h6 class="text-muted mb-4">Te informamos</h6>
 
-        <div class="row g-4">
+        <div class="row g-4 ">
           <div class="col-md-4">
             <div class="card h-100 shadow">
-              <div class="card-body h-75">
+              <div class="card-body h-75 ">
                 <a
                   href="https://www.cajahuancayo.com.pe/PCM_Noticias/PCM_frmDetNoticia.aspx?cCodNotici=N1002&cCodigo=85"
                   target="_blank"
