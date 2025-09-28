@@ -1,32 +1,30 @@
+.banner-inicial {
+  height: 40vw;
+  width: 40vw ;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
 .card-img-top {
-    height: 220px;     
-    object-fit: cover;  
-  }
-
-.bg-danger{
+  height: 220px;
+  object-fit: cover;
+}
+.bg-danger {
   background-color: red !important;
 }
-.btn-outline-danger{
+.btn-outline-danger {
   color: red;
-
 }
-.btn-outline-danger:hover{
+.btn-outline-danger:hover {
   color: white;
   background-color: red;
 }
-.nav-link{
-  color: black !important;
+.nav-link:hover {
+  font-weight: 500;
 }
-.nav-link:hover{
-  font-weight: 600 !important;
+.nav-item:hover {
+  border-bottom: 2px solid red;
 }
-.nav-item{
-  margin-bottom: 20px;
-}
-.nav-item:hover{
-  border-bottom: 2px solid red !important;
-  
-}
-.otro{
-  margin-bottom: 50px !important;
+.card-h {
+  max-height: 220px;
 }
