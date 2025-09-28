@@ -14,6 +14,24 @@
   width: 100px;
   height: 100px;
 }
+
+/*Botones negocios y personas*/
+.btn-person{
+  border-top-left-radius: 15px;
+  border-top-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 15px;
+  background-color: rgb(73, 69, 69);
+  -webkit-transition: font-size 0.05s ease-out;
+  transition: font-size 0.05s ease-out;
+  -webkit-transition: background-color 0.05s ease-out;
+  transition: font-background-color 0.05s ease-out;
+}
+.btn-person:hover{
+  font-size: 18px;
+  background-color: #e03737e8;
+}
+
 /* Solo para hover especial de los ítems rojos */
 .mi-rojo:hover {
   cursor: pointer;
