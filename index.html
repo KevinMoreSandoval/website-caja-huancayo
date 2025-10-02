@@ -52,21 +52,31 @@
       </div>
     </div>
     <!-- Header -->
-    <header class="container mt-3">
-      <!-- Botones superiores -->
-      <div class="d-flex justify-content-center mb-3">
-        <div class=" gap-5ñ">
-          <button type="button" class="btn btn-person text-light fw-bold bg-dark">
-            Negocios
-          </button>
-          <button type="button" class="btn btn-person text-light fw-bold bg-dark">
-            Personas
-          </button>
-        </div>
+    <nav class="bg-danger w-100">
+      <div class="container">
+        <ul class="nav">
+          <li class="nav-item nav-item-primary">
+            <a class="nav-link fw-bold text-uppercase text-white" href="#"
+              >Personas</a
+            >
+          </li>
+          <li class="nav-item nav-item-primary">
+            <a class="nav-link fw-bold text-uppercase text-white" href="#"
+              >Negocios</a
+            >
+          </li>
+          <li class="nav-item nav-item-primary">
+            <a class="nav-link fw-bold text-uppercase text-white" href="#"
+              >Colaboradores</a
+            >
+          </li>
+        </ul>
       </div>
+    </nav>
+    <header class="container mt-3">
       <!-- Logo + búsqueda + móvil -->
       <div class="d-flex justify-content-between align-items-center">
-        <a class="navbar-brand w-25" href="index.html">
+        <a class="navbar-brand w-25 logo" href="index.html">
           <img src="img/log.png" alt="Caja Huancayo" class="img-fluid" />
         </a>
 
@@ -87,13 +97,6 @@
             >
               <i class="bi bi-person me-1 fs-6 fs-md-5"></i> Caja Virtual
             </a>
-
-            <a
-              href="https://adm.cajahuancayo.com.pe/bienvenida"
-              class="btn btn-outline-danger d-flex align-items-center px-2 py-1 fs-6 px-md-3 py-md-2 fs-md-5"
-            >
-              <i class="bi bi-people me-1 fs-6 fs-md-5"></i> Colaboradores
-            </a>
           </div>
         </div>
         <!-- Busqueda -->
@@ -109,27 +112,54 @@
           </button>
         </form>
 
-        <!-- Botón móvil -->
-        <button
-          class="btn d-xl-none border-0"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#menuMovil"
-          aria-controls="menuMovil"
-          aria-expanded="false"
-        >
-          <i class="bi bi-list fs-1 text-danger"></i>
-        </button>
+        <!-- Botón móvil y Bloqueo -->
+        <div class="d-xl-none">
+          <!-- type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#menuMovil"
+            aria-controls="menuMovil"
+            aria-expanded="false" -->
+          <button
+            class="btn d-xl-none border-0"
+            
+          >
+           <i class="bi bi-lock"></i>
+
+          </button>
+          <button
+            class="btn d-xl-none border-0"
+            
+          >
+           <i class="bi bi-safe"></i>
+
+          </button>
+          <button
+            class="btn d-xl-none border-0"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#menuMovil"
+            aria-controls="menuMovil"
+            aria-expanded="false"
+          >
+            <i class="bi bi-list fs-1 text-danger"></i>
+          </button>
+        </div>
       </div>
     </header>
 
     <!-- Navbar desktop -->
     <nav class="navbar navbar-expand-md d-none d-none d-xl-flex mb-3">
       <div class="container">
-        <div class="navbar-collapse d-flex justify-content-center" id="navbarNav">
-          <ul class="navbar-nav d-flex justify-content-between gap-5" >
+        <div
+          class="navbar-collapse d-flex justify-content-center"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav d-flex justify-content-between gap-5">
             <li class="nav-item dropdown">
-              <a class="nav-link" href="#" data-bs-toggle="dropdown"
+              <a
+                class="nav-link nav-link-desktop"
+                href="#"
+                data-bs-toggle="dropdown"
                 >Productos y Servicios</a
               >
               <ul class="dropdown-menu">
@@ -145,7 +175,10 @@
               </ul>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link" href="#" data-bs-toggle="dropdown"
+              <a
+                class="nav-link nav-link-desktop"
+                href="#"
+                data-bs-toggle="dropdown"
                 >Nuestra Caja</a
               >
               <ul class="dropdown-menu">
@@ -172,7 +205,10 @@
               </ul>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link" href="#" data-bs-toggle="dropdown"
+              <a
+                class="nav-link nav-link-desktop"
+                href="#"
+                data-bs-toggle="dropdown"
                 >Proveedores</a
               >
               <ul class="dropdown-menu">
@@ -219,7 +255,10 @@
               </ul>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link" href="#" data-bs-toggle="dropdown"
+              <a
+                class="nav-link nav-link-desktop"
+                href="#"
+                data-bs-toggle="dropdown"
                 >Transparencia</a
               >
               <ul class="dropdown-menu">
@@ -248,7 +287,10 @@
               </ul>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link" href="#" data-bs-toggle="dropdown"
+              <a
+                class="nav-link nav-link-desktop"
+                href="#"
+                data-bs-toggle="dropdown"
                 >Gobierno corporativo</a
               >
               <ul class="dropdown-menu">
@@ -277,7 +319,10 @@
               </ul>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link" href="#" data-bs-toggle="dropdown"
+              <a
+                class="nav-link nav-link-desktop"
+                href="#"
+                data-bs-toggle="dropdown"
                 >Atención al cliente</a
               >
               <ul class="dropdown-menu">
@@ -316,7 +361,10 @@
               </ul>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link" href="#" data-bs-toggle="dropdown"
+              <a
+                class="nav-link nav-link-desktop"
+                href="#"
+                data-bs-toggle="dropdown"
                 >Estado de Emergencia</a
               >
               <ul class="dropdown-menu">
