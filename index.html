@@ -1335,7 +1335,7 @@
             <h5 class="modal-tittle" id="tituloModal">BLOQUEO DE TARJETAS</h5>
           </div>
           <div class="modal-body">
-            <form>
+            <form id="bloquearTarjeta">
               <div class="row">
                 <div class="form-group col-md-5">
                   <label for="documento">Tipo de Documento</label>
@@ -1381,13 +1381,14 @@
               </div>
               <div class="row justify-content-center">
                 <div class="form-group col-md-5 text-center">
-                  <label for="clave">Clave de 4 digitos</label>
+                  <label for="clave1">Clave de 4 digitos</label>
                   <input
-                    type="password"
+                    type="number"
                     class="form-control"
+                    min="1000"
                     class="form-control"
-                    maxlength="4"
                     id="clave1"
+                    maxlength="4"
                     required
                   />
                 </div>
@@ -1506,7 +1507,7 @@
             </form>
           </div>
           <div class="modal-footer">
-            <button type="submit" class="btn btn-danger">
+            <button type="submit" class="btn btn-danger" form="bloquearTarjeta">
               Bloquear Tarjeta
             </button>
             <button
@@ -1529,12 +1530,12 @@
       aria-hidden="true"
     >
       <div class="modal-dialog">
-        <div class="modal-content modal-center ">
+        <div class="modal-content modal-center">
           <div class="modal-header bg-danger">
             <img src="img/logo negro (Custom).png" />
           </div>
           <div class="modal-body">
-            <form>
+            <form id="cajaVirtual">
               <div class="row justify-content-center">
                 <div class="form-group col-md-5">
                   <label for="tarjeta">Tipo de tarjeta</label>
@@ -1587,9 +1588,10 @@
                     <label for="clave">Ingresa tu clave</label>
                     <input
                       type="password"
+                      title="Debe tener entre 6 y 12 caracteres"
                       class="form-control"
                       required
-                      maxlength="4"
+                      maxlength="12"
                     />
                   </div>
                 </div>
@@ -1597,7 +1599,9 @@
             </form>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-danger">Ingresar</button>
+            <button type="submit" class="btn btn-danger" form="cajaVirtual">
+              Ingresar
+            </button>
             <button
               type="button"
               class="btn btn-secondary"
