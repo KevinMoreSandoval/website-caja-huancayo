@@ -27,31 +27,6 @@
   </head>
 
   <body>
-    <div class="modal fade" id="promoModal" tabindex="-1" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered modal-lg">
-        <div
-          class="modal-content p-0 border-0 bg-transparent shadow-none banner-inicial"
-        >
-          <!-- Botón cerrar arriba a la derecha -->
-          <button
-            type="button"
-            class="btn-close position-absolute top-0 end-0 m-2 z-3 bg-white rounded-circle p-2"
-            data-bs-dismiss="modal"
-            aria-label="Close"
-          ></button>
-
-          <!-- Imagen del banner -->
-          <a
-            href="https://www.cajahuancayo.com.pe/PCM_AtenCliente/PCM_frmRegConDat.aspx"
-            ><img
-              src="img/bannerInicial.jpg"
-              alt="GranSorteo"
-              class="img-fluid w-100 rounded"
-          /></a>
-        </div>
-      </div>
-    </div>
-    <!-- Header -->
     <nav class="bg-danger w-100">
       <div class="container">
         <ul class="nav">
@@ -73,6 +48,7 @@
         </ul>
       </div>
     </nav>
+
     <header class="container mt-3">
       <!-- Logo + búsqueda + móvil -->
       <div class="d-flex justify-content-between align-items-center">
@@ -91,198 +67,6 @@
             >
               <i class="bi bi-lock me-1 fs-6 fs-md-5"></i> Bloqueos
             </a>
-            <div
-              class="modal fade"
-              id="miModal"
-              tabindex="-1"
-              aria-labelledby="miModalLabel"
-              aria-hidden="true"
-            >
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-tittle" id="tituloModal">
-                      BLOQUEO DE TARJETAS
-                    </h5>
-                  </div>
-                  <div class="modal-body">
-                    <form>
-                      <div class="row">
-                        <div class="form-group col-md-5">
-                          <label for="documento">Tipo de Documento</label>
-                          <select
-                            class="form-select"
-                            aria-label="Default select example"
-                          >
-                            <option selected>D.N.I.</option>
-                            <option value="c. extranjeria">
-                              C. EXTRANJERIA
-                            </option>
-                            <option value="pass">PASS</option>
-                          </select>
-                        </div>
-                        <div class="form-group col-md-5">
-                          <label for="numero">Numero de Documento</label>
-                          <input
-                            type="number"
-                            class="form-control"
-                            id="numero"
-                            required
-                          />
-                        </div>
-                        <div class="form-group col-md-6">
-                          <label for="motivo">Motivo de Bloqueo</label>
-                          <select
-                            class="form-select"
-                            aria-label="Default select example"
-                          >
-                            <option selected>PERDIDA DE TARJETA</option>
-                            <option value="retencion">
-                              RETENCION EN CAJERO
-                            </option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="form-group col-md-12">
-                          <label for="detalle">Detalle:</label>
-                          <textarea
-                            class="form-control"
-                            id="detalle"
-                            rows="4"
-                            required
-                          ></textarea>
-                        </div>
-                      </div>
-                      <div class="row justify-content-center">
-                        <div class="form-group col-md-5 text-center">
-                          <label for="clave">Clave de 4 digitos</label>
-                          <input
-                            type="number"
-                            class="form-control"
-                            id="clave"
-                            required
-                          />
-                        </div>
-                      </div>
-                      <div class="row mt-3 d-flex justify-content-center">
-                        <div class="text-center w-75">
-                          <div class="row mb-2">
-                            <div class="col">
-                              <button
-                                type="button"
-                                class="btn btn-danger w-100 num-btn"
-                              >
-                                2
-                              </button>
-                            </div>
-                            <div class="col">
-                              <button
-                                type="button"
-                                class="btn btn-danger w-100 num-btn"
-                              >
-                                7
-                              </button>
-                            </div>
-                            <div class="col">
-                              <button
-                                type="button"
-                                class="btn btn-danger w-100 num-btn"
-                              >
-                                8
-                              </button>
-                            </div>
-                          </div>
-                          <div class="row mb-2">
-                            <div class="col">
-                              <button
-                                type="button"
-                                class="btn btn-danger w-100 num-btn"
-                              >
-                                9
-                              </button>
-                            </div>
-                            <div class="col">
-                              <button
-                                type="button"
-                                class="btn btn-danger w-100 num-btn"
-                              >
-                                5
-                              </button>
-                            </div>
-                            <div class="col">
-                              <button
-                                type="button"
-                                class="btn btn-danger w-100 num-btn"
-                              >
-                                1
-                              </button>
-                            </div>
-                          </div>
-                          <div class="row mb-2">
-                            <div class="col">
-                              <button
-                                type="button"
-                                class="btn btn-danger w-100 num-btn"
-                              >
-                                3
-                              </button>
-                            </div>
-                            <div class="col">
-                              <button
-                                type="button"
-                                class="btn btn-danger w-100 num-btn"
-                              >
-                                6
-                              </button>
-                            </div>
-                            <div class="col">
-                              <button
-                                type="button"
-                                class="btn btn-danger w-100 num-btn"
-                              >
-                                4
-                              </button>
-                            </div>
-                          </div>
-                          <div class="row">
-                            <div class="col-4">
-                              <button
-                                type="button"
-                                class="btn btn-danger w-100 num-btn"
-                              >
-                                0
-                              </button>
-                            </div>
-                            <div class="col-8">
-                              <button
-                                type="button"
-                                class="btn btn-danger w-100"
-                                id="clearBtn"
-                              >
-                                Limpiar
-                              </button>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </form>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-primary">
-                      Bloquear Tarjeta
-                    </button>
-                    <button
-                      type="button"
-                      class="btn btn-secondary"
-                      data-bs-dismiss="modal"
-                    >
-                      Cerrar
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
 
             <a
               class="btn btn-outline-danger d-flex align-items-center px-2 py-1 fs-6 px-md-3 py-md-2 fs-md-5"
@@ -291,96 +75,6 @@
             >
               <i class="bi bi-person me-1 fs-6 fs-md-5"></i> Caja Virtual
             </a>
-            <div
-              class="modal fade"
-              id="miModal2"
-              tabindex="-1"
-              aria-labelledby="miModalLabel"
-              aria-hidden="true"
-            >
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header bg-danger">
-                    <img src="img/logo negro (Custom).png" />
-                  </div>
-                  <div class="modal-body">
-                    <form>
-                      <div class="row justify-content-center">
-                        <div class="form-group col-md-5">
-                          <label for="tarjeta">Tipo de tarjeta</label>
-                          <select
-                            class="form-select"
-                            aria-label="Default select example"
-                          >
-                            <option selected>Escoja su tarjeta</option>
-                            <option value="virtual">VIRTUAL EMPRESAS</option>
-                            <option value="rapicard">RAPICARD VISA</option>
-                            <option value="rapifuturo">RAPICARD FUTURO</option>
-                          </select>
-                        </div>
-                        <div class="form-group col-md-5">
-                          <label for="tarjeta">Numero de tarjeta</label>
-                          <input
-                            type="number"
-                            class="form-control"
-                            id="tarjeta"
-                            required
-                          />
-                        </div>
-                      </div>
-                      <div class="row justify-content-center">
-                        <div class="form-group col-md-5">
-                          <label for="tarjeta">Tipo de Documento</label>
-                          <select
-                            class="form-select"
-                            aria-label="Default select example"
-                          >
-                            <option selected>D.N.I.</option>
-                            <option value="extranjeria">C. EXTRANJERIA</option>
-                            <option value="pass">PASS</option>
-                            <option value="carnet">CARNET REFU.</option>
-                            <option value="ced">CED. IDENT.</option>
-                            <option value="ptp">PTP-CPP</option>
-                          </select>
-                        </div>
-                        <div class="form-group col-md-5">
-                          <label for="numero">Numero de Documento</label>
-                          <input
-                            type="number"
-                            class="form-control"
-                            id="numero"
-                            required
-                          />
-                        </div>
-                        <div class="row justify-content-center">
-                          <div class="form-group col-md-5 text-center">
-                            <label for="clave">Ingresa tu clave</label>
-                            <input
-                              type="number"
-                              class="form-control"
-                              id="clave"
-                              required
-                            />
-                          </div>
-                        </div>
-                      </div>
-                    </form>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-primary">
-                      Ingresar
-                    </button>
-                    <button
-                      type="button"
-                      class="btn btn-secondary"
-                      data-bs-dismiss="modal"
-                    >
-                      Cerrar
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
         <!-- Busqueda -->
@@ -399,302 +93,20 @@
 
         <!-- Botón móvil y Bloqueo -->
         <div class="d-xl-none">
-          <!-- type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#menuMovil"
-            aria-controls="menuMovil"
-            aria-expanded="false" -->
           <button
             class="btn d-xl-none border-0"
             data-bs-toggle="modal"
-            data-bs-target="#miModal3"
+            data-bs-target="#miModal"
           >
             <i class="bi bi-lock"></i>
           </button>
-          <div
-            class="modal fade"
-            id="miModal3"
-            tabindex="-1"
-            aria-labelledby="miModalLabel"
-            aria-hidden="true"
-          >
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-tittle" id="tituloModal">
-                    BLOQUEO DE TARJETAS
-                  </h5>
-                </div>
-                <div class="modal-body">
-                  <div class="row">
-                    <div class="form-group col-md-5">
-                      <label for="documento">Tipo de Documento</label>
-                      <select
-                        class="form-select"
-                        aria-label="Default select example"
-                      >
-                        <option selected>D.N.I.</option>
-                        <option value="c. extranjeria">C. EXTRANJERIA</option>
-                        <option value="pass">PASS</option>
-                      </select>
-                    </div>
-                    <div class="form-group col-md-5">
-                      <label for="numero">Numero de Documento</label>
-                      <input
-                        type="number"
-                        class="form-control"
-                        id="numero"
-                        required
-                      />
-                    </div>
-                    <div class="form-group col-md-6">
-                      <label for="motivo">Motivo de Bloqueo</label>
-                      <select
-                        class="form-select"
-                        aria-label="Default select example"
-                      >
-                        <option selected>PERDIDA DE TARJETA</option>
-                        <option value="retencion">RETENCION EN CAJERO</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="form-group col-md-12">
-                      <label for="detalle">Detalle:</label>
-                      <textarea
-                        class="form-control"
-                        id="detalle"
-                        rows="4"
-                        required
-                      ></textarea>
-                    </div>
-                  </div>
-                  <div class="row justify-content-center">
-                    <div class="form-group col-md-5 text-center">
-                      <label for="clave">Clave de 4 digitos</label>
-                      <input
-                        type="number"
-                        class="form-control"
-                        id="clave"
-                        required
-                      />
-                    </div>
-                  </div>
-                  <div class="row mt-3 d-flex justify-content-center">
-                    <div class="text-center w-75">
-                      <div class="row mb-2">
-                        <div class="col">
-                          <button
-                            type="button"
-                            class="btn btn-danger w-100 num-btn"
-                          >
-                            2
-                          </button>
-                        </div>
-                        <div class="col">
-                          <button
-                            type="button"
-                            class="btn btn-danger w-100 num-btn"
-                          >
-                            7
-                          </button>
-                        </div>
-                        <div class="col">
-                          <button
-                            type="button"
-                            class="btn btn-danger w-100 num-btn"
-                          >
-                            8
-                          </button>
-                        </div>
-                      </div>
-                      <div class="row mb-2">
-                        <div class="col">
-                          <button
-                            type="button"
-                            class="btn btn-danger w-100 num-btn"
-                          >
-                            9
-                          </button>
-                        </div>
-                        <div class="col">
-                          <button
-                            type="button"
-                            class="btn btn-danger w-100 num-btn"
-                          >
-                            5
-                          </button>
-                        </div>
-                        <div class="col">
-                          <button
-                            type="button"
-                            class="btn btn-danger w-100 num-btn"
-                          >
-                            1
-                          </button>
-                        </div>
-                      </div>
-                      <div class="row mb-2">
-                        <div class="col">
-                          <button
-                            type="button"
-                            class="btn btn-danger w-100 num-btn"
-                          >
-                            3
-                          </button>
-                        </div>
-                        <div class="col">
-                          <button
-                            type="button"
-                            class="btn btn-danger w-100 num-btn"
-                          >
-                            6
-                          </button>
-                        </div>
-                        <div class="col">
-                          <button
-                            type="button"
-                            class="btn btn-danger w-100 num-btn"
-                          >
-                            4
-                          </button>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-4">
-                          <button
-                            type="button"
-                            class="btn btn-danger w-100 num-btn"
-                          >
-                            0
-                          </button>
-                        </div>
-                        <div class="col-8">
-                          <button
-                            type="button"
-                            class="btn btn-danger w-100"
-                            id="clearBtn"
-                          >
-                            Limpiar
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-primary">
-                    Bloquear Tarjeta
-                  </button>
-                  <button
-                    type="button"
-                    class="btn btn-secondary"
-                    data-bs-dismiss="modal"
-                  >
-                    Cerrar
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-
           <button
             class="btn d-xl-none border-0"
             data-bs-toggle="modal"
-            data-bs-target="#miModal4"
+            data-bs-target="#miModal2"
           >
             <i class="bi bi-safe"></i>
           </button>
-          <div
-            class="modal fade"
-            id="miModal4"
-            tabindex="-1"
-            aria-labelledby="miModalLabel"
-            aria-hidden="true"
-          >
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header bg-danger">
-                  <img src="img/logo negro (Custom).png" />
-                </div>
-                <div class="modal-body">
-                  <form>
-                    <div class="row justify-content-center">
-                      <div class="form-group col-md-5">
-                        <label for="tarjeta">Tipo de tarjeta</label>
-                        <select
-                          class="form-select"
-                          aria-label="Default select example"
-                        >
-                          <option selected>Escoja su tarjeta</option>
-                          <option value="virtual">VIRTUAL EMPRESAS</option>
-                          <option value="rapicard">RAPICARD VISA</option>
-                          <option value="rapifuturo">RAPICARD FUTURO</option>
-                        </select>
-                      </div>
-                      <div class="form-group col-md-5">
-                        <label for="tarjeta">Numero de tarjeta</label>
-                        <input
-                          type="number"
-                          class="form-control"
-                          id="tarjeta"
-                          required
-                        />
-                      </div>
-                    </div>
-                    <div class="row justify-content-center">
-                      <div class="form-group col-md-5">
-                        <label for="tarjeta">Tipo de Documento</label>
-                        <select
-                          class="form-select"
-                          aria-label="Default select example"
-                        >
-                          <option selected>D.N.I.</option>
-                          <option value="extranjeria">C. EXTRANJERIA</option>
-                          <option value="pass">PASS</option>
-                          <option value="carnet">CARNET REFU.</option>
-                          <option value="ced">CED. IDENT.</option>
-                          <option value="ptp">PTP-CPP</option>
-                        </select>
-                      </div>
-                      <div class="form-group col-md-5">
-                        <label for="numero">Numero de Documento</label>
-                        <input
-                          type="number"
-                          class="form-control"
-                          id="numero"
-                          required
-                        />
-                      </div>
-                      <div class="row justify-content-center">
-                        <div class="form-group col-md-5 text-center">
-                          <label for="clave">Ingresa tu clave</label>
-                          <input
-                            type="number"
-                            class="form-control"
-                            id="clave"
-                            required
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-primary">
-                    Ingresar
-                  </button>
-                  <button
-                    type="button"
-                    class="btn btn-secondary"
-                    data-bs-dismiss="modal"
-                  >
-                    Cerrar
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
 
           <button
             class="btn d-xl-none border-0"
@@ -1882,6 +1294,322 @@
         </div>
       </div>
     </footer>
+
+    <!-- Modales -->
+    <!-- Promoción -->
+    <div class="modal fade" id="promoModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div
+          class="modal-content p-0 border-0 bg-transparent shadow-none banner-inicial"
+        >
+          <!-- Botón cerrar arriba a la derecha -->
+          <button
+            type="button"
+            class="btn-close position-absolute top-0 end-0 m-2 z-3 bg-white rounded-circle p-2"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+
+          <!-- Imagen del banner -->
+          <a
+            href="https://www.cajahuancayo.com.pe/PCM_AtenCliente/PCM_frmRegConDat.aspx"
+            ><img
+              src="img/bannerInicial.jpg"
+              alt="GranSorteo"
+              class="img-fluid w-100 rounded"
+          /></a>
+        </div>
+      </div>
+    </div>
+    <!-- Bloqueo Emergente -->
+    <div
+      class="modal fade"
+      id="miModal"
+      tabindex="-1"
+      aria-labelledby="miModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-tittle" id="tituloModal">BLOQUEO DE TARJETAS</h5>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="row">
+                <div class="form-group col-md-5">
+                  <label for="documento">Tipo de Documento</label>
+                  <select
+                    class="form-select"
+                    aria-label="Default select example"
+                  >
+                    <option selected>D.N.I.</option>
+                    <option value="c. extranjeria">C. EXTRANJERIA</option>
+                    <option value="pass">PASS</option>
+                  </select>
+                </div>
+                <div class="form-group col-md-5">
+                  <label for="numero">Numero de Documento</label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="numero"
+                    required
+                  />
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="motivo">Motivo de Bloqueo</label>
+                  <select
+                    class="form-select"
+                    aria-label="Default select example"
+                  >
+                    <option selected>PERDIDA DE TARJETA</option>
+                    <option value="retencion">RETENCION EN CAJERO</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row">
+                <div class="form-group col-md-12">
+                  <label for="detalle">Detalle:</label>
+                  <textarea
+                    class="form-control"
+                    id="detalle"
+                    rows="4"
+                    required
+                  ></textarea>
+                </div>
+              </div>
+              <div class="row justify-content-center">
+                <div class="form-group col-md-5 text-center">
+                  <label for="clave">Clave de 4 digitos</label>
+                  <input
+                    type="password"
+                    class="form-control"
+                    class="form-control"
+                    maxlength="4"
+                    id="clave1"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="row mt-3 d-flex justify-content-center">
+                <div class="text-center w-75">
+                  <div class="row mb-2">
+                    <div class="col">
+                      <button
+                        type="button"
+                        class="btn btn-danger w-100 num-btn"
+                        onclick="concatenar('clave1', 2)"
+                      >
+                        2
+                      </button>
+                    </div>
+                    <div class="col">
+                      <button
+                        type="button"
+                        class="btn btn-danger w-100 num-btn"
+                        onclick="concatenar('clave1', 7)"
+                      >
+                        7
+                      </button>
+                    </div>
+                    <div class="col">
+                      <button
+                        type="button"
+                        class="btn btn-danger w-100 num-btn"
+                        onclick="concatenar('clave1', 8)"
+                      >
+                        8
+                      </button>
+                    </div>
+                  </div>
+                  <div class="row mb-2">
+                    <div class="col">
+                      <button
+                        type="button"
+                        class="btn btn-danger w-100 num-btn"
+                        onclick="concatenar('clave1', 9)"
+                      >
+                        9
+                      </button>
+                    </div>
+                    <div class="col">
+                      <button
+                        type="button"
+                        class="btn btn-danger w-100 num-btn"
+                        onclick="concatenar('clave1', 5)"
+                      >
+                        5
+                      </button>
+                    </div>
+                    <div class="col">
+                      <button
+                        type="button"
+                        class="btn btn-danger w-100 num-btn"
+                        onclick="concatenar('clave1', 1)"
+                      >
+                        1
+                      </button>
+                    </div>
+                  </div>
+                  <div class="row mb-2">
+                    <div class="col">
+                      <button
+                        type="button"
+                        class="btn btn-danger w-100 num-btn"
+                        onclick="concatenar('clave1', 3)"
+                      >
+                        3
+                      </button>
+                    </div>
+                    <div class="col">
+                      <button
+                        type="button"
+                        class="btn btn-danger w-100 num-btn"
+                        onclick="concatenar('clave1', 6)"
+                      >
+                        6
+                      </button>
+                    </div>
+                    <div class="col">
+                      <button
+                        type="button"
+                        class="btn btn-danger w-100 num-btn"
+                        onclick="concatenar('clave1', 4)"
+                      >
+                        4
+                      </button>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-4">
+                      <button
+                        type="button"
+                        class="btn btn-danger w-100 num-btn"
+                        onclick="concatenar('clave1', 0)"
+                      >
+                        0
+                      </button>
+                    </div>
+                    <div class="col-8">
+                      <button
+                        type="reset"
+                        class="btn btn-danger w-100"
+                        id="clearBtn"
+                      >
+                        Limpiar
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-danger">
+              Bloquear Tarjeta
+            </button>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cerrar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Caja Virtual -->
+    <div
+      class="modal fade"
+      id="miModal2"
+      tabindex="-1"
+      aria-labelledby="miModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content modal-center ">
+          <div class="modal-header bg-danger">
+            <img src="img/logo negro (Custom).png" />
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="row justify-content-center">
+                <div class="form-group col-md-5">
+                  <label for="tarjeta">Tipo de tarjeta</label>
+                  <select
+                    class="form-select"
+                    aria-label="Default select example"
+                  >
+                    <option selected>Escoja su tarjeta</option>
+                    <option value="virtual">VIRTUAL EMPRESAS</option>
+                    <option value="rapicard">RAPICARD VISA</option>
+                    <option value="rapifuturo">RAPICARD FUTURO</option>
+                  </select>
+                </div>
+                <div class="form-group col-md-5">
+                  <label for="tarjeta">Numero de tarjeta</label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="tarjeta"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="row justify-content-center">
+                <div class="form-group col-md-5">
+                  <label for="tarjeta">Tipo de Documento</label>
+                  <select
+                    class="form-select"
+                    aria-label="Default select example"
+                  >
+                    <option selected>D.N.I.</option>
+                    <option value="extranjeria">C. EXTRANJERIA</option>
+                    <option value="pass">PASS</option>
+                    <option value="carnet">CARNET REFU.</option>
+                    <option value="ced">CED. IDENT.</option>
+                    <option value="ptp">PTP-CPP</option>
+                  </select>
+                </div>
+                <div class="form-group col-md-5">
+                  <label for="numero">Numero de Documento</label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="numero"
+                    required
+                  />
+                </div>
+                <div class="row justify-content-center">
+                  <div class="form-group col-md-5 text-center">
+                    <label for="clave">Ingresa tu clave</label>
+                    <input
+                      type="password"
+                      class="form-control"
+                      required
+                      maxlength="4"
+                    />
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger">Ingresar</button>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cerrar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script src="js/app.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
   </body>

@@ -1,6 +1,6 @@
 .banner-inicial {
   height: 40vw;
-  width: 40vw ;
+  width: 40vw;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -12,6 +12,9 @@
 .bg-danger {
   background-color: red !important;
 }
+.btn-danger {
+  background-color: red;
+}
 .btn-outline-danger {
   color: red;
 }
@@ -19,15 +22,14 @@
   color: white;
   background-color: red;
 }
-.nav-link-desktop{
+.nav-link-desktop {
   border-bottom: 2px solid rgb(255, 255, 255);
-  color:rgba(0, 0, 0, 0.542);
+  color: rgba(0, 0, 0, 0.542);
   font-weight: 400;
   transition: border-bottom 0.2s ease-out;
-
 }
 .nav-link-desktop:hover {
-  color: black ; 
+  color: black;
   border-bottom: 2px solid red;
 }
 
@@ -35,38 +37,25 @@
   max-height: 220px;
 }
 
-/*Botones negocios y personas*/
-.btn-person{
-  /* border-top-left-radius: 15px;
-  border-top-right-radius: 3px;
-  border-bottom-left-radius: 3px;
-  border-bottom-right-radius: 15px; */
-
-  border-radius: 15px 3px 15px 3px;
-  transition: font-background-color 0.05s ease-out;
-  transform-origin: center; /* por defecto, pero lo aclaramos */
-}
-
-.btn-person:hover {
-  background-color: #ff0000e8 !important;
-  transform: scale(1.05);
-}
-
-.nav-item-primary:hover{
+.nav-item-primary:hover {
   background: rgb(252, 58, 58);
-
 }
-.bi-lock, .bi-safe{
+.bi-lock,
+.bi-safe {
   font-size: 1.5rem;
-  display:inline-block;
+  display: inline-block;
   transform: scaleX(1.3);
 }
 
-@media(width <=500px){
-  .logo{
+@media (width <=800px) {
+  .logo {
     width: 40% !important;
   }
-  .nav-item-primary{
+  .banner-inicial {
+    height: 75vw;
+    width: 75vw;
+  }
+  .nav-item-primary {
     font-size: 11px;
   }
 }
