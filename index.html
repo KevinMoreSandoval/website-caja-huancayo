@@ -83,20 +83,304 @@
         <!-- Búsqueda y botones superiores solo en desktop -->
         <!-- Botones superiores -->
         <div class="d-none d-xl-flex justify-content-center mb-3">
-          <div class="d-flex flex-wrap gap-1">
+          <div class="d-flex flex-wrap gap-1 container">
             <a
-              href="https://www.cajahuancayo.com.pe/homebankinghyo/CJN_frmBloTarjet.aspx"
               class="btn btn-outline-danger d-flex align-items-center px-2 py-1 fs-6 px-md-3 py-md-2 fs-md-5"
+              data-bs-toggle="modal"
+              data-bs-target="#miModal"
             >
               <i class="bi bi-lock me-1 fs-6 fs-md-5"></i> Bloqueos
             </a>
+            <div
+              class="modal fade"
+              id="miModal"
+              tabindex="-1"
+              aria-labelledby="miModalLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-tittle" id="tituloModal">
+                      BLOQUEO DE TARJETAS
+                    </h5>
+                  </div>
+                  <div class="modal-body">
+                    <form>
+                      <div class="row">
+                        <div class="form-group col-md-5">
+                          <label for="documento">Tipo de Documento</label>
+                          <select
+                            class="form-select"
+                            aria-label="Default select example"
+                          >
+                            <option selected>D.N.I.</option>
+                            <option value="c. extranjeria">
+                              C. EXTRANJERIA
+                            </option>
+                            <option value="pass">PASS</option>
+                          </select>
+                        </div>
+                        <div class="form-group col-md-5">
+                          <label for="numero">Numero de Documento</label>
+                          <input
+                            type="number"
+                            class="form-control"
+                            id="numero"
+                            required
+                          />
+                        </div>
+                        <div class="form-group col-md-6">
+                          <label for="motivo">Motivo de Bloqueo</label>
+                          <select
+                            class="form-select"
+                            aria-label="Default select example"
+                          >
+                            <option selected>PERDIDA DE TARJETA</option>
+                            <option value="retencion">
+                              RETENCION EN CAJERO
+                            </option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="form-group col-md-12">
+                          <label for="detalle">Detalle:</label>
+                          <textarea
+                            class="form-control"
+                            id="detalle"
+                            rows="4"
+                            required
+                          ></textarea>
+                        </div>
+                      </div>
+                      <div class="row justify-content-center">
+                        <div class="form-group col-md-5 text-center">
+                          <label for="clave">Clave de 4 digitos</label>
+                          <input
+                            type="number"
+                            class="form-control"
+                            id="clave"
+                            required
+                          />
+                        </div>
+                      </div>
+                      <div class="row mt-3 d-flex justify-content-center">
+                        <div class="text-center w-75">
+                          <div class="row mb-2">
+                            <div class="col">
+                              <button
+                                type="button"
+                                class="btn btn-danger w-100 num-btn"
+                              >
+                                2
+                              </button>
+                            </div>
+                            <div class="col">
+                              <button
+                                type="button"
+                                class="btn btn-danger w-100 num-btn"
+                              >
+                                7
+                              </button>
+                            </div>
+                            <div class="col">
+                              <button
+                                type="button"
+                                class="btn btn-danger w-100 num-btn"
+                              >
+                                8
+                              </button>
+                            </div>
+                          </div>
+                          <div class="row mb-2">
+                            <div class="col">
+                              <button
+                                type="button"
+                                class="btn btn-danger w-100 num-btn"
+                              >
+                                9
+                              </button>
+                            </div>
+                            <div class="col">
+                              <button
+                                type="button"
+                                class="btn btn-danger w-100 num-btn"
+                              >
+                                5
+                              </button>
+                            </div>
+                            <div class="col">
+                              <button
+                                type="button"
+                                class="btn btn-danger w-100 num-btn"
+                              >
+                                1
+                              </button>
+                            </div>
+                          </div>
+                          <div class="row mb-2">
+                            <div class="col">
+                              <button
+                                type="button"
+                                class="btn btn-danger w-100 num-btn"
+                              >
+                                3
+                              </button>
+                            </div>
+                            <div class="col">
+                              <button
+                                type="button"
+                                class="btn btn-danger w-100 num-btn"
+                              >
+                                6
+                              </button>
+                            </div>
+                            <div class="col">
+                              <button
+                                type="button"
+                                class="btn btn-danger w-100 num-btn"
+                              >
+                                4
+                              </button>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-4">
+                              <button
+                                type="button"
+                                class="btn btn-danger w-100 num-btn"
+                              >
+                                0
+                              </button>
+                            </div>
+                            <div class="col-8">
+                              <button
+                                type="button"
+                                class="btn btn-danger w-100"
+                                id="clearBtn"
+                              >
+                                Limpiar
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">
+                      Bloquear Tarjeta
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-secondary"
+                      data-bs-dismiss="modal"
+                    >
+                      Cerrar
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
 
             <a
-              href="https://www.cajahuancayo.com.pe/homebankinghyo/CJN_frmInicio.aspx"
               class="btn btn-outline-danger d-flex align-items-center px-2 py-1 fs-6 px-md-3 py-md-2 fs-md-5"
+              data-bs-toggle="modal"
+              data-bs-target="#miModal2"
             >
               <i class="bi bi-person me-1 fs-6 fs-md-5"></i> Caja Virtual
             </a>
+            <div
+              class="modal fade"
+              id="miModal2"
+              tabindex="-1"
+              aria-labelledby="miModalLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header bg-danger">
+                    <img src="img/logo negro (Custom).png" />
+                  </div>
+                  <div class="modal-body">
+                    <form>
+                      <div class="row justify-content-center">
+                        <div class="form-group col-md-5">
+                          <label for="tarjeta">Tipo de tarjeta</label>
+                          <select
+                            class="form-select"
+                            aria-label="Default select example"
+                          >
+                            <option selected>Escoja su tarjeta</option>
+                            <option value="virtual">VIRTUAL EMPRESAS</option>
+                            <option value="rapicard">RAPICARD VISA</option>
+                            <option value="rapifuturo">RAPICARD FUTURO</option>
+                          </select>
+                        </div>
+                        <div class="form-group col-md-5">
+                          <label for="tarjeta">Numero de tarjeta</label>
+                          <input
+                            type="number"
+                            class="form-control"
+                            id="tarjeta"
+                            required
+                          />
+                        </div>
+                      </div>
+                      <div class="row justify-content-center">
+                        <div class="form-group col-md-5">
+                          <label for="tarjeta">Tipo de Documento</label>
+                          <select
+                            class="form-select"
+                            aria-label="Default select example"
+                          >
+                            <option selected>D.N.I.</option>
+                            <option value="extranjeria">C. EXTRANJERIA</option>
+                            <option value="pass">PASS</option>
+                            <option value="carnet">CARNET REFU.</option>
+                            <option value="ced">CED. IDENT.</option>
+                            <option value="ptp">PTP-CPP</option>
+                          </select>
+                        </div>
+                        <div class="form-group col-md-5">
+                          <label for="numero">Numero de Documento</label>
+                          <input
+                            type="number"
+                            class="form-control"
+                            id="numero"
+                            required
+                          />
+                        </div>
+                        <div class="row justify-content-center">
+                          <div class="form-group col-md-5 text-center">
+                            <label for="clave">Ingresa tu clave</label>
+                            <input
+                              type="number"
+                              class="form-control"
+                              id="clave"
+                              required
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">
+                      Ingresar
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-secondary"
+                      data-bs-dismiss="modal"
+                    >
+                      Cerrar
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <!-- Busqueda -->
@@ -107,6 +391,7 @@
             placeholder="Buscar..."
             aria-label="Buscar"
           />
+
           <button class="btn btn-outline-danger" type="submit">
             <i class="bi bi-search"></i>
           </button>
@@ -121,18 +406,296 @@
             aria-expanded="false" -->
           <button
             class="btn d-xl-none border-0"
-            
+            data-bs-toggle="modal"
+            data-bs-target="#miModal3"
           >
-           <i class="bi bi-lock"></i>
-
+            <i class="bi bi-lock"></i>
           </button>
+          <div
+            class="modal fade"
+            id="miModal3"
+            tabindex="-1"
+            aria-labelledby="miModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-tittle" id="tituloModal">
+                    BLOQUEO DE TARJETAS
+                  </h5>
+                </div>
+                <div class="modal-body">
+                  <div class="row">
+                    <div class="form-group col-md-5">
+                      <label for="documento">Tipo de Documento</label>
+                      <select
+                        class="form-select"
+                        aria-label="Default select example"
+                      >
+                        <option selected>D.N.I.</option>
+                        <option value="c. extranjeria">C. EXTRANJERIA</option>
+                        <option value="pass">PASS</option>
+                      </select>
+                    </div>
+                    <div class="form-group col-md-5">
+                      <label for="numero">Numero de Documento</label>
+                      <input
+                        type="number"
+                        class="form-control"
+                        id="numero"
+                        required
+                      />
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label for="motivo">Motivo de Bloqueo</label>
+                      <select
+                        class="form-select"
+                        aria-label="Default select example"
+                      >
+                        <option selected>PERDIDA DE TARJETA</option>
+                        <option value="retencion">RETENCION EN CAJERO</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="form-group col-md-12">
+                      <label for="detalle">Detalle:</label>
+                      <textarea
+                        class="form-control"
+                        id="detalle"
+                        rows="4"
+                        required
+                      ></textarea>
+                    </div>
+                  </div>
+                  <div class="row justify-content-center">
+                    <div class="form-group col-md-5 text-center">
+                      <label for="clave">Clave de 4 digitos</label>
+                      <input
+                        type="number"
+                        class="form-control"
+                        id="clave"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div class="row mt-3 d-flex justify-content-center">
+                    <div class="text-center w-75">
+                      <div class="row mb-2">
+                        <div class="col">
+                          <button
+                            type="button"
+                            class="btn btn-danger w-100 num-btn"
+                          >
+                            2
+                          </button>
+                        </div>
+                        <div class="col">
+                          <button
+                            type="button"
+                            class="btn btn-danger w-100 num-btn"
+                          >
+                            7
+                          </button>
+                        </div>
+                        <div class="col">
+                          <button
+                            type="button"
+                            class="btn btn-danger w-100 num-btn"
+                          >
+                            8
+                          </button>
+                        </div>
+                      </div>
+                      <div class="row mb-2">
+                        <div class="col">
+                          <button
+                            type="button"
+                            class="btn btn-danger w-100 num-btn"
+                          >
+                            9
+                          </button>
+                        </div>
+                        <div class="col">
+                          <button
+                            type="button"
+                            class="btn btn-danger w-100 num-btn"
+                          >
+                            5
+                          </button>
+                        </div>
+                        <div class="col">
+                          <button
+                            type="button"
+                            class="btn btn-danger w-100 num-btn"
+                          >
+                            1
+                          </button>
+                        </div>
+                      </div>
+                      <div class="row mb-2">
+                        <div class="col">
+                          <button
+                            type="button"
+                            class="btn btn-danger w-100 num-btn"
+                          >
+                            3
+                          </button>
+                        </div>
+                        <div class="col">
+                          <button
+                            type="button"
+                            class="btn btn-danger w-100 num-btn"
+                          >
+                            6
+                          </button>
+                        </div>
+                        <div class="col">
+                          <button
+                            type="button"
+                            class="btn btn-danger w-100 num-btn"
+                          >
+                            4
+                          </button>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-4">
+                          <button
+                            type="button"
+                            class="btn btn-danger w-100 num-btn"
+                          >
+                            0
+                          </button>
+                        </div>
+                        <div class="col-8">
+                          <button
+                            type="button"
+                            class="btn btn-danger w-100"
+                            id="clearBtn"
+                          >
+                            Limpiar
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-primary">
+                    Bloquear Tarjeta
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Cerrar
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <button
             class="btn d-xl-none border-0"
-            
+            data-bs-toggle="modal"
+            data-bs-target="#miModal4"
           >
-           <i class="bi bi-safe"></i>
-
+            <i class="bi bi-safe"></i>
           </button>
+          <div
+            class="modal fade"
+            id="miModal4"
+            tabindex="-1"
+            aria-labelledby="miModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header bg-danger">
+                  <img src="img/logo negro (Custom).png" />
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <div class="row justify-content-center">
+                      <div class="form-group col-md-5">
+                        <label for="tarjeta">Tipo de tarjeta</label>
+                        <select
+                          class="form-select"
+                          aria-label="Default select example"
+                        >
+                          <option selected>Escoja su tarjeta</option>
+                          <option value="virtual">VIRTUAL EMPRESAS</option>
+                          <option value="rapicard">RAPICARD VISA</option>
+                          <option value="rapifuturo">RAPICARD FUTURO</option>
+                        </select>
+                      </div>
+                      <div class="form-group col-md-5">
+                        <label for="tarjeta">Numero de tarjeta</label>
+                        <input
+                          type="number"
+                          class="form-control"
+                          id="tarjeta"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div class="row justify-content-center">
+                      <div class="form-group col-md-5">
+                        <label for="tarjeta">Tipo de Documento</label>
+                        <select
+                          class="form-select"
+                          aria-label="Default select example"
+                        >
+                          <option selected>D.N.I.</option>
+                          <option value="extranjeria">C. EXTRANJERIA</option>
+                          <option value="pass">PASS</option>
+                          <option value="carnet">CARNET REFU.</option>
+                          <option value="ced">CED. IDENT.</option>
+                          <option value="ptp">PTP-CPP</option>
+                        </select>
+                      </div>
+                      <div class="form-group col-md-5">
+                        <label for="numero">Numero de Documento</label>
+                        <input
+                          type="number"
+                          class="form-control"
+                          id="numero"
+                          required
+                        />
+                      </div>
+                      <div class="row justify-content-center">
+                        <div class="form-group col-md-5 text-center">
+                          <label for="clave">Ingresa tu clave</label>
+                          <input
+                            type="number"
+                            class="form-control"
+                            id="clave"
+                            required
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-primary">
+                    Ingresar
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Cerrar
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <button
             class="btn d-xl-none border-0"
             type="button"
