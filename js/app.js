@@ -1,7 +1,7 @@
-setTimeout(() => {
+window.addEventListener("load", () => {
   const modal = new bootstrap.Modal(document.getElementById("promoModal"));
   modal.show();
-}, 100);
+});
 
 
 

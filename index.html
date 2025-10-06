@@ -1297,7 +1297,7 @@
 
     <!-- Modales -->
     <!-- Promoción -->
-    <div class="modal fade" id="promoModal" tabindex="-1" aria-hidden="true">
+    <div class="modal fade" id="promoModal" tabindex="-1" aria-hidden="true" data-bs-focus="false">
       <div class="modal-dialog modal-dialog-centered modal-lg">
         <div
           class="modal-content p-0 border-0 bg-transparent shadow-none banner-inicial"
@@ -1385,7 +1385,7 @@
                   <input
                     type="number"
                     class="form-control"
-                    min="1000"
+                    minlength="4"
                     class="form-control"
                     id="clave1"
                     maxlength="4"
@@ -1575,11 +1575,11 @@
                   </select>
                 </div>
                 <div class="form-group col-md-5">
-                  <label for="numero">Numero de Documento</label>
+                  <label for="numeroDocumento">Numero de Documento</label>
                   <input
                     type="number"
                     class="form-control"
-                    id="numero"
+                    id="numeroDocumento"
                     required
                   />
                 </div>
