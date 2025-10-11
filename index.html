@@ -129,7 +129,7 @@
           class="navbar-collapse d-flex justify-content-center"
           id="navbarNav"
         >
-          <ul class="navbar-nav d-flex justify-content-between gap-5">
+          <ul class="navbar-nav d-flex justify-content-between w-100">
             <li class="nav-item dropdown">
               <a
                 class="nav-link nav-link-desktop"
@@ -1020,7 +1020,53 @@
           </div>
         </div>
       </section>
+      <!-- Video -->
+      <section class="bg-danger py-5">
+        <div
+          class="container text-center d-flex flex-column flex-md-row py-xl-5 align-items-center gap-5"
+        >
+          <!-- Columna de texto -->
+          <div class="w-100 w-md-50 p-3">
+            <h1 class="text-white fw-bold text-start text-md-start text-center">
+              Uso del CVV Dinámico
+            </h1>
+            <p class="text-white mt-3 text-justify">
+              Protege tus compras en línea con el CVV dinámico, un código de
+              seguridad que cambia constantemente y puedes generar desde nuestra
+              app móvil. Con esta tecnología, tus transacciones son más seguras
+              y tu información personal está siempre protegida. ¡Compra con
+              confianza con Caja Huancayo!
+            </p>
+            <div
+              class="mt-4 d-flex justify-content-center justify-content-md-start mt-5"
+            >
+              <a
+                href="https://play.google.com/store/search?q=caja+huancayo+app&c=apps&hl=es_419"
+                class="btn btn-light text-dark fw-semibold px-4 py-2 rounded-3"
+                target="_blank"
+              >
+                Descargar app 
+              </a>
+            </div>
+          </div>
 
+          <!-- Columna del video -->
+          <div
+            class="w-100 w-md-50 d-flex justify-content-center align-items-center"
+          >
+            <video
+              src="video/CVV-Dinamico.mp4"
+              controls
+              autoplay
+              muted
+              preload="auto"
+              class="video w-100 rounded shadow"
+            ></video>
+          </div>
+        </div>
+      </section>
+
+      <!-- E-NEWS CAJA HUANCAYO -->
       <section class="container my-5 text-center">
         <h5 class="fw-bold mt-5">E-NEWS CAJA HUANCAYO</h5>
         <h6 class="text-muted mb-4">Te informamos</h6>
@@ -1236,7 +1282,7 @@
           <div class="col-md-3 mb-4">
             <h6 class="fw-bold">Síguenos</h6>
             <div
-              class="d-flex justify-content-center justify-content-md-start gap-3"
+              class="d-flex justify-content-center justify-content-md-start gap-3 flex-wrap"
             >
               <a href="https://www.facebook.com/CajaHuancayo" target="_blank"
                 ><i class="bi bi-facebook fs-5 text-white"></i
@@ -1299,7 +1345,13 @@
 
     <!-- Modales -->
     <!-- Promoción -->
-    <div class="modal fade" id="promoModal" tabindex="-1" aria-hidden="true" data-bs-focus="false">
+    <div
+      class="modal fade"
+      id="promoModal"
+      tabindex="-1"
+      aria-hidden="true"
+      data-bs-focus="false"
+    >
       <div class="modal-dialog modal-dialog-centered modal-lg">
         <div
           class="modal-content p-0 border-0 bg-transparent shadow-none banner-inicial"
