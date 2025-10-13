@@ -58,6 +58,25 @@
   display: inline-block;
   transform: scaleX(1.3);
 }
+.item-descubre-mas{
+  width: 120px;
+  height: 120px;
+  border-radius: 2rem 0.5rem 2rem 0.5rem !important;
+  transition: all 0.3s ease-in-out;
+}
+.item-descubre-mas:hover{
+  border-radius: 5rem 5rem 5rem 0.5rem !important;
+}
+.item-enlaces{
+  width: 100px ;
+  height: 100px  ;
+}
+.item-enlaces:hover{
+  background-color: #ffffff2f;
+
+}
+
+
 
 @media (width <=800px) {
   .logo {
