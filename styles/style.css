@@ -90,3 +90,17 @@
     font-size: 11px;
   }
 }
+.scroll-cards {
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .scroll-cards .card {
+    scroll-snap-align: start;
+    border-radius: 12px;
+  }
+
+  /* Oculta scrollbar en navegadores modernos */
+  .scroll-cards::-webkit-scrollbar {
+    display: none;
+  }
