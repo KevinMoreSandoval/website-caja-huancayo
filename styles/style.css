@@ -1,3 +1,7 @@
+.border-top-gray{
+  border-top: 1px solid #cccccc6e;
+  padding-top: 20px;
+}
 .banner-inicial {
   height: 40vw;
   width: 40vw;
@@ -42,7 +46,7 @@
 }
 
 .card-h {
-  max-height: 220px;
+  max-height: 200px;
 }
 
 .nav-item-primary:hover {
