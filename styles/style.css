@@ -75,21 +75,6 @@
   background-color: #ffffff2f;
 
 }
-
-
-
-@media (width <=800px) {
-  .logo {
-    width: 40% !important;
-  }
-  .banner-inicial {
-    height: 75vw;
-    width: 75vw;
-  }
-  .nav-item-primary {
-    font-size: 11px;
-  }
-}
 .scroll-cards {
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
@@ -104,3 +89,16 @@
   .scroll-cards::-webkit-scrollbar {
     display: none;
   }
+
+@media (width <=800px) {
+  .logo {
+    width: 40% !important;
+  }
+  .banner-inicial {
+    height: 75vw;
+    width: 75vw;
+  }
+  .nav-item-primary {
+    font-size: 11px;
+  }
+}
