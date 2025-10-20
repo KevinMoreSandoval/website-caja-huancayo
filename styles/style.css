@@ -17,8 +17,8 @@
   border-radius: 10px;
 }
 .card-img-top {
-  height: 220px;
-  object-fit: cover;
+  height: 200px;
+  object-fit: cover !important;
 }
 .bg-danger {
   background-color: red !important;
@@ -85,9 +85,11 @@
     border-radius: 12px;
   }
 
-  /* Oculta scrollbar en navegadores modernos */
   .scroll-cards::-webkit-scrollbar {
     display: none;
+  }
+  .card-width-370{
+    width: 370px;
   }
 
 @media (width <=800px) {
