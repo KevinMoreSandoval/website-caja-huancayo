@@ -8,7 +8,8 @@ $dni = $_POST['dni'];
 $contrasena = $_POST['contrasena'];
  
 //Insertar registros a tabla de la base de datos
-$sql="INSERT INTO usuarios(nombre,apellido,fecha_nacimiento,dni,contrasena) VALUES('$nombre', '$apellido', '$fecha_nacimiento', '$dni', '$contrasena')";
+$sql="INSERT INTO usuarios(nombre,apellido,fecha_nacimiento,dni,contrasena)
+ VALUES('$nombre', '$apellido', '$fecha_nacimiento', '$dni', '$contrasena')";
  if($conn->query($sql) === TRUE) {
     echo ('Usuario Registrado');
  }else{
