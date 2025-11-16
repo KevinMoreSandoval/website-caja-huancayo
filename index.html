@@ -1800,14 +1800,56 @@
            <div class="modal-footer">
               <input type="submit" value="Guardar">
 
-      
-
-     
+               <form id="loginForm"></form>
 
     </div>
   </div>
 </div>
 
+    <h1> Iniciar Sesion</h1>
+
+    <label for="">Usuario</label>
+    <input type="text" placeholder="Escriba su usuario" id="nombre">
+
+    <label for="">Contraseña</label>
+    <input type="text" placeholder="Escriba su Contraseña" id="constasena">
+
+    <input type="button" value="Ingresar" onclick="logear()">
+
+
+
+    <script>
+function loguear() {
+  const nombre = document.getElementById("nombre").value.trim();
+  const contrasena = document.getElementById("contrasena").value.trim();
+
+  if (nombre === "" || contrasena === "") {
+    alert("Por favor, completa ambos campos.");
+    return;
+  }
+
+  // Enviar datos al servidor con fetch
+  fetch("verificar_login.php", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/x-www-form-urlencoded"
+    },
+    body: `nombre=${encodeURIComponent(nombre)}&contrasena=${encodeURIComponent(contrasena)}`
+  })
+  .then(response => response.text())
+  .then(data => {
+    if (data === "ok") {
+      window.location.href = "caja_virtual.php"; // tu panel principal
+    } else {
+      alert("❌ Datos incorrectos");
+    }
+  })
+  .catch(error => {
+    console.error("Error:", error);
+    alert("Error de conexión con el servidor.");
+  });
+}
+</script>
 
   
 
