@@ -11,7 +11,7 @@ $direccion = $_POST['direccion'];
 $contrasena = $_POST['contrasena'];
  
 //Insertar registros a tabla de la base de datos
-$sql="INSERT INTO usuarios(nombre,apellido,fecha_nacimiento,dni,contrasena) VALUES('$nombre', '$apellido', '$fecha_nacimiento', '$dni', '$correo', '$telefono', '$direccion','$contrasena')";
+$sql="INSERT INTO usuarios(nombre,apellido,fecha_nacimiento,dni,telefono,correo,direccion,contrasena) VALUES('$nombre', '$apellido', '$fecha_nacimiento', '$dni', '$correo', '$telefono', '$direccion','$contrasena')";
  if($conn->query($sql) === TRUE) {
     echo ("Usuario Registrado");
  }else{
