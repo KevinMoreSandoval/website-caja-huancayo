@@ -1669,20 +1669,8 @@
           <div class="modal-body">
             <form id="cajaVirtual">
               <div class="row justify-content-center">
-                <div class="form-group col-md-5">
-                  <label for="tarjeta">Tipo de tarjeta</label>
-                  <select
-                    class="form-select"
-                    aria-label="Default select example"
-                  >
-                    <option selected>Escoja su tarjeta</option>
-                    <option value="virtual">VIRTUAL EMPRESAS</option>
-                    <option value="rapicard">RAPICARD VISA</option>
-                    <option value="rapifuturo">RAPICARD FUTURO</option>
-                  </select>
-                </div>
-                <div class="form-group col-md-5">
-                  <label for="tarjeta">Numero de tarjeta</label>
+                <div class="col-md-6 mb-3">
+                  <label for="ingresatarjeta">Ingrese su Tarjeta</label>
                   <input
                     type="number"
                     class="form-control"
@@ -1691,63 +1679,38 @@
                   />
                 </div>
               </div>
+
               <div class="row justify-content-center">
-                <div class="form-group col-md-5">
-                  <label for="tarjeta">Tipo de Documento</label>
-                  <select
-                    class="form-select"
-                    aria-label="Default select example"
-                  >
-                    <option selected>D.N.I.</option>
-                    <option value="extranjeria">C. EXTRANJERIA</option>
-                    <option value="pass">PASS</option>
-                    <option value="carnet">CARNET REFU.</option>
-                    <option value="ced">CED. IDENT.</option>
-                    <option value="ptp">PTP-CPP</option>
-                  </select>
-                </div>
-                <div class="form-group col-md-5">
-                  <label for="numeroDocumento">Numero de Documento</label>
+                <div class="col-md-6 mb-3">
+                  <label for="numeroDocumento" class="form-label">Ingrese su DNI</label>
                   <input
                     type="number"
                     class="form-control"
                     id="numeroDocumento"
-                    required
-                  />
+                    required>
+                  </div>  
                 </div>
+
                 <div class="row justify-content-center">
-                  <div class="form-group col-md-5 text-center">
-                    <label for="clave">Ingresa tu clave</label>
+                  <div class="col-md-6 mb-3">
+                    <label for="clave" class="form-label">Ingrese su Contraseña</label>
                     <input
                       type="password"
                       title="Debe tener entre 6 y 12 caracteres"
                       class="form-control"
                       required
                       maxlength="12"
-                    />
+                      required>
                   </div>
                 </div>
-              </div>
             </form>
           </div>
-          <div class="modal-footer">
-            <li class="nav-item">
-              <a class="nav-link" href="#" data-bs-toggle="modal"  data-bs-target="#ingresar"></a>
-            </li>
+          <div class="modal-footer d-flex justify-content-center gap-3">
             
-            <button type="submit" class="btn btn-danger" form="cajaVirtual">
-              Ingresar
-            </button>
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-bs-dismiss="modal"
-            >
-              Cerrar
-            </button>
-            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#registro">
-              Registro
-            </button>
+            <button type="submit" class="btn btn-danger" form="cajaVirtual">Ingresar</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#registro">Registro</button>
+          
           </div>
         </div>
       </div>
@@ -1781,6 +1744,7 @@
           <div class="mb-3">
             <label for="d.n.i" class="form-label">D.N.I</label>
             <input type="text" class="form-control" id="dni" name="dni"required>
+          </div>
           <div class="mb-3">
             <label for="correo" class="form-label">Correo</label>
             <input type="text" class="form-control" id="correo" name="correo" required>
@@ -1789,16 +1753,33 @@
             <label for="telefono" class="form-label">Telefono</label>
             <input type="text" class="form-control" id="telefono" name="telefono"required>
           </div>
-           <div class="mb-3">
+          <div class="mb-3">
             <label for="direccion" class="form-label">Direccion</label>
             <input type="text" class="form-control" id="direccion" name="direccion"required>
           </div>
-           <div class="mb-3">
+          <div class="mb-3">
             <label for="contrasena" class="form-label">Contraseña</label>
-            <input type="text" class="form-control" id="contrasena" name="contrasena"required>
+            <input type="password" class="form-control" id="contrasena" name="contrasena" required maxlength="100" required>
           </div>
+          <div class="mb-3">
+            <label for="contrasena" class="form-label">Confirmar Contraseña</label>
+            <input type="password" class="form-control" id="contrasena" name="contrasena" required maxlength="100" required>
+          </div>
+
            <div class="modal-footer">
+
               <input type="submit" value="Guardar">
+
+
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            <button type="submit" class="btn btn-primary">Guardar</button>
+          </div>
+        
+      </div>
+
+        </form>
+      </div>
+
 
                <form id="loginForm"></form>
 
