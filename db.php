@@ -1,17 +1,10 @@
 <?php
-// ==============================================
-// Configuración centralizada de base de datos
-// ==============================================
-// Esta conexión se reutiliza en todo el proyecto
-// Incluir este archivo al inicio de cada script PHP
-// ==============================================
 
 $servername = "localhost";
 $username = "root";
 $password = "";
 $database = "usuarios";
 
-// Crear conexión única
 $conn = new mysqli($servername, $username, $password, $database);
 
 // Verificar conexión
