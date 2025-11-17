@@ -1,0 +1,111 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.welcome-container {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  padding: 40px;
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+}
+.logo-welcome {
+  max-width: 120px;
+  margin-bottom: 30px;
+}
+.welcome-title {
+  color: #dc3545;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.welcome-subtitle {
+  color: #666;
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+.user-greeting {
+  background: #f8f9fa;
+  border-left: 4px solid #dc3545;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 25px;
+  text-align: left;
+}
+.user-greeting p {
+  margin: 8px 0;
+  color: #333;
+}
+.credential-box {
+  background: #f0f0f0;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+.credential-label {
+  font-weight: 600;
+  color: #666;
+  font-size: 12px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  display: block;
+}
+.credential-value {
+  background: white;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #dc3545;
+  word-break: break-all;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.copy-btn {
+  background: none;
+  border: none;
+  color: #dc3545;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 0 8px;
+}
+.copy-btn:hover {
+  color: #a02834;
+}
+.alert-info-custom {
+  background: #e7f3ff;
+  border: 1px solid #b3d9ff;
+  color: #004085;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+.btn-login {
+  background: #dc3545;
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  transition: background 0.3s;
+}
+.btn-login:hover {
+  background: #c82333;
+  color: white;
+  text-decoration: none;
+}
+.icon-success {
+  font-size: 50px;
+  color: #28a745;
+  margin-bottom: 20px;
+}
