@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mi Cuenta</title>
+</head>
+<body>
+    <h1 id="saludo"></h1>
+    <p id="cuenta"></p>
+    <p id="dni"></p>
+    <p id="saldo"></p>
+
+<script>
+// Cargar datos del usuario desde PHP
+async function cargarDatos() {
+    const res = await fetch("../usuario-data.php", { credentials: 'same-origin' });
+    const data = await res.json();
+
+    if (data.error === "NO_SESSION") {
+        window.location.href = "../index.html"; // No logueado
+        return;
+    }
+
+    document.getElementById("saludo").textContent = `Bienvenido, ${data.nombre}`;
+    document.getElementById("cuenta").textContent = `Cuenta: ${data.numero_cuenta}`;
+    document.getElementById("dni").textContent = `DNI: ${data.dni}`;
+    document.getElementById("saldo").textContent = `Saldo: S/ ${data.saldo}`;
+}
+
+cargarDatos();
+</script>
+</body>
+</html>

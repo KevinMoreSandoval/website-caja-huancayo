@@ -1,21 +1,42 @@
 <?php
 include("db.php");
 
-$nombre = $_POST['nombre'];
-$apellido = $_POST['apellido'];
-$fecha_nacimiento = $_POST['fecha_nacimiento'];
-$dni = $_POST['dni'];
-$telefono = $_POST['telefono'];
-$correo = $_POST['correo'];
-$direccion = $_POST['direccion'];
-$contrasena = $_POST['contrasena'];
- 
-//Insertar registros a tabla de la base de datos
-$sql="INSERT INTO usuarios(nombre,apellido,fecha_nacimiento,dni,telefono,correo,direccion,contrasena) VALUES('$nombre', '$apellido', '$fecha_nacimiento', '$dni', '$correo', '$telefono', '$direccion','$contrasena')";
- if($conn->query($sql) === TRUE) {
-    echo ("Usuario Registrado");
- }else{
-    echo "Error";
- }
- $conn->close();
+// Sanitizar entradas
+$nombre = $conn->real_escape_string($_POST['nombre']);
+$apellido = $conn->real_escape_string($_POST['apellido']);
+$fecha_nacimiento = $conn->real_escape_string($_POST['fecha_nacimiento']);
+$dni = $conn->real_escape_string($_POST['dni']);
+$telefono = $conn->real_escape_string($_POST['telefono']);
+$correo = $conn->real_escape_string($_POST['correo']);
+$direccion = $conn->real_escape_string($_POST['direccion']);
+$contrasena = $conn->real_escape_string($_POST['contrasena']);
+
+// -------------------------------------------------------
+// GENERAR NUMERO DE CUENTA A PARTIR DEL DNI
+// -------------------------------------------------------
+$codigoBanco = "5687";
+$codigoSucursal = "2579";
+
+// calcular dígito verificador
+$suma = array_sum(str_split($dni));
+$digito = $suma % 10;
+
+$numero_cuenta = $codigoBanco . "-" . $codigoSucursal . "-" . $dni . "-" . $digito;
+
+// -------------------------------------------------------
+// Insertar registro
+// IMPORTANTE: ordenar los valores igual que los campos
+// -------------------------------------------------------
+$sql = "INSERT INTO usuarios
+(nombre, apellido, fecha_nacimiento, dni, telefono, correo, direccion, contrasena, numero_cuenta)
+VALUES
+('$nombre', '$apellido', '$fecha_nacimiento', '$dni', '$telefono', '$correo', '$direccion', '$contrasena', '$numero_cuenta')";
+
+if ($conn->query($sql) === TRUE) {
+    echo "Usuario Registrado. Número de cuenta: $numero_cuenta";
+} else {
+    echo "Error: " . $conn->error;
+}
+
+$conn->close();
 ?>
