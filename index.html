@@ -6,6 +6,9 @@
     <title>Caja Huancayo S.A.</title>
     <link href="css/bootstrap.min.css" rel="stylesheet" />
     <link href="iconAndFonts/bootstrap-icons.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="styles/login.css" />
+    <link rel="stylesheet" href="styles/register.css" />
     <link
       rel="icon"
       type="image/png"
@@ -1661,92 +1664,386 @@
       aria-labelledby="miModalLabel"
       aria-hidden="true"
     >
-      <div class="modal-dialog">
-        <div class="modal-content modal-center">
-          <div class="modal-header bg-danger">
-            <img src="img/logo negro (Custom).png" />
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <!-- Header con icono -->
+          <div
+            class="modal-header border-0 d-flex flex-column align-items-center pt-4 pb-3"
+          >
+            <img src="img/log.png" alt="" class="logo-modal" />
+
+            <h5 class="modal-title fw-bold mb-0">Iniciar Sesión</h5>
           </div>
-          <div class="modal-body">
-            <form id="cajaVirtual">
-              <div class="row justify-content-center">
-                <div class="form-group col-md-5">
-                  <label for="tarjeta">Tipo de tarjeta</label>
-                  <select
-                    class="form-select"
-                    aria-label="Default select example"
-                  >
-                    <option selected>Escoja su tarjeta</option>
-                    <option value="virtual">VIRTUAL EMPRESAS</option>
-                    <option value="rapicard">RAPICARD VISA</option>
-                    <option value="rapifuturo">RAPICARD FUTURO</option>
-                  </select>
-                </div>
-                <div class="form-group col-md-5">
-                  <label for="tarjeta">Numero de tarjeta</label>
+
+          <!-- Body -->
+          <div class="modal-body px-4 pb-4">
+            <form id="cajaVirtual" action="login.php" method="POST">
+              <!-- Número de Cuenta -->
+              <div class="mb-3">
+                <label class="form-label fw-normal" style="font-size: 0.9rem"
+                  >Número de Cuenta</label
+                >
+                <div class="input-group">
+                  <span class="input-group-text bg-white border-end-0">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-person-circle text-muted"
+                      viewBox="0 0 16 16"
+                    >
+                      <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                      <path
+                        fill-rule="evenodd"
+                        d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"
+                      />
+                    </svg>
+                  </span>
                   <input
-                    type="number"
-                    class="form-control"
-                    id="tarjeta"
+                    type="text"
+                    class="form-control border-start-0 ps-0"
+                    name="numero_cuenta"
                     required
                   />
                 </div>
               </div>
-              <div class="row justify-content-center">
-                <div class="form-group col-md-5">
-                  <label for="tarjeta">Tipo de Documento</label>
-                  <select
-                    class="form-select"
-                    aria-label="Default select example"
-                  >
-                    <option selected>D.N.I.</option>
-                    <option value="extranjeria">C. EXTRANJERIA</option>
-                    <option value="pass">PASS</option>
-                    <option value="carnet">CARNET REFU.</option>
-                    <option value="ced">CED. IDENT.</option>
-                    <option value="ptp">PTP-CPP</option>
-                  </select>
-                </div>
-                <div class="form-group col-md-5">
-                  <label for="numeroDocumento">Numero de Documento</label>
+
+              <!-- DNI -->
+              <div class="mb-3">
+                <label class="form-label fw-normal" style="font-size: 0.9rem"
+                  >DNI</label
+                >
+                <div class="input-group">
+                  <span class="input-group-text bg-white border-end-0">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-credit-card text-muted"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v1h14V4a1 1 0 0 0-1-1H2zm13 4H1v5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V7z"
+                      />
+                      <path
+                        d="M2 10a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-1z"
+                      />
+                    </svg>
+                  </span>
                   <input
                     type="number"
-                    class="form-control"
-                    id="numeroDocumento"
+                    class="form-control border-start-0 ps-0"
+                    name="dni"
                     required
                   />
                 </div>
-                <div class="row justify-content-center">
-                  <div class="form-group col-md-5 text-center">
-                    <label for="clave">Ingresa tu clave</label>
-                    <input
-                      type="password"
-                      title="Debe tener entre 6 y 12 caracteres"
-                      class="form-control"
-                      required
-                      maxlength="12"
-                    />
-                  </div>
+              </div>
+
+              <!-- Contraseña -->
+              <div class="mb-4">
+                <label class="form-label fw-normal" style="font-size: 0.9rem"
+                  >Contraseña</label
+                >
+                <div class="input-group">
+                  <span class="input-group-text bg-white border-end-0">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-lock text-muted"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2zM5 8h6a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"
+                      />
+                    </svg>
+                  </span>
+                  <input
+                    type="password"
+                    name="contrasena"
+                    class="form-control border-start-0 ps-0"
+                    maxlength="12"
+                    required
+                  />
                 </div>
+              </div>
+
+              <!-- Botón Iniciar Sesión -->
+              <button
+                type="submit"
+                class="btn btn-danger w-100 py-2 fw-semibold mb-3"
+              >
+                Iniciar Sesión
+              </button>
+
+              <!-- Registro -->
+              <div class="text-center">
+                <small class="text-muted">¿No tienes una cuenta? </small>
+                <a
+                  href="#"
+                  class="text-danger text-decoration-none fw-semibold"
+                  style="font-size: 0.9rem"
+                  data-bs-toggle="modal"
+                  data-bs-target="#registro"
+                  >Regístrate</a
+                >
               </div>
             </form>
           </div>
-          <div class="modal-footer">
-            <button type="submit" class="btn btn-danger" form="cajaVirtual">
-              Ingresar
-            </button>
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-bs-dismiss="modal"
-            >
-              Cerrar
-            </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Registro -->
+    <div
+      class="modal fade"
+      id="registro"
+      tabindex="-1"
+      aria-labelledby="registroLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <!-- Header con imagen -->
+          <div
+            class="modal-header border-0 d-flex flex-column align-items-center pt-4 pb-3"
+          >
+            <img src="img/log.png" alt="" class="logo-modal" />
+            <h5 class="modal-title fw-bold mb-1">Crea tu cuenta</h5>
+            <p class="text-muted small mb-0">
+              Completa los siguientes datos para registrarte.
+            </p>
+          </div>
+
+          <!-- Body -->
+          <div class="modal-body px-4 pb-4">
+            <form action="guardar.php" method="post">
+              <!-- Nombre -->
+              <div class="mb-3">
+                <label
+                  for="nombre"
+                  class="form-label fw-normal"
+                  style="font-size: 0.9rem"
+                  >Nombre</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="nombre"
+                  name="nombre"
+                  placeholder="Ingresa tu nombre"
+                  required
+                />
+              </div>
+
+              <!-- Apellido -->
+              <div class="mb-3">
+                <label
+                  for="apellido"
+                  class="form-label fw-normal"
+                  style="font-size: 0.9rem"
+                  >Apellido</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="apellido"
+                  name="apellido"
+                  placeholder="Ingresa tu apellido"
+                  required
+                />
+              </div>
+
+              <!-- Fecha de Nacimiento -->
+              <div class="mb-3">
+                <label
+                  for="fecha_nacimiento"
+                  class="form-label fw-normal"
+                  style="font-size: 0.9rem"
+                  >Fecha de Nacimiento</label
+                >
+                <input
+                  type="date"
+                  class="form-control"
+                  id="fecha_nacimiento"
+                  name="fecha_nacimiento"
+                  placeholder="dd/mm/aaaa"
+                  required
+                />
+              </div>
+
+              <!-- DNI -->
+              <div class="mb-3">
+                <label
+                  for="dni"
+                  class="form-label fw-normal"
+                  style="font-size: 0.9rem"
+                  >DNI</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="dni"
+                  name="dni"
+                  placeholder="Ingresa tu documento de identidad"
+                  inputmode="numeric"
+                  required
+                />
+              </div>
+
+              <!-- Dirección -->
+              <div class="mb-3">
+                <label
+                  for="direccion"
+                  class="form-label fw-normal"
+                  style="font-size: 0.9rem"
+                  >Dirección</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="direccion"
+                  name="direccion"
+                  placeholder="Ingresa tu dirección"
+                  required
+                />
+              </div>
+
+              <!-- Correo Electrónico -->
+              <div class="mb-3">
+                <label
+                  for="correo"
+                  class="form-label fw-normal"
+                  style="font-size: 0.9rem"
+                  >Correo Electrónico</label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  id="correo"
+                  name="correo"
+                  placeholder="ejemplo@correo.com"
+                  required
+                />
+              </div>
+
+              <!-- Contraseña -->
+              <div class="mb-3">
+                <label
+                  for="contrasena"
+                  class="form-label fw-normal"
+                  style="font-size: 0.9rem"
+                  >Contraseña</label
+                >
+                <div class="position-relative">
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="contrasena"
+                    name="contrasena"
+                    placeholder="Crea tu contraseña"
+                    maxlength="100"
+                    required
+                  />
+                  <button
+                    class="btn position-absolute end-0 top-50 translate-middle-y border-0 bg-transparent"
+                    type="button"
+                    onclick="togglePasswordRegistro('contrasena')"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      fill="currentColor"
+                      class="bi bi-eye text-muted"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"
+                      />
+                      <path
+                        d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Confirmar Contraseña -->
+              <div class="mb-4">
+                <label
+                  for="confirmar_contrasena"
+                  class="form-label fw-normal"
+                  style="font-size: 0.9rem"
+                  >Confirmar Contraseña</label
+                >
+                <div class="position-relative">
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="confirmar_contrasena"
+                    name="confirmar_contrasena"
+                    placeholder="Confirma tu contraseña"
+                    maxlength="100"
+                    required
+                  />
+                  <button
+                    class="btn position-absolute end-0 top-50 translate-middle-y border-0 bg-transparent"
+                    type="button"
+                    onclick="togglePasswordRegistro('confirmar_contrasena')"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      fill="currentColor"
+                      class="bi bi-eye text-muted"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"
+                      />
+                      <path
+                        d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Botón Registrarse -->
+              <button
+                type="submit"
+                class="btn btn-danger w-100 py-2 fw-semibold mb-3"
+              >
+                Registrarse
+              </button>
+
+              <!-- Iniciar Sesión -->
+              <div class="text-center">
+                <small class="text-muted">¿Ya tienes cuenta? </small>
+                <a
+                  href="#"
+                  class="text-danger text-decoration-none fw-semibold"
+                  data-bs-dismiss="modal"
+                  data-bs-toggle="modal"
+                  data-bs-target="#miModal2"
+                  style="font-size: 0.9rem"
+                  >Inicia Sesión</a
+                >
+              </div>
+            </form>
           </div>
         </div>
       </div>
     </div>
 
     <script src="js/app.js"></script>
+    <script src="js/redirection.js"></script>
+    <script src="js/register.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

@@ -1,0 +1,22 @@
+/* Sin efectos de focus */
+*:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.form-control:focus,
+.btn:focus {
+  border-color: #dee2e6 !important;
+}
+/* Eliminar flechas de input type="number" en Chrome, Safari, Edge */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Eliminar flechas de input type="number" en Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}

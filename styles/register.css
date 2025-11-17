@@ -1,0 +1,38 @@
+/* Logo en el modal - Tamaño más grande */
+.logo-modal {
+  width: 100%;
+  max-width: 12rem;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+/* Ajustar el ancho del modal si es necesario */
+.modal-dialog {
+  max-width: 500px;
+}
+
+/* Para pantallas más grandes */
+@media (min-width: 768px) {
+  #logo-modal {
+    max-width: 450px;
+  }
+  
+  .modal-dialog {
+    max-width: 600px;
+  }
+}
+
+/* Ajustar espaciado del header */
+.modal-header {
+  padding: 1.5rem 1rem 1rem;
+}
+
+.modal-header p.text-muted {
+  margin-bottom: 0;
+  font-size: 0.9rem;
+}
+
+/* Título más pequeño si es necesario */
+.modal-title {
+  font-size: 1.5rem;
+}
