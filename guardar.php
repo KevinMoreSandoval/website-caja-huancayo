@@ -35,7 +35,7 @@ $base_numero = $codigoBanco . "-" . $codigoSucursal . "-" . $dni . "-" . $digito
 
 // Asegurar unicidad: si ya existe, añadimos sufijo incremental
 $candidate = $base_numero;
-$checkStmt = $conn->prepare("SELECT COUNT(*) FROM usuarios WHERE numero_cuenta = ?");
+$checkStmt = $conn->prepare("SELECT COUNT(*) as total FROM usuarios WHERE numero_cuenta = ?");
 if (!$checkStmt) {
     echo "Error preparando consulta: " . $conn->error;
     $conn->close();
@@ -46,9 +46,10 @@ $i = 1;
 while (true) {
     $checkStmt->bind_param('s', $candidate);
     $checkStmt->execute();
-    $checkStmt->bind_result($count);
-    $checkStmt->fetch();
-    $checkStmt->store_result();
+    $result = $checkStmt->get_result();
+    $row = $result->fetch_assoc();
+    $count = $row['total'];
+    
     // Si no existe, salimos
     if ($count == 0) break;
     // Generar candidato con sufijo
