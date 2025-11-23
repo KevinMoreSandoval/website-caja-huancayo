@@ -211,3 +211,15 @@ body {
 }
 
 }
+
+.cerrar{
+  color: white;
+  width: 30px !important;
+  height: 30px;
+  padding: 0 !important;
+  background-color: red;
+}
+.cerrar:hover {
+  background-color: var(--rojo-hover);
+  color: white;
+}
