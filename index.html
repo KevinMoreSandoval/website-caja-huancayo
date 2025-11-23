@@ -1473,7 +1473,7 @@
           </div>
           
           <div class="modal-body">
-            <form id="bloquearTarjeta">
+            <form id="bloquearTarjeta" action="bloqueo.php" method="POST">
               <div class="row g-3">
                  <div class="form-group col-md-12">
                    <label for="numero">Numero de Documento</label>
@@ -1522,7 +1522,7 @@
                    <label for="numero">Contraseña</label>
                    <input
                       type="password"
-                      name="contrasena"
+                      name="contrasena_bloqueo"
                       class="form-control"
                       maxlength="12"
                       placeholder="Ingresar Contraseña"
