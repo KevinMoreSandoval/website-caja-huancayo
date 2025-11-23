@@ -1473,13 +1473,13 @@
           </div>
           
           <div class="modal-body">
-            <form id="bloquearTarjeta" action="bloqueo.php" method="POST">
+            <form id="bloquearTarjeta" action="bloquear.php" method="POST">
               <div class="row g-3">
                  <div class="form-group col-md-12">
                    <label for="numero">Numero de Documento</label>
                    <input
                     type="number"
-                    id="numero-dni"
+                    name="dni"
                     class="form-control"
                     placeholder="Ingrese su número de DNI"
                     required
@@ -1491,7 +1491,7 @@
                    <input
                      type="text"
                      class="form-control"
-                     name="numero-cuenta"
+                     name="numero_cuenta"
                      placeholder="Ingrese su número de cuenta"
                      required
                    />
@@ -1499,8 +1499,8 @@
 
                   <div class="form-group col-md-12">
                     <label for="motivo">Motivo del Bloqueo</label>
-                    <select class="form-select" required>
-                    <option selected disabled>Seleccione un motivo</option>
+                    <select class="form-select" name="motivo" required>
+                    <option value="" disabled selected>Seleccione un motivo</option>
                     <option value="perdida">Pérdida de Tarjeta</option>
                     <option value="cajero">Retención en Cajero</option>
                    </select>
@@ -1511,7 +1511,7 @@
                   <label for="detalle">Detalle:</label>
                   <textarea
                     class="form-control"
-                    id="detalle"
+                    name="detalle"
                     rows="3"
                     placeholder="Proporcione más contexto aquí"
                     required
@@ -1522,22 +1522,22 @@
                    <label for="numero">Contraseña</label>
                    <input
                       type="password"
-                      name="contrasena_bloqueo"
+                      name="contrasena"
                       class="form-control"
                       maxlength="12"
                       placeholder="Ingresar Contraseña"
                       required
                    />
                   </div>
-            </form>
-          </div>
-          <div class="modal-footer">
+                   <div class="modal-footer">
             <button type="submit" class="btn btn-danger" form="bloquearTarjeta">
               Bloquear Cuenta
             </button>
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
               Cerrar
             </button>
+          </div>
+            </form>
           </div>
         </div>
       </div>
