@@ -1466,196 +1466,83 @@
     >
       <div class="modal-dialog">
         <div class="modal-content">
+
           <div class="modal-header">
-            <h5 class="modal-tittle" id="tituloModal">BLOQUEO DE TARJETAS</h5>
+            <h5 class="modal-tittle" id="tituloModal">BLOQUEO DE CUENTA</h5>
+           <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
           </div>
+          
           <div class="modal-body">
             <form id="bloquearTarjeta">
-              <div class="row">
-                <div class="form-group col-md-5">
-                  <label for="documento">Tipo de Documento</label>
-                  <select
-                    class="form-select"
-                    aria-label="Default select example"
-                  >
-                    <option selected>D.N.I.</option>
-                    <option value="c. extranjeria">C. EXTRANJERIA</option>
-                    <option value="pass">PASS</option>
-                  </select>
-                </div>
-                <div class="form-group col-md-5">
-                  <label for="numero">Numero de Documento</label>
-                  <input
+              <div class="row g-3">
+                 <div class="form-group col-md-12">
+                   <label for="numero">Numero de Documento</label>
+                   <input
                     type="number"
+                    id="numero-dni"
                     class="form-control"
-                    id="numero"
+                    placeholder="Ingrese su número de DNI"
                     required
-                  />
-                </div>
-                <div class="form-group col-md-6">
-                  <label for="motivo">Motivo de Bloqueo</label>
-                  <select
-                    class="form-select"
-                    aria-label="Default select example"
-                  >
-                    <option selected>PERDIDA DE TARJETA</option>
-                    <option value="retencion">RETENCION EN CAJERO</option>
-                  </select>
-                </div>
+                    />
+                   </div>
+
+                   <div class="form-group col-md-12">
+                   <label for="numero">Numero de Cuenta</label>
+                   <input
+                     type="text"
+                     class="form-control"
+                     name="numero-cuenta"
+                     placeholder="Ingrese su número de cuenta"
+                     required
+                   />
+                  </div>
+
+                  <div class="form-group col-md-12">
+                    <label for="motivo">Motivo del Bloqueo</label>
+                    <select class="form-select" required>
+                    <option selected disabled>Seleccione un motivo</option>
+                    <option value="perdida">Pérdida de Tarjeta</option>
+                    <option value="cajero">Retención en Cajero</option>
+                   </select>
+                  </div>
+
               </div>
-              <div class="row">
-                <div class="form-group col-md-12">
+               <div class="form-group col-md-12">
                   <label for="detalle">Detalle:</label>
                   <textarea
                     class="form-control"
                     id="detalle"
-                    rows="4"
+                    rows="3"
+                    placeholder="Proporcione más contexto aquí"
                     required
                   ></textarea>
                 </div>
-              </div>
-              <div class="row justify-content-center">
-                <div class="form-group col-md-5 text-center">
-                  <label for="clave1">Clave de 4 digitos</label>
-                  <input
-                    type="number"
-                    class="form-control"
-                    minlength="4"
-                    class="form-control"
-                    id="clave1"
-                    maxlength="4"
-                    required
-                  />
-                </div>
-              </div>
-              <div class="row mt-3 d-flex justify-content-center">
-                <div class="text-center w-75">
-                  <div class="row mb-2">
-                    <div class="col">
-                      <button
-                        type="button"
-                        class="btn btn-danger w-100 num-btn"
-                        onclick="concatenar('clave1', 2)"
-                      >
-                        2
-                      </button>
-                    </div>
-                    <div class="col">
-                      <button
-                        type="button"
-                        class="btn btn-danger w-100 num-btn"
-                        onclick="concatenar('clave1', 7)"
-                      >
-                        7
-                      </button>
-                    </div>
-                    <div class="col">
-                      <button
-                        type="button"
-                        class="btn btn-danger w-100 num-btn"
-                        onclick="concatenar('clave1', 8)"
-                      >
-                        8
-                      </button>
-                    </div>
+        
+                 <div class="form-group col-md-12">
+                   <label for="numero">Contraseña</label>
+                   <input
+                      type="password"
+                      name="contrasena"
+                      class="form-control"
+                      maxlength="12"
+                      placeholder="Ingresar Contraseña"
+                      required
+                   />
                   </div>
-                  <div class="row mb-2">
-                    <div class="col">
-                      <button
-                        type="button"
-                        class="btn btn-danger w-100 num-btn"
-                        onclick="concatenar('clave1', 9)"
-                      >
-                        9
-                      </button>
-                    </div>
-                    <div class="col">
-                      <button
-                        type="button"
-                        class="btn btn-danger w-100 num-btn"
-                        onclick="concatenar('clave1', 5)"
-                      >
-                        5
-                      </button>
-                    </div>
-                    <div class="col">
-                      <button
-                        type="button"
-                        class="btn btn-danger w-100 num-btn"
-                        onclick="concatenar('clave1', 1)"
-                      >
-                        1
-                      </button>
-                    </div>
-                  </div>
-                  <div class="row mb-2">
-                    <div class="col">
-                      <button
-                        type="button"
-                        class="btn btn-danger w-100 num-btn"
-                        onclick="concatenar('clave1', 3)"
-                      >
-                        3
-                      </button>
-                    </div>
-                    <div class="col">
-                      <button
-                        type="button"
-                        class="btn btn-danger w-100 num-btn"
-                        onclick="concatenar('clave1', 6)"
-                      >
-                        6
-                      </button>
-                    </div>
-                    <div class="col">
-                      <button
-                        type="button"
-                        class="btn btn-danger w-100 num-btn"
-                        onclick="concatenar('clave1', 4)"
-                      >
-                        4
-                      </button>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-4">
-                      <button
-                        type="button"
-                        class="btn btn-danger w-100 num-btn"
-                        onclick="concatenar('clave1', 0)"
-                      >
-                        0
-                      </button>
-                    </div>
-                    <div class="col-8">
-                      <button
-                        type="reset"
-                        class="btn btn-danger w-100"
-                        id="clearBtn"
-                      >
-                        Limpiar
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </form>
           </div>
           <div class="modal-footer">
             <button type="submit" class="btn btn-danger" form="bloquearTarjeta">
-              Bloquear Tarjeta
+              Bloquear Cuenta
             </button>
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-bs-dismiss="modal"
-            >
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
               Cerrar
             </button>
           </div>
         </div>
       </div>
     </div>
+
     <!-- Caja Virtual -->
     <div
       class="modal fade"
