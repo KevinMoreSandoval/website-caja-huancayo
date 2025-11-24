@@ -110,13 +110,40 @@
             <button class="btn btn-rapido">
               <i class="bi bi-cash-stack"></i> Pagar crédito
             </button>
-            <button class="btn btn-rapido">
+            <button class="btn btn-rapido" data-bs-toggle="modal" data-bs-target="#actualizar">
               <i class="bi bi-person-fill-up"></i> Actualizar datos
             </button>
           </div>
         </div>
 
-      <!-- Modal -->
+      
+  
+
+        <!-- Notificaciones Recientes -->
+        <div class="col-lg-4">
+          <div class="notificaciones-card">
+            <h5 class="section-title mb-3">Notificaciones Recientes</h5>
+
+            <div class="notif-item">
+              <p class="notif-title">Pago de crédito recibido</p>
+              <p class="notif-date">05 Dic, 2025</p>
+            </div>
+
+            <div class="notif-item">
+              <p class="notif-title">Transferencia exitosa a J. Perez</p>
+              <p class="notif-date">02 Dic, 2025</p>
+            </div>
+
+            <div class="notif-item">
+              <p class="notif-title">Depósito recibido</p>
+              <p class="notif-date">01 Dic, 2025</p>
+            </div>
+          </div>
+        </div>
+        </div>
+</div>
+
+        <!-- Modales -->
         <div class="modal fade" id="movimientos" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog modal-sm">
             <div class="modal-content">
@@ -149,29 +176,83 @@
           </div>
         </div>
 
-        <!-- Notificaciones Recientes -->
-        <div class="col-lg-4">
-          <div class="notificaciones-card">
-            <h5 class="section-title mb-3">Notificaciones Recientes</h5>
-
-            <div class="notif-item">
-              <p class="notif-title">Pago de crédito recibido</p>
-              <p class="notif-date">05 Dic, 2025</p>
-            </div>
-
-            <div class="notif-item">
-              <p class="notif-title">Transferencia exitosa a J. Perez</p>
-              <p class="notif-date">02 Dic, 2025</p>
-            </div>
-
-            <div class="notif-item">
-              <p class="notif-title">Depósito recibido</p>
-              <p class="notif-date">01 Dic, 2025</p>
-            </div>
+        <div class="modal fade" id="actualizar" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div
+            class="modal-header border-0 d-flex flex-column align-items-center pt-4 pb-3"
+          >
+            <h5 class="modal-title fw-bold mb-1">Actualiza tus datos</h5>
+            <p class="text-muted small mb-0">
+              Completa los siguientes campos con tus nuevos datos.
+            </p>
           </div>
+
+          <div class="modal-body px-4 pb-4">
+            <form action="guardar.php" method="post">
+              <!-- Dirección -->
+              <div class="mb-3">
+                <label
+                  for="direccion"
+                  class="form-label fw-normal"
+                  style="font-size: 0.9rem"
+                  >Dirección</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="direccion"
+                  name="direccion"
+                  placeholder="Ingresa tu dirección"
+                  required
+                />
+              </div>
+
+              <!-- Telefono -->
+              <div class="mb-3">
+                <label
+                  for="telefono"
+                  class="form-label fw-normal"
+                  style="font-size: 0.9rem"
+                  >Telefono</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="telefono"
+                  name="telefono"
+                  placeholder="Ingresa tu telefono"
+                  required
+                />
+              </div>
+              <!-- Correo Electrónico -->
+              <div class="mb-3">
+                <label
+                  for="correo"
+                  class="form-label fw-normal"
+                  style="font-size: 0.9rem"
+                  >Correo Electrónico</label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  id="correo"
+                  name="correo"
+                  placeholder="ejemplo@correo.com"
+                  required
+                />
+              </div>
+
+            </form>
+          </div>
+          <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-rojo">Actualizar</button>
+      </div>
         </div>
       </div>
     </div>
+
     <script src="../js/rendering.js"></script>
     <script src="../js/bootstrap.bundle.min.js"></script>
   </body>
