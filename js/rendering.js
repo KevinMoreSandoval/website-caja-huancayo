@@ -15,6 +15,25 @@ document.addEventListener("DOMContentLoaded", async () => {
     const user = data || {};
 
     // ========================================
+    // VERIFICAR ESTADO DEL USUARIO
+    // ========================================
+    const activeContent = document.getElementById("activeUserContent");
+    const blockedContent = document.getElementById("blockedUserContent");
+
+    if (user.estado === "bloqueado") {
+      // Mostrar contenido de cuenta bloqueada
+      if (blockedContent) blockedContent.style.display = "block";
+      if (activeContent) activeContent.style.display = "none";
+
+      // Cargar información de bloqueo
+      await loadBlockInfo(user.id);
+    } else {
+      // Mostrar contenido normal (activo)
+      if (activeContent) activeContent.style.display = "block";
+      if (blockedContent) blockedContent.style.display = "none";
+    }
+
+    // ========================================
     // RENDERIZAR DATOS DEL USUARIO
     // ========================================
 
@@ -276,3 +295,60 @@ document.addEventListener("DOMContentLoaded", async () => {
     console.error("Error cargando datos de usuario:", err);
   }
 });
+
+// ========================================
+// FUNCIONES PARA CUENTA BLOQUEADA
+// ========================================
+
+/**
+ * Cargar información de bloqueo del usuario
+ */
+async function loadBlockInfo(userId) {
+  try {
+    const response = await fetch("../obtener-bloqueo.php", {
+      method: "POST",
+      credentials: "same-origin",
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+      },
+      body: `id_usuario=${userId}`,
+    });
+
+    const result = await response.json();
+
+    if (result.success && result.data) {
+      const blockData = result.data;
+
+      // Actualizar motivo
+      const blockReason = document.getElementById("blockReason");
+      if (blockReason) {
+        blockReason.textContent = blockData.motivo || "-";
+      }
+
+      // Actualizar fecha de bloqueo
+      const blockDate = document.getElementById("blockDate");
+      if (blockDate && blockData.fecha_bloqueo) {
+        const date = new Date(blockData.fecha_bloqueo);
+        blockDate.textContent = date.toLocaleDateString("es-ES", {
+          year: "numeric",
+          month: "long",
+          day: "numeric",
+          hour: "2-digit",
+          minute: "2-digit",
+        });
+      }
+
+      // Actualizar detalle si existe
+      const blockDetail = document.getElementById("blockDetail");
+      const blockDetailContainer = document.getElementById(
+        "blockDetailContainer"
+      );
+      if (blockData.detalle && blockData.detalle.trim() !== "") {
+        if (blockDetail) blockDetail.textContent = blockData.detalle;
+        if (blockDetailContainer) blockDetailContainer.style.display = "flex";
+      }
+    }
+  } catch (error) {
+    console.error("Error al cargar información de bloqueo:", error);
+  }
+}

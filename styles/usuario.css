@@ -1,4 +1,3 @@
-
 :root {
   --rojo-primary: #ff0000;
   --rojo-dark: #cc0000;
@@ -31,7 +30,7 @@
   max-width: 1400px;
   margin: 0 auto;
   display: flex !important;
-  justify-content: space-between ;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -459,5 +458,309 @@
 
   .product-amount {
     font-size: 1.5rem;
+  }
+}
+
+/* ==================== BLOCKED ACCOUNT SECTION ==================== */
+.blocked-account-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+  padding: 2rem 0;
+}
+
+.blocked-card {
+  background: var(--bg-secondary);
+  border-radius: var(--radius-lg);
+  padding: 3rem 2.5rem;
+  max-width: 600px;
+  width: 100%;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-lg);
+  text-align: center;
+}
+
+.blocked-icon-container {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 1.5rem;
+  background: linear-gradient(135deg, var(--rojo-primary), var(--rojo-dark));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 30px rgba(255, 0, 0, 0.2);
+}
+
+.blocked-icon {
+  color: white;
+}
+
+.blocked-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  letter-spacing: -0.5px;
+}
+
+.blocked-message {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.blocked-info {
+  background: var(--bg-primary);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.blocked-info-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.blocked-info-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.blocked-info-item:first-child {
+  padding-top: 0;
+}
+
+.blocked-info-label {
+  font-weight: 600;
+  color: var(--text-primary);
+  font-size: 0.9rem;
+}
+
+.blocked-info-value {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.unlock-form {
+  margin-bottom: 1.5rem;
+}
+
+.unlock-form .form-group {
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.unlock-form .form-label {
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.unlock-form .form-control {
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-color);
+  font-size: 0.95rem;
+  transition: all 0.2s;
+}
+
+.unlock-form .form-control:focus {
+  border-color: var(--rojo-primary);
+  box-shadow: 0 0 0 0.25rem rgba(255, 0, 0, 0.1);
+  outline: none;
+}
+
+.btn-unlock {
+  width: 100%;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, var(--rojo-primary), var(--rojo-dark));
+  color: white;
+  border: none;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  box-shadow: 0 4px 15px rgba(255, 0, 0, 0.2);
+}
+
+.btn-unlock:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 0, 0, 0.3);
+}
+
+.btn-unlock:active {
+  transform: translateY(0);
+}
+
+.btn-unlock:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.blocked-help {
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.blocked-help p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.help-link {
+  color: var(--rojo-primary);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+
+.help-link:hover {
+  color: var(--rojo-dark);
+  text-decoration: underline;
+}
+
+/* Responsive for blocked section */
+@media (max-width: 768px) {
+  .blocked-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .blocked-title {
+    font-size: 1.5rem;
+  }
+
+  .blocked-icon-container {
+    width: 80px;
+    height: 80px;
+  }
+
+  .blocked-icon {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+@media (max-width: 576px) {
+  .blocked-account-container {
+    padding: 1rem;
+  }
+
+  .blocked-card {
+    padding: 1.5rem 1rem;
+  }
+
+  .blocked-info-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+}
+
+/* Contact Section for Blocked Account */
+.contact-section {
+  margin-top: 2rem;
+}
+
+.contact-card {
+  background: linear-gradient(135deg, var(--rojo-primary), var(--rojo-dark));
+  border-radius: var(--radius-md);
+  padding: 2rem;
+  text-align: center;
+  color: white;
+  box-shadow: 0 10px 30px rgba(255, 0, 0, 0.2);
+}
+
+.contact-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1rem;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(10px);
+}
+
+.contact-icon svg {
+  color: white;
+}
+
+.contact-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: white;
+}
+
+.contact-description {
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
+}
+
+.contact-phone {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  background: white;
+  color: var(--rojo-primary);
+  border-radius: var(--radius-md);
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: all 0.3s;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact-phone:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  color: var(--rojo-dark);
+}
+
+.contact-hours {
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  opacity: 0.8;
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .contact-card {
+    padding: 1.5rem;
+  }
+
+  .contact-icon {
+    width: 64px;
+    height: 64px;
+  }
+
+  .contact-icon svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .contact-phone {
+    font-size: 1rem;
+    padding: 0.875rem 1.5rem;
   }
 }

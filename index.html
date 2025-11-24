@@ -1476,7 +1476,7 @@
           </div>
 
           <div class="modal-body">
-            <form id="bloquearTarjeta">
+            <form id="bloquearTarjeta" action="bloqueo.php" method="post">
               <div class="row g-3">
                 <div class="form-group col-md-12">
                   <label for="numero">Numero de Documento</label>
@@ -1952,51 +1952,6 @@
         </div>
       </div>
     </div>
-
-    <script>
-      document
-        .getElementById("bloquearTarjeta")
-        .addEventListener("submit", function (e) {
-          e.preventDefault();
-
-          const dni = document.getElementById("numero-dni").value;
-          const cuenta = document.querySelector(
-            "input[name='numero-cuenta']"
-          ).value;
-          const motivo = document.querySelector("select").value;
-          const detalle = document.getElementById("detalle").value;
-          const contrasena = document.querySelector(
-            "input[name='contrasena']"
-          ).value;
-
-          fetch("bloquear_cuenta.php", {
-            method: "POST",
-            headers: { "Content-Type": "application/x-www-form-urlencoded" },
-            body: `dni=${dni}&numero_cuenta=${cuenta}&motivo=${motivo}&detalle=${detalle}&contrasena=${contrasena}`,
-          })
-            .then((res) => res.text())
-            .then((data) => {
-              if (data.trim() === "ok") {
-                // 1. Cerrar modal principal
-                const modal = bootstrap.Modal.getInstance(
-                  document.getElementById("miModal")
-                );
-                modal.hide();
-
-                // 2. Redirigir al inicio después de 1 segundo
-                setTimeout(() => {
-                  window.location.href = "index.php"; // 👈 AQUÍ SE REDIRECCIONA
-                }, 1000);
-              } else {
-                alert("❌ No se pudo bloquear la cuenta");
-              }
-            })
-            .catch((err) => {
-              console.error(err);
-              alert("Error al conectar con el servidor.");
-            });
-        });
-    </script>
 
     <script src="js/app.js"></script>
     <script src="js/redirection.js"></script>
