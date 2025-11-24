@@ -8,7 +8,7 @@ $motivo = $_POST['motivo'] ?? '';
 $detalle = $_POST['detalle'] ?? '';
 $contrasena = $_POST['contrasena'] ?? '';
 
-// Validación sencilla
+// Validación 
 if (empty($dni) || empty($numeroCuenta) || empty($motivo) || empty($contrasena)) {
     die("Error: faltan datos.");
 }
@@ -16,7 +16,7 @@ if (empty($dni) || empty($numeroCuenta) || empty($motivo) || empty($contrasena))
 // Encriptar contraseña
 $contrasenaHash = password_hash($contrasena, PASSWORD_DEFAULT);
 
-// Insertar en la tabla "bloqueo" (o el nombre exacto que usaste)
+// Insertar en la tabla bloqueo
 $sql = "INSERT INTO bloqueo_cuenta (id_usuario, numero_cuenta, motivo, detalle, contrasena_bloqueo)
         VALUES (?, ?, ?, ?, ?)";
 
