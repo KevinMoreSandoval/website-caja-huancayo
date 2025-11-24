@@ -10,7 +10,8 @@ $contrasena = $_POST['contrasena'] ?? '';
 
 // Validación 
 if (empty($dni) || empty($numeroCuenta) || empty($motivo) || empty($contrasena)) {
-    die("Error: faltan datos.");
+    echo("Error: faltan datos.");
+    exit;
 }
 
 // Encriptar contraseña

@@ -223,3 +223,11 @@ body {
   background-color: var(--rojo-hover);
   color: white;
 }
+.btn-rojo{
+  color: white;
+  background-color: red;
+}
+.btn-rojo:hover {
+  background-color: var(--rojo-hover);
+  color: white;
+}
