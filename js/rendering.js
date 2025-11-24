@@ -118,11 +118,39 @@ document.addEventListener("DOMContentLoaded", async () => {
         amountEl.textContent = `S/ ${user.linea_disponible || user.linea}`;
       }
     });
-
+    const badgeUser = document.querySelector(".user-badge");
+    if (badgeUser) {
+      badgeUser.innerHTML = fullName;
+    }
     // Si existe algún elemento para mostrar número de cuenta, actualizarlo
     const cuentaEl = document.getElementById("cuenta");
     if (cuentaEl && (user.numero_cuenta || user.cuenta)) {
       cuentaEl.textContent = `Cuenta: ${user.numero_cuenta || user.cuenta}`;
+    }
+
+    // Evento para cerrar sesión
+    function cerrarSesion() {
+      console.log("Cerrando sesión...");
+      fetch("../logout.php", {
+        credentials: "same-origin",
+      })
+        .then(() => {
+          console.log("Sesión cerrada, redirigiendo...");
+          window.location.href = "../index.html";
+        })
+        .catch((error) => {
+          console.error("Error al cerrar sesión:", error);
+          // Redirigir de todas formas para asegurar el logout
+          window.location.href = "../index.html";
+        });
+    }
+
+    const logoutBtn = document.getElementById("logout");
+    if (logoutBtn) {
+      console.log("Botón de logout encontrado, agregando event listener");
+      logoutBtn.addEventListener("click", cerrarSesion);
+    } else {
+      console.error("Botón de logout no encontrado");
     }
   } catch (err) {
     console.error("Error cargando datos de usuario:", err);
