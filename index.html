@@ -1466,77 +1466,85 @@
     >
       <div class="modal-dialog">
         <div class="modal-content">
-
           <div class="modal-header">
             <h5 class="modal-tittle" id="tituloModal">BLOQUEO DE CUENTA</h5>
-           <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
           </div>
-          
+
           <div class="modal-body">
             <form id="bloquearTarjeta">
               <div class="row g-3">
-                 <div class="form-group col-md-12">
-                   <label for="numero">Numero de Documento</label>
-                   <input
+                <div class="form-group col-md-12">
+                  <label for="numero">Numero de Documento</label>
+                  <input
                     type="number"
                     name="dni"
                     class="form-control"
                     placeholder="Ingrese su número de DNI"
                     required
-                    />
-                   </div>
+                  />
+                </div>
 
-                   <div class="form-group col-md-12">
-                   <label for="numero">Numero de Cuenta</label>
-                   <input
-                     type="text"
-                     class="form-control"
-                     name="numero_cuenta"
-                     placeholder="Ingrese su número de cuenta"
-                     required
-                   />
-                  </div>
+                <div class="form-group col-md-12">
+                  <label for="numero">Numero de Cuenta</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="numero_cuenta"
+                    placeholder="Ingrese su número de cuenta"
+                    required
+                  />
+                </div>
 
-                  <div class="form-group col-md-12">
-                    <label for="motivo">Motivo del Bloqueo</label>
-                    <select class="form-select" name="motivo" required>
-                    <option value="" disabled selected>Seleccione un motivo</option>
+                <div class="form-group col-md-12">
+                  <label for="motivo">Motivo del Bloqueo</label>
+                  <select class="form-select" name="motivo" required>
+                    <option value="" disabled selected>
+                      Seleccione un motivo
+                    </option>
                     <option value="perdida">Pérdida de Tarjeta</option>
                     <option value="cajero">Retención en Cajero</option>
-                   </select>
-                  </div>
-
-              </div>
-               <div class="form-group col-md-12">
-                  <label for="detalle">Detalle:</label>
-                  <textarea
-                    class="form-control"
-                    name="detalle"
-                    rows="3"
-                    placeholder="Proporcione más contexto aquí"
-                    required
-                  ></textarea>
+                  </select>
                 </div>
-        
-                 <div class="form-group col-md-12">
-                   <label for="numero">Contraseña</label>
-                   <input
-                      type="password"
-                      name="contrasena"
-                      class="form-control"
-                      maxlength="12"
-                      placeholder="Ingresar Contraseña"
-                      required
-                   />
-                  </div>
-                   <div class="modal-footer">
-            <button type="submit" class="btn btn-danger" >
-              Bloquear Cuenta
-            </button>
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
-              Cerrar
-            </button>
-          </div>
+              </div>
+              <div class="form-group col-md-12">
+                <label for="detalle">Detalle:</label>
+                <textarea
+                  class="form-control"
+                  name="detalle"
+                  rows="3"
+                  placeholder="Proporcione más contexto aquí"
+                  required
+                ></textarea>
+              </div>
+
+              <div class="form-group col-md-12">
+                <label for="numero">Contraseña</label>
+                <input
+                  type="password"
+                  name="contrasena"
+                  class="form-control"
+                  maxlength="12"
+                  placeholder="Ingresar Contraseña"
+                  required
+                />
+              </div>
+              <div class="modal-footer">
+                <button type="submit" class="btn btn-danger">
+                  Bloquear Cuenta
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Cerrar
+                </button>
+              </div>
             </form>
           </div>
         </div>
@@ -1945,48 +1953,50 @@
       </div>
     </div>
 
-
-
     <script>
-document.getElementById("bloquearTarjeta").addEventListener("submit", function(e) {
-  e.preventDefault();
+      document
+        .getElementById("bloquearTarjeta")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
 
-  const dni = document.getElementById("numero-dni").value;
-  const cuenta = document.querySelector("input[name='numero-cuenta']").value;
-  const motivo = document.querySelector("select").value;
-  const detalle = document.getElementById("detalle").value;
-  const contrasena = document.querySelector("input[name='contrasena']").value;
+          const dni = document.getElementById("numero-dni").value;
+          const cuenta = document.querySelector(
+            "input[name='numero-cuenta']"
+          ).value;
+          const motivo = document.querySelector("select").value;
+          const detalle = document.getElementById("detalle").value;
+          const contrasena = document.querySelector(
+            "input[name='contrasena']"
+          ).value;
 
-  fetch("bloquear_cuenta.php", {
-    method: "POST",
-    headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    body: `dni=${dni}&numero_cuenta=${cuenta}&motivo=${motivo}&detalle=${detalle}&contrasena=${contrasena}`
-  })
-  .then(res => res.text())
-  .then(data => {
+          fetch("bloquear_cuenta.php", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: `dni=${dni}&numero_cuenta=${cuenta}&motivo=${motivo}&detalle=${detalle}&contrasena=${contrasena}`,
+          })
+            .then((res) => res.text())
+            .then((data) => {
+              if (data.trim() === "ok") {
+                // 1. Cerrar modal principal
+                const modal = bootstrap.Modal.getInstance(
+                  document.getElementById("miModal")
+                );
+                modal.hide();
 
-    if (data.trim() === "ok") {
-
-      // 1. Cerrar modal principal
-      const modal = bootstrap.Modal.getInstance(document.getElementById("miModal"));
-      modal.hide();
-
-      // 2. Redirigir al inicio después de 1 segundo
-      setTimeout(() => {
-        window.location.href = "index.php"; // 👈 AQUÍ SE REDIRECCIONA
-      }, 1000);
-
-    } else {
-      alert("❌ No se pudo bloquear la cuenta");
-    }
-
-  })
-  .catch(err => {
-    console.error(err);
-    alert("Error al conectar con el servidor.");
-  });
-});
-</script>
+                // 2. Redirigir al inicio después de 1 segundo
+                setTimeout(() => {
+                  window.location.href = "index.php"; // 👈 AQUÍ SE REDIRECCIONA
+                }, 1000);
+              } else {
+                alert("❌ No se pudo bloquear la cuenta");
+              }
+            })
+            .catch((err) => {
+              console.error(err);
+              alert("Error al conectar con el servidor.");
+            });
+        });
+    </script>
 
     <script src="js/app.js"></script>
     <script src="js/redirection.js"></script>

@@ -1,236 +1,260 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pagina de Usuario</title>
+    <title>Panel de Usuario - Caja Huancayo</title>
     <link rel="stylesheet" href="../css/bootstrap.min.css" />
     <link rel="stylesheet" href="../iconAndFonts/bootstrap-icons.css" />
     <link rel="stylesheet" href="../styles/usuario.css" />
   </head>
   <body>
+    <!-- Navbar -->
     <nav class="navbar">
-      <div class="container flex flex-nowrap justify-content-between">
-        <div class="d-flex align-items-center">
-          <img src="../img/log.png" alt="" class="logo" />
-        </div>
-        <div>
-          <div class="d-flex align-items-center">
-          <span class="me-3"></span>
-          <span class="user-badge"></span>
-        </div>
-        <button class="btn cerrar" id="logout">
-              <i class="bi bi-box-arrow-right"></i>
-        </button>
+      <div class="navbar-container">
+        <img src="../img/log.png" alt="Logo Caja Huancayo" class="logo" />
+        <div class="nav-actions">
+          <div class="user-badge">
+            <div class="user-avatar"></div>
+            <span class="user-name user-fullname"></span>
+          </div>
+          <button class="btn-logout" id="logout" title="Cerrar Sesión">
+            <i class="bi bi-box-arrow-right"></i>
+          </button>
         </div>
       </div>
     </nav>
 
-    <div class="container" style="max-width: 1200px">
-      <!-- Welcome Section -->
-      <div class="welcome-section">
-        <div class="d-flex align-items-center">
-          <img
-            src="https://ui-avatars.com/api/?name=Maria+Lopez&background=FF0000&color=fff&size=80"
-            alt="Usuario"
-            class="profile-img"
-          />
-          <div class="welcome-text">
-            <h4>Bienvenido(a),</h4>
-            <p>
-              Aquí puedes ver la información de tu cuenta y tus productos
-              activos.
-            </p>
-          </div>
+    <!-- Main Content -->
+    <div class="container mt-3">
+      <!-- Hero Section -->
+      <div class="hero">
+        <div class="hero-content">
+          <h1 class="hero-title">Hola, <span class="user-fullname"></span></h1>
+          <p>
+            Gestiona tu cuenta, revisa tus productos activos y mantén tu
+            información actualizada desde un solo lugar.
+          </p>
         </div>
       </div>
 
-      <!-- Mis Productos Activos -->
-      <div class="mt-4">
-        <h5 class="section-title">Mis Productos Activos</h5>
-        <div class="row">
-          <div class="col-lg-8">
-            <div class="productos-grid">
-              <!-- Cuenta Ahorro Digital -->
-              <div class="product-card">
-                <h5><i class="bi bi-piggy-bank"></i> Cuenta Ahorro Digital</h5>
-                <p class="product-label">Saldo disponible</p>
-                <p class="product-amount">S/ 1,250.70</p>
+      <!-- Main Grid -->
+      <div class="row g-4">
+        <!-- Products Column -->
+        <div class="col-lg-8">
+          <div class="card">
+            <h2 class="card-title">Mis Productos</h2>
+            <div class="row g-3">
+              <!-- Cuenta Ahorro -->
+              <div class="col-md-6">
+                <div class="product-card">
+                  <div class="product-header">
+                    <span class="product-name">Cuenta Ahorro Digital</span>
+                    <span class="status-active">Activa</span>
+                  </div>
+                  <p class="product-label">Saldo disponible</p>
+                  <p class="product-amount">S/ <span>0.00</span></p>
+                </div>
               </div>
 
               <!-- Tarjeta de Crédito -->
-              <div class="product-card">
-                <h5><i class="bi bi-credit-card"></i> Tarjeta de Crédito</h5>
-                <p class="product-label">Línea disponible</p>
-                <p class="product-amount">S/ 2,340.50</p>
+            </div>
+          </div>
+
+          <!-- Quick Actions -->
+          <div class="card mt-4">
+            <h2 class="card-title">Accesos Rápidos</h2>
+            <div class="quick-actions">
+              <button
+                class="btn-action"
+                data-bs-toggle="modal"
+                data-bs-target="#movimientos"
+              >
+                Ver movimientos
+              </button>
+              <button
+                class="btn-action"
+                data-bs-toggle="modal"
+                data-bs-target="#recarga"
+              >
+                Recargar crédito
+              </button>
+              <button
+                class="btn-action"
+                data-bs-toggle="modal"
+                data-bs-target="#actualizar"
+              >
+                Actualizar datos
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sidebar Column -->
+        <div class="col-lg-4">
+          <!-- Personal Info -->
+          <div class="card info-card">
+            <h2 class="card-title">Información Personal</h2>
+            <div class="info-list">
+              <div class="info-item">
+                <span class="info-label product-label">DNI</span>
+                <span class="info-value product-amount">-</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label product-label">Teléfono</span>
+                <span class="info-value product-amount">-</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label product-label">Email</span>
+                <span class="info-value product-amount">-</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label product-label">Dirección</span>
+                <span class="info-value product-amount">-</span>
               </div>
             </div>
           </div>
 
-          <!-- Información Personal -->
-          <div class="col-lg-4">
-            <div class="info-card">
-              <h5 class="section-title mb-3">Información Personal</h5>
-
-              <div class="info-item">
-                <p class="product-label">DNI</p>
-                <p class="product-amount"></p>
-              </div>
-
-              <div class="info-item">
-                <p class="product-label">Teléfono</p>
-                <p class="product-amount"></p>
-              </div>
-
-              <div class="info-item">
-                <p class="product-label">Email</p>
-                <p class="product-amount" style="font-size: 0.9rem"></p>
-              </div>
-
-              <div class="info-item">
-                <p class="product-label">Dirección</p>
-                <p class="product-amount" style="font-size: 0.9rem">
-                  Av. Principal 123, Huancayo
+          <!-- Notifications -->
+          <div class="card mt-4">
+            <h2 class="card-title">Notificaciones</h2>
+            <div>
+              <div class="notification-item">
+                <p class="notification-title">
+                  <span class="notification-indicator indicator-success"></span>
+                  Bienvenido a Caja Huancayo
                 </p>
+                <p class="notification-date">23 Nov, 2025</p>
+              </div>
+              <div class="notification-item">
+                <p class="notification-title">
+                  <span class="notification-indicator indicator-info"></span>
+                  Transferencia exitosa a J. Perez
+                </p>
+                <p class="notification-date">22 Nov, 2025</p>
+              </div>
+              <div class="notification-item">
+                <p class="notification-title">
+                  <span class="notification-indicator indicator-success"></span>
+                  Depósito recibido
+                </p>
+                <p class="notification-date">21 Nov, 2025</p>
               </div>
             </div>
           </div>
         </div>
       </div>
+    </div>
 
-      <!-- Accesos Rápidos y Notificaciones -->
-      <div class="row mt-4 mb-5">
-        <div class="col-lg-8">
-          <div class="accesos-rapidos">
-            <h5 class="section-title">Accesos Rápidos</h5>
-            <button class="btn btn-rapido" data-bs-toggle="modal" data-bs-target="#movimientos">
-              <i class="bi bi-receipt-cutoff"></i> Ver movimientos
+    <!-- Modal: Movimientos -->
+    <div
+      class="modal fade"
+      id="movimientos"
+      tabindex="-1"
+      aria-labelledby="movimientosLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="movimientosLabel">
+              Historial de Movimientos
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Cerrar"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="notification-item">
+              <p class="notification-title">
+                <span class="notification-indicator indicator-success"></span>
+                Pago de crédito recibido
+              </p>
+              <p class="notification-date">05 Dic, 2025</p>
+            </div>
+            <div class="notification-item">
+              <p class="notification-title">
+                <span class="notification-indicator indicator-info"></span>
+                Transferencia exitosa a J. Perez
+              </p>
+              <p class="notification-date">02 Dic, 2025</p>
+            </div>
+            <div class="notification-item">
+              <p class="notification-title">
+                <span class="notification-indicator indicator-success"></span>
+                Depósito recibido
+              </p>
+              <p class="notification-date">01 Dic, 2025</p>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cerrar
             </button>
-
-            <button class="btn btn-rapido">
-              <i class="bi bi-cash-stack"></i> Pagar crédito
-            </button>
-            <button class="btn btn-rapido" data-bs-toggle="modal" data-bs-target="#actualizar">
-              <i class="bi bi-person-fill-up"></i> Actualizar datos
-            </button>
           </div>
         </div>
+      </div>
+    </div>
 
-      
-  
-
-        <!-- Notificaciones Recientes -->
-        <div class="col-lg-4">
-          <div class="notificaciones-card">
-            <h5 class="section-title mb-3">Notificaciones Recientes</h5>
-
-            <div class="notif-item">
-              <p class="notif-title">Pago de crédito recibido</p>
-              <p class="notif-date">05 Dic, 2025</p>
+    <!-- Modal: Actualizar Datos -->
+    <div
+      class="modal fade"
+      id="actualizar"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="actualizarLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div>
+              <h5 class="modal-title" id="actualizarLabel">Actualizar Datos</h5>
+              <p class="text-muted small mb-0 mt-1">
+                Completa los siguientes campos con tus nuevos datos.
+              </p>
             </div>
-
-            <div class="notif-item">
-              <p class="notif-title">Transferencia exitosa a J. Perez</p>
-              <p class="notif-date">02 Dic, 2025</p>
-            </div>
-
-            <div class="notif-item">
-              <p class="notif-title">Depósito recibido</p>
-              <p class="notif-date">01 Dic, 2025</p>
-            </div>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Cerrar"
+            ></button>
           </div>
-        </div>
-        </div>
-</div>
-
-        <!-- Modales -->
-        <div class="modal fade" id="movimientos" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog modal-sm">
-            <div class="modal-content">
-                <div class="col-lg-12">
-          <div class="notificaciones-card">
-            <h5 class="section-title mb-3">Movimientos</h5>
-
-            <div class="notif-item">
-              <p class="notif-title">Pago de crédito recibido</p>
-              <p class="notif-date">05 Dic, 2025</p>
-            </div>
-
-            <div class="notif-item">
-              <p class="notif-title">Transferencia exitosa a J. Perez</p>
-              <p class="notif-date">02 Dic, 2025</p>
-            </div>
-
-            <div class="notif-item">
-              <p class="notif-title">Depósito recibido</p>
-              <p class="notif-date">01 Dic, 2025</p>
-            </div>
-
-            <div class="notif-item">
-              <p class="notif-title">Depósito recibido</p>
-              <p class="notif-date">01 Dic, 2025</p>
-            </div>
-          </div>
-        </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="modal fade" id="actualizar" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div
-            class="modal-header border-0 d-flex flex-column align-items-center pt-4 pb-3"
-          >
-            <h5 class="modal-title fw-bold mb-1">Actualiza tus datos</h5>
-            <p class="text-muted small mb-0">
-              Completa los siguientes campos con tus nuevos datos.
-            </p>
-          </div>
-
-          <div class="modal-body px-4 pb-4">
-            <form action="guardar.php" method="post">
-              <!-- Dirección -->
-              <div class="mb-3">
-                <label
-                  for="direccion"
-                  class="form-label fw-normal"
-                  style="font-size: 0.9rem"
-                  >Dirección</label
-                >
+          <div class="modal-body">
+            <form id="formActualizar">
+              <div class="mb-3 form-group">
+                <label for="direccion" class="form-label">Dirección</label>
                 <input
                   type="text"
                   class="form-control"
                   id="direccion"
                   name="direccion"
-                  placeholder="Ingresa tu dirección"
+                  placeholder="Av. Principal 123, Huancayo"
                   required
                 />
               </div>
-
-              <!-- Telefono -->
-              <div class="mb-3">
-                <label
-                  for="telefono"
-                  class="form-label fw-normal"
-                  style="font-size: 0.9rem"
-                  >Telefono</label
-                >
+              <div class="mb-3 form-group">
+                <label for="telefono" class="form-label">Teléfono</label>
                 <input
-                  type="text"
+                  type="tel"
                   class="form-control"
                   id="telefono"
                   name="telefono"
-                  placeholder="Ingresa tu telefono"
+                  placeholder="999 999 999"
                   required
                 />
               </div>
-              <!-- Correo Electrónico -->
-              <div class="mb-3">
-                <label
-                  for="correo"
-                  class="form-label fw-normal"
-                  style="font-size: 0.9rem"
+              <div class="mb-3 form-group">
+                <label for="correo" class="form-label"
                   >Correo Electrónico</label
                 >
                 <input
@@ -242,13 +266,77 @@
                   required
                 />
               </div>
-
             </form>
           </div>
           <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-        <button type="button" class="btn btn-rojo">Actualizar</button>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cancelar
+            </button>
+            <button type="button" class="btn btn-primary" id="btnActualizar">
+              Actualizar
+            </button>
+          </div>
+        </div>
       </div>
+    </div>
+    <!-- Modal: Recarga -->
+    <div
+      class="modal fade"
+      id="recarga"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="recargaLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div>
+              <h5 class="modal-title" id="recargaLabel">Recarga</h5>
+              <p class="text-muted small mb-0 mt-1">
+                Completa los siguientes campos para realizar tu recarga.
+              </p>
+            </div>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Cerrar"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form id="formRecarga">
+              <div class="mb-3 form-group">
+                <label for="monto" class="form-label">Monto</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="monto"
+                  name="monto"
+                  placeholder="Monto"
+                  required
+                  min="1"
+                />
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cancelar
+            </button>
+            <button type="button" class="btn btn-primary" id="btnRecarga">
+              Recargar
+            </button>
+          </div>
         </div>
       </div>
     </div>
